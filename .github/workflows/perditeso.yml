@@ -47,16 +47,38 @@ jobs:
             echo "UT1 $cat: $count domene"
           done
 
+          # combined lists used by the schools (always on): security and filter-bypass sites
+          python3 - <<'PY'
+          import os
+          combined = {
+              "bgt-siguria": ["ddos", "hacking", "cryptojacking", "stalkerware", "dangerous_material", "drogue",
+                              "agressif", "warez", "dating", "tricheur"],
+              "bgt-anashkalimi": ["vpn", "redirector"],
+          }
+          for name, cats in combined.items():
+              doms = set()
+              for c in cats:
+                  path = f"lists/ut1-{c}.txt"
+                  if os.path.exists(path):
+                      doms |= {l.strip()[2:-1] for l in open(path) if l.startswith("||")}
+              with open(f"lists/{name}.txt", "w") as f:
+                  f.write(f"! Title: {name} (UT1: {', '.join(cats)})\n")
+                  f.write("! Source: UT1, Universite Toulouse Capitole via github.com/olbat/ut1-blacklists\n")
+                  f.write(f"! License: CC BY-SA 4.0\n! Domains: {len(doms)}\n")
+                  f.writelines(f"||{d}^\n" for d in sorted(doms))
+              print(f"{name}: {len(doms)} domene")
+          PY
+
           # index of all lists with their size and AdGuard URL
           {
-            echo "# Listat UT1 (formati AdGuard)"
+            echo "# Listat (formati AdGuard)"
             echo
             echo "Perditesuar: $(date -u +'%F %H:%M') UTC. Burimi: UT1, Universite Toulouse Capitole, CC BY-SA 4.0."
             echo
-            echo "| Kategoria | Domene | URL per AdGuard Home |"
+            echo "| Lista | Domene | URL per AdGuard Home |"
             echo "|---|---|---|"
-            for f in lists/ut1-*.txt; do
-              c=$(basename "$f" .txt); c=${c#ut1-}
+            for f in lists/bgt-*.txt lists/ut1-*.txt; do
+              c=$(basename "$f" .txt)
               echo "| $c | $(grep -c '^||' "$f") | https://raw.githubusercontent.com/${GITHUB_REPOSITORY}/main/$f |"
             done
           } > lists/README.md
