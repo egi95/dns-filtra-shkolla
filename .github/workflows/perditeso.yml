@@ -1,4 +1,4 @@
-# Every night: download the UT1 categories and convert them to AdGuard syntax (||domain^ also blocks www. and subdomains)
+# Every night: download every UT1 category and convert it to AdGuard syntax (||domain^ also blocks www. and subdomains)
 name: Perditeso listat
 
 on:
@@ -19,14 +19,24 @@ jobs:
         run: |
           set -euo pipefail
           mkdir -p lists
-          for cat in games social_networks; do
-            curl -fsSL --retry 3 "https://raw.githubusercontent.com/olbat/ut1-blacklists/master/blacklists/$cat/domains" -o "/tmp/$cat.txt"
+          # every category of the mirror; "adult" (4.6M domains) is left out: too big for GitHub and for the routers
+          cats=$(curl -fsSL --retry 3 https://api.github.com/repos/olbat/ut1-blacklists/contents/blacklists \
+                 | python3 -c 'import json,sys; print(" ".join(sorted(x["name"] for x in json.load(sys.stdin) if x["type"]=="dir")))')
+          for cat in $cats; do
+            [ "$cat" = "adult" ] && continue
+            if ! curl -fsSL --retry 3 "https://raw.githubusercontent.com/olbat/ut1-blacklists/master/blacklists/$cat/domains" -o "/tmp/$cat.txt"; then
+              echo "UT1 $cat: pa skedar domains, kalohet"; continue
+            fi
             # keep only plain domain names, drop IP addresses and comments
             tr -d '\r' < "/tmp/$cat.txt" | sed -E 's/^[*.]+//' | tr 'A-Z' 'a-z' \
-              | grep -E '^[a-z0-9-]+(\.[a-z0-9-]+)+$' | grep -vE '^[0-9.]+$' | sort -u > "/tmp/$cat.clean"
+              | { grep -E '^[a-z0-9-]+(\.[a-z0-9-]+)+$' || true; } | { grep -vE '^[0-9.]+$' || true; } | sort -u > "/tmp/$cat.clean"
             count=$(wc -l < "/tmp/$cat.clean")
-            # an almost empty download means the source failed: keep yesterday's list instead
-            if [ "$count" -lt 100 ]; then echo "UT1 $cat: vetem $count domene, lista nuk ndryshohet"; continue; fi
+            old=0
+            [ -f "lists/ut1-$cat.txt" ] && old=$(grep -c '^||' "lists/ut1-$cat.txt" || true)
+            # an empty or suddenly halved download means the source failed: keep yesterday's list
+            if [ "$count" -eq 0 ] || [ "$count" -lt $((old / 2)) ]; then
+              echo "UT1 $cat: $count domene (dje $old), lista nuk ndryshohet"; continue
+            fi
             {
               echo "! Title: UT1 $cat (AdGuard)"
               echo "! Source: UT1, Universite Toulouse Capitole (https://dsi.ut-capitole.fr/blacklists/) via github.com/olbat/ut1-blacklists"
@@ -36,6 +46,20 @@ jobs:
             } > "lists/ut1-$cat.txt"
             echo "UT1 $cat: $count domene"
           done
+
+          # index of all lists with their size and AdGuard URL
+          {
+            echo "# Listat UT1 (formati AdGuard)"
+            echo
+            echo "Perditesuar: $(date -u +'%F %H:%M') UTC. Burimi: UT1, Universite Toulouse Capitole, CC BY-SA 4.0."
+            echo
+            echo "| Kategoria | Domene | URL per AdGuard Home |"
+            echo "|---|---|---|"
+            for f in lists/ut1-*.txt; do
+              c=$(basename "$f" .txt); c=${c#ut1-}
+              echo "| $c | $(grep -c '^||' "$f") | https://raw.githubusercontent.com/${GITHUB_REPOSITORY}/main/$f |"
+            done
+          } > lists/README.md
 
       - name: Ruaj ndryshimet
         run: |
@@ -47,7 +71,7 @@ jobs:
           git push
 
       # BGT 2: UniFi cannot read a list URL, so the Domain Lists and lesson policies are synced through its API.
-      # (BGT 1 needs nothing here: its AdGuard Home downloads lists/ut1-games.txt itself every 24 h.)
+      # (BGT 1 needs nothing here: its AdGuard Home downloads the lists itself every 24 h.)
       - name: Sinkronizo UniFi (BGT 2)
         if: github.repository == 'egi95/dns-filtra-shkolla'
         env:
