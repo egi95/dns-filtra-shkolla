@@ -1,0 +1,5 @@
+! Title: UT1 associations_religieuses (AdGuard)
+! Source: UT1, Universite Toulouse Capitole (https://dsi.ut-capitole.fr/blacklists/) via github.com/olbat/ut1-blacklists
+! License: CC BY-SA 4.0
+! Domains: 1
+||jw.org^

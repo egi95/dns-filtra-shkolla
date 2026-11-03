@@ -1,0 +1,11 @@
+! Title: UT1 reaffected (AdGuard)
+! Source: UT1, Universite Toulouse Capitole (https://dsi.ut-capitole.fr/blacklists/) via github.com/olbat/ut1-blacklists
+! License: CC BY-SA 4.0
+! Domains: 7
+||ecoles-primaires.com^
+||le-coin-des-instits.com^
+||leonardo-france.com^
+||metiers-jeunes.com^
+||mission-culture.org^
+||museedepoche.com^
+||tableau-noir.com^

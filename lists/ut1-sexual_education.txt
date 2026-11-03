@@ -1,0 +1,19 @@
+! Title: UT1 sexual_education (AdGuard)
+! Source: UT1, Universite Toulouse Capitole (https://dsi.ut-capitole.fr/blacklists/) via github.com/olbat/ut1-blacklists
+! License: CC BY-SA 4.0
+! Domains: 15
+||bishuk.com^
+||blaf.ntic.qc.ca^
+||comment-faire-amour.comment-faire.net^
+||doctissimo.fr^
+||femme-amour-seduction-homme.fr^
+||handentspannung.de^
+||heterosexualite.blogs.liberation.fr^
+||kinseyconfidential.org^
+||macontraception.fr^
+||masexualite.ca^
+||onsexprime.fr^
+||questionsexualite.fr^
+||sexinfoonline.com^
+||sexualityandu.ca^
+||xatsexologia.es^

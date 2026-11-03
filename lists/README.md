@@ -1,0 +1,74 @@
+# Listat UT1 (formati AdGuard)
+
+Perditesuar: 2026-11-03 21:22 UTC. Burimi: UT1, Universite Toulouse Capitole, CC BY-SA 4.0.
+
+| Kategoria | Domene | URL per AdGuard Home |
+|---|---|---|
+| agressif | 266 | https://raw.githubusercontent.com/egi95/dns-filtra-shkolla/main/lists/ut1-agressif.txt |
+| ai | 77 | https://raw.githubusercontent.com/egi95/dns-filtra-shkolla/main/lists/ut1-ai.txt |
+| arjel | 69 | https://raw.githubusercontent.com/egi95/dns-filtra-shkolla/main/lists/ut1-arjel.txt |
+| associations_religieuses | 1 | https://raw.githubusercontent.com/egi95/dns-filtra-shkolla/main/lists/ut1-associations_religieuses.txt |
+| astrology | 28 | https://raw.githubusercontent.com/egi95/dns-filtra-shkolla/main/lists/ut1-astrology.txt |
+| audio-video | 3620 | https://raw.githubusercontent.com/egi95/dns-filtra-shkolla/main/lists/ut1-audio-video.txt |
+| bank | 6646 | https://raw.githubusercontent.com/egi95/dns-filtra-shkolla/main/lists/ut1-bank.txt |
+| bitcoin | 1394 | https://raw.githubusercontent.com/egi95/dns-filtra-shkolla/main/lists/ut1-bitcoin.txt |
+| blog | 1494 | https://raw.githubusercontent.com/egi95/dns-filtra-shkolla/main/lists/ut1-blog.txt |
+| celebrity | 634 | https://raw.githubusercontent.com/egi95/dns-filtra-shkolla/main/lists/ut1-celebrity.txt |
+| chat | 195 | https://raw.githubusercontent.com/egi95/dns-filtra-shkolla/main/lists/ut1-chat.txt |
+| child | 75 | https://raw.githubusercontent.com/egi95/dns-filtra-shkolla/main/lists/ut1-child.txt |
+| cleaning | 73 | https://raw.githubusercontent.com/egi95/dns-filtra-shkolla/main/lists/ut1-cleaning.txt |
+| cooking | 37 | https://raw.githubusercontent.com/egi95/dns-filtra-shkolla/main/lists/ut1-cooking.txt |
+| cryptojacking | 11490 | https://raw.githubusercontent.com/egi95/dns-filtra-shkolla/main/lists/ut1-cryptojacking.txt |
+| dangerous_material | 35 | https://raw.githubusercontent.com/egi95/dns-filtra-shkolla/main/lists/ut1-dangerous_material.txt |
+| dating | 10546 | https://raw.githubusercontent.com/egi95/dns-filtra-shkolla/main/lists/ut1-dating.txt |
+| ddos | 421 | https://raw.githubusercontent.com/egi95/dns-filtra-shkolla/main/lists/ut1-ddos.txt |
+| dialer | 4 | https://raw.githubusercontent.com/egi95/dns-filtra-shkolla/main/lists/ut1-dialer.txt |
+| doh | 2995 | https://raw.githubusercontent.com/egi95/dns-filtra-shkolla/main/lists/ut1-doh.txt |
+| download | 4020 | https://raw.githubusercontent.com/egi95/dns-filtra-shkolla/main/lists/ut1-download.txt |
+| drogue | 436 | https://raw.githubusercontent.com/egi95/dns-filtra-shkolla/main/lists/ut1-drogue.txt |
+| dynamic-dns | 2077 | https://raw.githubusercontent.com/egi95/dns-filtra-shkolla/main/lists/ut1-dynamic-dns.txt |
+| educational_games | 8 | https://raw.githubusercontent.com/egi95/dns-filtra-shkolla/main/lists/ut1-educational_games.txt |
+| examen_pix | 347 | https://raw.githubusercontent.com/egi95/dns-filtra-shkolla/main/lists/ut1-examen_pix.txt |
+| exceptions_liste_bu | 1 | https://raw.githubusercontent.com/egi95/dns-filtra-shkolla/main/lists/ut1-exceptions_liste_bu.txt |
+| fakenews | 1116 | https://raw.githubusercontent.com/egi95/dns-filtra-shkolla/main/lists/ut1-fakenews.txt |
+| filehosting | 940 | https://raw.githubusercontent.com/egi95/dns-filtra-shkolla/main/lists/ut1-filehosting.txt |
+| financial | 472 | https://raw.githubusercontent.com/egi95/dns-filtra-shkolla/main/lists/ut1-financial.txt |
+| forums | 197 | https://raw.githubusercontent.com/egi95/dns-filtra-shkolla/main/lists/ut1-forums.txt |
+| gambling | 47546 | https://raw.githubusercontent.com/egi95/dns-filtra-shkolla/main/lists/ut1-gambling.txt |
+| games | 33652 | https://raw.githubusercontent.com/egi95/dns-filtra-shkolla/main/lists/ut1-games.txt |
+| hacking | 197 | https://raw.githubusercontent.com/egi95/dns-filtra-shkolla/main/lists/ut1-hacking.txt |
+| jobsearch | 60740 | https://raw.githubusercontent.com/egi95/dns-filtra-shkolla/main/lists/ut1-jobsearch.txt |
+| lingerie | 193 | https://raw.githubusercontent.com/egi95/dns-filtra-shkolla/main/lists/ut1-lingerie.txt |
+| liste_blanche | 269 | https://raw.githubusercontent.com/egi95/dns-filtra-shkolla/main/lists/ut1-liste_blanche.txt |
+| liste_bu | 2810 | https://raw.githubusercontent.com/egi95/dns-filtra-shkolla/main/lists/ut1-liste_bu.txt |
+| malware | 239972 | https://raw.githubusercontent.com/egi95/dns-filtra-shkolla/main/lists/ut1-malware.txt |
+| manga | 651 | https://raw.githubusercontent.com/egi95/dns-filtra-shkolla/main/lists/ut1-manga.txt |
+| marketingware | 77 | https://raw.githubusercontent.com/egi95/dns-filtra-shkolla/main/lists/ut1-marketingware.txt |
+| mixed_adult | 149 | https://raw.githubusercontent.com/egi95/dns-filtra-shkolla/main/lists/ut1-mixed_adult.txt |
+| mobile-phone | 50 | https://raw.githubusercontent.com/egi95/dns-filtra-shkolla/main/lists/ut1-mobile-phone.txt |
+| phishing | 240482 | https://raw.githubusercontent.com/egi95/dns-filtra-shkolla/main/lists/ut1-phishing.txt |
+| press | 4644 | https://raw.githubusercontent.com/egi95/dns-filtra-shkolla/main/lists/ut1-press.txt |
+| publicite | 4269 | https://raw.githubusercontent.com/egi95/dns-filtra-shkolla/main/lists/ut1-publicite.txt |
+| radio | 561 | https://raw.githubusercontent.com/egi95/dns-filtra-shkolla/main/lists/ut1-radio.txt |
+| reaffected | 7 | https://raw.githubusercontent.com/egi95/dns-filtra-shkolla/main/lists/ut1-reaffected.txt |
+| redirector | 109790 | https://raw.githubusercontent.com/egi95/dns-filtra-shkolla/main/lists/ut1-redirector.txt |
+| remote-control | 170 | https://raw.githubusercontent.com/egi95/dns-filtra-shkolla/main/lists/ut1-remote-control.txt |
+| residential-proxies | 120 | https://raw.githubusercontent.com/egi95/dns-filtra-shkolla/main/lists/ut1-residential-proxies.txt |
+| sect | 143 | https://raw.githubusercontent.com/egi95/dns-filtra-shkolla/main/lists/ut1-sect.txt |
+| sexual_education | 15 | https://raw.githubusercontent.com/egi95/dns-filtra-shkolla/main/lists/ut1-sexual_education.txt |
+| shopping | 36963 | https://raw.githubusercontent.com/egi95/dns-filtra-shkolla/main/lists/ut1-shopping.txt |
+| shortener | 4562 | https://raw.githubusercontent.com/egi95/dns-filtra-shkolla/main/lists/ut1-shortener.txt |
+| social_networks | 715 | https://raw.githubusercontent.com/egi95/dns-filtra-shkolla/main/lists/ut1-social_networks.txt |
+| special | 1 | https://raw.githubusercontent.com/egi95/dns-filtra-shkolla/main/lists/ut1-special.txt |
+| sports | 2362 | https://raw.githubusercontent.com/egi95/dns-filtra-shkolla/main/lists/ut1-sports.txt |
+| stalkerware | 525 | https://raw.githubusercontent.com/egi95/dns-filtra-shkolla/main/lists/ut1-stalkerware.txt |
+| strict_redirector | 109790 | https://raw.githubusercontent.com/egi95/dns-filtra-shkolla/main/lists/ut1-strict_redirector.txt |
+| strong_redirector | 109790 | https://raw.githubusercontent.com/egi95/dns-filtra-shkolla/main/lists/ut1-strong_redirector.txt |
+| translation | 175 | https://raw.githubusercontent.com/egi95/dns-filtra-shkolla/main/lists/ut1-translation.txt |
+| tricheur | 53 | https://raw.githubusercontent.com/egi95/dns-filtra-shkolla/main/lists/ut1-tricheur.txt |
+| tricheur_pix | 55 | https://raw.githubusercontent.com/egi95/dns-filtra-shkolla/main/lists/ut1-tricheur_pix.txt |
+| update | 30 | https://raw.githubusercontent.com/egi95/dns-filtra-shkolla/main/lists/ut1-update.txt |
+| vpn | 6039 | https://raw.githubusercontent.com/egi95/dns-filtra-shkolla/main/lists/ut1-vpn.txt |
+| warez | 1524 | https://raw.githubusercontent.com/egi95/dns-filtra-shkolla/main/lists/ut1-warez.txt |
+| webhosting | 45 | https://raw.githubusercontent.com/egi95/dns-filtra-shkolla/main/lists/ut1-webhosting.txt |
+| webmail | 404 | https://raw.githubusercontent.com/egi95/dns-filtra-shkolla/main/lists/ut1-webmail.txt |

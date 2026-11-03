@@ -1,0 +1,32 @@
+! Title: UT1 astrology (AdGuard)
+! Source: UT1, Universite Toulouse Capitole (https://dsi.ut-capitole.fr/blacklists/) via github.com/olbat/ut1-blacklists
+! License: CC BY-SA 4.0
+! Domains: 28
+||abastrologie.com^
+||alainb-voyance.com^
+||asiaflash.com^
+||astro.femmeactuelle.fr^
+||astro.qc.ca^
+||astroannonce.com^
+||astrocenter.orange.fr^
+||astrolog.co.uk^
+||astrology.com^
+||astroo.com^
+||astrosonia.com^
+||astrotheme.fr^
+||belovedwitch.com^
+||coursdetarot.eu^
+||franceastro.com^
+||goracash.com^
+||horoscope-du-jour-gratuit.com^
+||horoscopes.rambler.ru^
+||kkkii.com^
+||lovevoyance.com^
+||magie-voyance.com^
+||numerotarot.com^
+||oroskopos.gr^
+||sexcountry.host.sk^
+||team.astromanie.com^
+||voyance-mediumtelephone.com^
+||voyance-sexe.com^
+||voyance-web.fr^

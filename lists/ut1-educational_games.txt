@@ -1,0 +1,12 @@
+! Title: UT1 educational_games (AdGuard)
+! Source: UT1, Universite Toulouse Capitole (https://dsi.ut-capitole.fr/blacklists/) via github.com/olbat/ut1-blacklists
+! License: CC BY-SA 4.0
+! Domains: 8
+||englishexercises.org^
+||jeux.lulu.pagesperso-orange.fr^
+||logicieleducatif.fr^
+||mathador.fr^
+||primarygames.com^
+||toupty.com^
+||vinzetlou.net^
+||webecolia.fr^
