@@ -45,3 +45,12 @@ jobs:
           git diff --cached --quiet && exit 0
           git commit -m "Perditesim automatik i listave $(date -u +%F)"
           git push
+
+      # BGT 2: UniFi cannot read a list URL, so the Domain Lists and lesson policies are synced through its API.
+      # (BGT 1 needs nothing here: its AdGuard Home downloads lists/ut1-games.txt itself every 24 h.)
+      - name: Sinkronizo UniFi (BGT 2)
+        if: github.repository == 'egi95/dns-filtra-shkolla'
+        env:
+          UNIFI_API_KEY: ${{ secrets.UNIFI_API_KEY }}
+          UNIFI_CONSOLE: ${{ secrets.UNIFI_CONSOLE }}
+        run: python3 scripts/unifi_sync.py
