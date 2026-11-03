@@ -1,0 +1,47 @@
+# Every night: download the UT1 categories and convert them to AdGuard syntax (||domain^ also blocks www. and subdomains)
+name: Perditeso listat
+
+on:
+  schedule:
+    - cron: "30 2 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  perditeso:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Shkarko dhe konverto listat UT1
+        run: |
+          set -euo pipefail
+          mkdir -p lists
+          for cat in games social_networks; do
+            curl -fsSL --retry 3 "https://raw.githubusercontent.com/olbat/ut1-blacklists/master/blacklists/$cat/domains" -o "/tmp/$cat.txt"
+            # keep only plain domain names, drop IP addresses and comments
+            tr -d '\r' < "/tmp/$cat.txt" | sed -E 's/^[*.]+//' | tr 'A-Z' 'a-z' \
+              | grep -E '^[a-z0-9-]+(\.[a-z0-9-]+)+$' | grep -vE '^[0-9.]+$' | sort -u > "/tmp/$cat.clean"
+            count=$(wc -l < "/tmp/$cat.clean")
+            # an almost empty download means the source failed: keep yesterday's list instead
+            if [ "$count" -lt 100 ]; then echo "UT1 $cat: vetem $count domene, lista nuk ndryshohet"; continue; fi
+            {
+              echo "! Title: UT1 $cat (AdGuard)"
+              echo "! Source: UT1, Universite Toulouse Capitole (https://dsi.ut-capitole.fr/blacklists/) via github.com/olbat/ut1-blacklists"
+              echo "! License: CC BY-SA 4.0"
+              echo "! Domains: $count"
+              sed -E 's/.*/||&^/' "/tmp/$cat.clean"
+            } > "lists/ut1-$cat.txt"
+            echo "UT1 $cat: $count domene"
+          done
+
+      - name: Ruaj ndryshimet
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add lists
+          git diff --cached --quiet && exit 0
+          git commit -m "Perditesim automatik i listave $(date -u +%F)"
+          git push
