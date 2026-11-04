@@ -1,6 +1,6 @@
 # Listat (formati AdGuard)
 
-Perditesuar: 2026-11-03 22:14 UTC. Burimi: UT1, Universite Toulouse Capitole, CC BY-SA 4.0.
+Perditesuar: 2026-11-04 09:32 UTC. Burimi: UT1, Universite Toulouse Capitole, CC BY-SA 4.0.
 
 | Lista | Domene | URL per AdGuard Home |
 |---|---|---|
