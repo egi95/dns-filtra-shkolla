@@ -1,0 +1,33 @@
+# Every 6 hours: Tor relays and Spamhaus DROP as plain IP lists for the school routers.
+name: Perditeso IP listat (Tor, Spamhaus)
+
+on:
+  schedule:
+    - cron: "10 */6 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: listat
+  cancel-in-progress: false
+
+jobs:
+  ip-listat:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Nderto listat e IP-ve
+        run: python3 scripts/build_ip_lists.py
+
+      - name: Ruaj ndryshimet
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add lists/bgt-tor-ip.txt lists/bgt-spamhaus-drop.txt
+          git diff --cached --quiet && exit 0
+          git commit -m "IP listat (Tor, Spamhaus) $(date -u +'%F %H:%M')"
+          git pull --rebase -q origin main
+          git push
