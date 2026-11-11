@@ -1,14 +1,20 @@
 # Listat (formati AdGuard)
 
-Perditesuar: 2026-11-11 10:24 UTC. Burimi: UT1, Universite Toulouse Capitole, CC BY-SA 4.0.
+Perditesuar: 2026-11-11 12:16 UTC. Burimi: UT1, Universite Toulouse Capitole, CC BY-SA 4.0.
 
 | Lista | Domene | URL per AdGuard Home |
 |---|---|---|
+| bgt-ai | 77 | https://raw.githubusercontent.com/egi95/dns-filtra-shkolla/main/lists/bgt-ai.txt |
 | bgt-anashkalimi | 114219 | https://raw.githubusercontent.com/egi95/dns-filtra-shkolla/main/lists/bgt-anashkalimi.txt |
+| bgt-droga | 26337 | https://raw.githubusercontent.com/egi95/dns-filtra-shkolla/main/lists/bgt-droga.txt |
+| bgt-kercenime | 199359 | https://raw.githubusercontent.com/egi95/dns-filtra-shkolla/main/lists/bgt-kercenime.txt |
 | bgt-lojera | 33769 | https://raw.githubusercontent.com/egi95/dns-filtra-shkolla/main/lists/bgt-lojera.txt |
+| bgt-mashtrim | 27198 | https://raw.githubusercontent.com/egi95/dns-filtra-shkolla/main/lists/bgt-mashtrim.txt |
+| bgt-safesearch | 200 | https://raw.githubusercontent.com/egi95/dns-filtra-shkolla/main/lists/bgt-safesearch.txt |
 | bgt-siguria | 25479 | https://raw.githubusercontent.com/egi95/dns-filtra-shkolla/main/lists/bgt-siguria.txt |
 | bgt-sociale | 35222 | https://raw.githubusercontent.com/egi95/dns-filtra-shkolla/main/lists/bgt-sociale.txt |
 | bgt-torrent | 64710 | https://raw.githubusercontent.com/egi95/dns-filtra-shkolla/main/lists/bgt-torrent.txt |
+| bgt-video | 27900 | https://raw.githubusercontent.com/egi95/dns-filtra-shkolla/main/lists/bgt-video.txt |
 | ut1-agressif | 266 | https://raw.githubusercontent.com/egi95/dns-filtra-shkolla/main/lists/ut1-agressif.txt |
 | ut1-ai | 77 | https://raw.githubusercontent.com/egi95/dns-filtra-shkolla/main/lists/ut1-ai.txt |
 | ut1-arjel | 69 | https://raw.githubusercontent.com/egi95/dns-filtra-shkolla/main/lists/ut1-arjel.txt |
