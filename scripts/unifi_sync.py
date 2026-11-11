@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 """Keep the UniFi (BGT 2) blocking in sync with the lists of this repository.
 
-- Games, only during lessons: Domain Lists "BGT Lojera UT1 #1..#N" (UT1 games + EXTRA_GAMES, educational sites
-  removed) and one BLOCK policy per list and lesson block: "BGT Lojera UT1 #k - Ora n".
+- Games, only during lessons: Domain Lists "BGT Lojera UT1 #1..#N" (lists/bgt-lojera.txt = UT1 games + CasCas2
+  school-gaming, plus EXTRA_GAMES, educational sites removed) and one BLOCK policy per list and lesson block: "BGT Lojera UT1 #k - Ora n".
 - Security, always: Domain List "BGT Siguria UT1" (UT1 ddos, dangerous_material, warez, tricheur) and
   the BLOCK policy "BGT Siguria UT1 - gjithmone". The other security categories come from the UniFi Content Filter.
 - AI chatbots, only on request (exams): Domain List "BGT AI UT1" and the BLOCK policy "BGT AI UT1 - provime",
@@ -114,8 +114,24 @@ class Sync:
             print(f"{name}: lista u lidh perseri")
 
 
+def read_merged(name):
+    """A merged list built by build_lists.py (UT1 + other collections), minus the educational exceptions."""
+    path = os.path.join(LISTS, f"{name}.txt")
+    if not os.path.exists(path):
+        return None
+    doms = set()
+    for line in open(path, encoding="utf-8"):
+        line = line.strip()
+        if line.startswith("||") and line.endswith("^"):
+            d = line[2:-1]
+            if not any(d == a or d.endswith("." + a) for a in ALLOW):
+                doms.add(d)
+    return doms
+
+
 def main():
-    games = sorted(read_list("games") | set(EXTRA_GAMES))
+    merged = read_merged("bgt-lojera")   # UT1 games + CasCas2 school-gaming (has poki.io, unblocked-games mirrors)
+    games = sorted((merged if merged else read_list("games")) | set(EXTRA_GAMES))
     if len(games) < MIN_GAME_DOMAINS:
         sys.exit(f"vetem {len(games)} domene lojerash, asgje nuk ndryshohet")
     n = -(-len(games) // MAX_PER_LIST)
