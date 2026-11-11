@@ -6,6 +6,13 @@ sites (e.g. poki.io) are covered without anyone adding domains by hand.
 
   bgt-lojera.txt   games, only during lessons  = UT1 games + CasCas2 school-gaming list
   bgt-torrent.txt  torrent / piracy, always    = UT1 warez + HaGeZi anti-piracy + Block List Project piracy, torrent
+  Stored for later (NOT switched on anywhere until the school decides):
+  bgt-ai.txt         AI chatbots (exams) = UT1 ai. Before enabling, allow the admin laptop (Claude/Codex use these).
+  bgt-mashtrim.txt   scams / fake shops = HaGeZi fake + Block List Project scam
+  bgt-kercenime.txt  malware, ransomware, crypto-mining = HaGeZi TIF mini + BLP ransomware, crypto + UT1 cryptojacking
+  bgt-droga.txt      drugs and vaping = UT1 drogue + BLP drugs, vaping
+  bgt-video.txt      video/streaming for lessons = UT1 audio-video + BLP youtube
+  bgt-safesearch.txt search engines without SafeSearch = HaGeZi nosafesearch
   bgt-sociale.txt  social networks (PREPARED, not switched on anywhere yet)
                                                = UT1 social_networks + HaGeZi social + Block List Project facebook,
                                                  tiktok, twitter
@@ -41,6 +48,33 @@ LISTS_DEF = {
         "local": ["warez"],
         "remote": [f"{HAGEZI}/anti.piracy.txt", f"{BLP}/piracy-ags.txt", f"{BLP}/torrent-ags.txt"],
         "allow": [], "min": 20000,
+    },
+    # stored for later, NOT switched on anywhere until the school decides
+    "bgt-ai": {
+        "title": "AI chatbote (UT1 ai) - vetem per provime",
+        "local": ["ai"], "remote": [], "allow": [], "min": 30,
+    },
+    "bgt-mashtrim": {
+        "title": "Mashtrime / scam / fake shops (HaGeZi fake + Block List Project scam)",
+        "local": [], "remote": [f"{HAGEZI}/fake.txt", f"{BLP}/scam-ags.txt"], "allow": [], "min": 10000,
+    },
+    "bgt-kercenime": {
+        "title": "Kercenime: malware, ransomware, crypto-mining (HaGeZi TIF mini + BLP ransomware, crypto + UT1 cryptojacking)",
+        "local": ["cryptojacking"],
+        "remote": [f"{HAGEZI}/tif.mini.txt", f"{BLP}/ransomware-ags.txt", f"{BLP}/crypto-ags.txt"],
+        "allow": [], "min": 10000,
+    },
+    "bgt-droga": {
+        "title": "Droga dhe vape (UT1 drogue + Block List Project drugs, vaping)",
+        "local": ["drogue"], "remote": [f"{BLP}/drugs-ags.txt", f"{BLP}/vaping-ags.txt"], "allow": [], "min": 10000,
+    },
+    "bgt-video": {
+        "title": "Video / streaming per ore mesimore (UT1 audio-video + Block List Project youtube)",
+        "local": ["audio-video"], "remote": [f"{BLP}/youtube-ags.txt"], "allow": [], "min": 10000,
+    },
+    "bgt-safesearch": {
+        "title": "Motore kerkimi pa SafeSearch (HaGeZi nosafesearch)",
+        "local": [], "remote": [f"{HAGEZI}/nosafesearch.txt"], "allow": [], "min": 50,
     },
     "bgt-sociale": {
         "title": "Rrjete sociale (UT1 social_networks + HaGeZi social + Block List Project facebook, tiktok, twitter)",
