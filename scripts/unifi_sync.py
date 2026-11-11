@@ -165,6 +165,11 @@ def main():
     if security:
         s.policy("BGT Siguria UT1 - gjithmone", s.group("BGT Siguria UT1", security), ALWAYS)
 
+    # learned from BGT 1's AdGuard (adult, gambling, piracy, VPN/DoH that students really tried) -> always
+    learned = sorted(read_merged("bgt-mesuar-gjithmone") or [])
+    if learned:
+        s.policy("BGT Mesuar nga BGT1 - gjithmone", s.group("BGT Mesuar nga BGT1", learned[:MAX_PER_LIST]), ALWAYS)
+
     ai = sorted(read_list("ai"))
     if ai:
         s.policy("BGT AI UT1 - provime", s.group("BGT AI UT1", ai), ALWAYS, enabled_when_new=False)

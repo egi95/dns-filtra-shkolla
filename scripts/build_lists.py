@@ -40,6 +40,7 @@ LISTS_DEF = {
     "bgt-lojera": {
         "title": "Lojera (UT1 games + CasCas2 school-gaming)",
         "local": ["games"],
+        "learned": ["bgt-mesuar-lojera.txt"],
         "remote": ["https://raw.githubusercontent.com/CasCas2/school-gaming-dns-blocklist/main/mega-gaming-blocklist.txt"],
         "allow": ALLOW_GAMES, "min": 20000,
     },
@@ -79,6 +80,7 @@ LISTS_DEF = {
     "bgt-sociale": {
         "title": "Rrjete sociale (UT1 social_networks + HaGeZi social + Block List Project facebook, tiktok, twitter)",
         "local": ["social_networks"],
+        "learned": ["bgt-mesuar-sociale.txt"],
         "remote": [f"{HAGEZI}/social.txt", f"{BLP}/facebook-ags.txt", f"{BLP}/tiktok-ags.txt",
                    f"{BLP}/twitter-ags.txt"],
         "allow": ALLOW_SOCIAL, "min": 5000,
@@ -126,6 +128,12 @@ def build(name, d):
             got = parse(open(p, encoding="utf-8"))
             doms |= got
             used.append(f"UT1 {cat} ({len(got)})")
+    for fname in d.get("learned", []):   # learned by the schools from each other (bgt-learn.py)
+        p = os.path.join(LISTS, fname)
+        if os.path.exists(p):
+            got = parse(open(p, encoding="utf-8"))
+            doms |= got
+            used.append(f"{fname} ({len(got)})")
     for url in d["remote"]:
         try:
             got = parse(fetch(url))
