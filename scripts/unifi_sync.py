@@ -129,7 +129,22 @@ def read_merged(name):
     return doms
 
 
+def resolve_ids():
+    """UniFi Network 11 changed every id to a UUID: look the student network and the zones up by name
+    instead of trusting the constants (which stay only as a fallback)."""
+    global NETWORK_DEFAULT, ZONE_INTERNAL, ZONE_EXTERNAL
+    nets = {n.get("name"): n["_id"] for n in api("GET", "/api/s/default/rest/networkconf")["data"]}
+    NETWORK_DEFAULT = nets.get("VLAN-Students", NETWORK_DEFAULT)
+    for p in api("GET", "/v2/api/site/default/firewall-policies"):
+        if p.get("name", "").startswith("BGT Lojera UT1 #1 - "):
+            ZONE_INTERNAL = p.get("source", {}).get("zone_id", ZONE_INTERNAL)
+            ZONE_EXTERNAL = p.get("destination", {}).get("zone_id", ZONE_EXTERNAL)
+            break
+    print(f"id: rrjeti {NETWORK_DEFAULT}, zonat {ZONE_INTERNAL} -> {ZONE_EXTERNAL}")
+
+
 def main():
+    resolve_ids()
     merged = read_merged("bgt-lojera")   # UT1 games + CasCas2 school-gaming (has poki.io, unblocked-games mirrors)
     games = sorted((merged if merged else read_list("games")) | set(EXTRA_GAMES))
     if len(games) < MIN_GAME_DOMAINS:
