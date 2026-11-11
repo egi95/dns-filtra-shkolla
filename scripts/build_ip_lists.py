@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""IP lists for the routers, rebuilt every 6 hours (Tor changes often).
+"""IP lists for the routers, rebuilt every night (02:10 CET), like the other lists.
 
   lists/bgt-tor-ip.txt         every Tor relay that is running now (Tor Project Onionoo), one IPv4 per line
   lists/bgt-spamhaus-drop.txt  Spamhaus DROP: hijacked / criminal networks, one CIDR per line
