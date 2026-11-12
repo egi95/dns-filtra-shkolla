@@ -1,5 +1,6 @@
 ! Title: Rrjete sociale (UT1 social_networks + HaGeZi social + Block List Project facebook, tiktok, twitter)
 ! Source: UT1 social_networks (715)
+! Source: bgt-mesuar-sociale.txt (0)
 ! Source: https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/social.txt (8159)
 ! Source: https://blocklistproject.github.io/Lists/adguard/facebook-ags.txt (22361)
 ! Source: https://blocklistproject.github.io/Lists/adguard/tiktok-ags.txt (3722)

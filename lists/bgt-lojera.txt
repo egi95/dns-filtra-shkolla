@@ -1,5 +1,6 @@
 ! Title: Lojera (UT1 games + CasCas2 school-gaming)
 ! Source: UT1 games (33652)
+! Source: bgt-mesuar-lojera.txt (0)
 ! Source: https://raw.githubusercontent.com/CasCas2/school-gaming-dns-blocklist/main/mega-gaming-blocklist.txt (183)
 ! Licenses: UT1 CC BY-SA 4.0; HaGeZi GPL-3.0; Block List Project Unlicense; CasCas2 see repo
 ! Domains: 33769

@@ -1,8 +1,8 @@
 ! Title: Mashtrime / scam / fake shops (HaGeZi fake + Block List Project scam)
-! Source: https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/fake.txt (18846)
+! Source: https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/fake.txt (18848)
 ! Source: https://blocklistproject.github.io/Lists/adguard/scam-ags.txt (8527)
 ! Licenses: UT1 CC BY-SA 4.0; HaGeZi GPL-3.0; Block List Project Unlicense; CasCas2 see repo
-! Domains: 27198
+! Domains: 27200
 ||0-google.com^
 ||007-dvd.com^
 ||01crypto.com^
@@ -2486,7 +2486,6 @@
 ||berlincrown.com^
 ||berliner-gartenservice.de^
 ||berliner-laden.de^
-||berlinermode.shop^
 ||berlinfog.com^
 ||berlinget.com^
 ||berlinglamour.de^
@@ -2817,6 +2816,7 @@
 ||bikers-dates.com^
 ||bikers-nextdoor.com^
 ||bikescompetitive.com^
+||bikesexpert-de.com^
 ||bikesexpert.shop^
 ||bikeshockabsorberde.com^
 ||bikeskraft.de^
@@ -4460,7 +4460,6 @@
 ||cifad-ae.com^
 ||cifuentesdresseshop.com^
 ||cigarettesbtc.com^
-||cigarettescigs.com^
 ||cigartrade.net^
 ||cillva.com^
 ||cimerwatch.com^
@@ -4649,6 +4648,7 @@
 ||clubcougar.fr^
 ||clurophillashop.com^
 ||clutchlucky.com^
+||cluud7.com^
 ||cluxe.ma^
 ||cmchbhopal.com^
 ||cmctradingeu.com^
@@ -7466,7 +7466,6 @@
 ||ethikadeutschland.de^
 ||ethimostyle.com^
 ||ethnotheko.shop^
-||eticketsy.com^
 ||etkick.de^
 ||etniesshoesireland.com^
 ||etorooption.com^
@@ -9234,6 +9233,7 @@
 ||gartenstuhlemetall.com^
 ||gartentraktor.com^
 ||gartenundanhaenger.de^
+||gartenundhausmeisterservice.de^
 ||gartenundwerkzeug.com^
 ||gartenvision2.de^
 ||gartenwerkzeugeprofi.com^
@@ -9787,6 +9787,7 @@
 ||glurvextopin-official.com^
 ||gluschwein.de^
 ||glutadrops.com^
+||glutbar.de^
 ||gmbh2go.de^
 ||gmxcourierservice.com^
 ||gmzglobal.net^
@@ -9840,6 +9841,7 @@
 ||golden-goose.at^
 ||golden-outlet.de^
 ||golden-re.com^
+||goldenage-trading.com^
 ||goldenbayboutiques.com^
 ||goldenbestliquorshop.com^
 ||goldenbirdsgo.com^
@@ -11022,7 +11024,6 @@
 ||hiziel.de^
 ||hjmyfzzw.com^
 ||hjullagerdrivaxlar.com^
-||hjz-handel.de^
 ||hkguns.shop^
 ||hkgunstore.com^
 ||hkp-biofuels.com^
@@ -11925,6 +11926,7 @@
 ||instrklang.com^
 ||instructionk.com^
 ||instrumentak.com^
+||instrumentenvinyl.com^
 ||insuranks.com^
 ||intactlect.com^
 ||integisok.com^
@@ -14780,6 +14782,7 @@
 ||marktpro.de^
 ||marktsmart.de^
 ||marktzauberbox.com^
+||markvexo-ai.com^
 ||markvexo.at^
 ||markvexoki.at^
 ||marleytecnologica.com^
@@ -15600,7 +15603,6 @@
 ||mn.magazinmodern.de^
 ||mncprobuild.com^
 ||mngaristastore.de^
-||mnsnyavp.shop^
 ||mntasest.lol^
 ||moancd.shop^
 ||moaracafe.com^
@@ -17153,7 +17155,6 @@
 ||obligatione.com^
 ||obligeextent.com^
 ||obmarkets.com^
-||obolapvw.shop^
 ||oborondesign.shop^
 ||obozboots.com^
 ||obroker.com^
@@ -18698,6 +18699,7 @@
 ||polska-randki.com^
 ||polster-franz.at^
 ||polster-franz.de^
+||polstersofa.com^
 ||polvest.com^
 ||poly-dating.com^
 ||polycondistribution.com^
@@ -18846,6 +18848,7 @@
 ||preisrausch24.de^
 ||preistech.de^
 ||preiswertoutdoor.com^
+||preiswohnen.com^
 ||prelinker.net^
 ||prelox-guenstiger.de^
 ||premier-dream.co^
@@ -19473,6 +19476,7 @@
 ||radioxnl.com^
 ||radiusor.com^
 ||radixinvest.com^
+||radlerfrau.com^
 ||radliebeshop.de^
 ||radmarkt-schaeler.de^
 ||radrudel.de^
@@ -21684,6 +21688,7 @@
 ||smartplantivy.com^
 ||smartplayground.de^
 ||smartpower4all.org^
+||smartregler.com^
 ||smartro.de^
 ||smartsmokeshop.com^
 ||smartsteamershop.com^
@@ -21725,7 +21730,6 @@
 ||sneawin.com^
 ||snefe.cc^
 ||snitactical.com^
-||snjdueu.shop^
 ||snkzurich.com^
 ||snmea.shop^
 ||snoacks.com^
@@ -21855,6 +21859,7 @@
 ||soldtee.com^
 ||solepersonal.com^
 ||solern.top^
+||solgarag.com^
 ||solictedbyjule.shop^
 ||solid-arms.com^
 ||solidarityk.com^
@@ -22535,7 +22540,6 @@
 ||store.jaimerico.net^
 ||store.kestrelby.com^
 ||store.khoinguyenhanoi.vn^
-||store.kingslora.com^
 ||store.legabitid.com^
 ||store.lifewonderland.com^
 ||store.look-like-star.myshopify.com^
@@ -23058,7 +23062,6 @@
 ||t-shirtcheap.com^
 ||t.promotionsonlineusa.com^
 ||t3ml.com^
-||t4trade.com^
 ||tabexofficial.com^
 ||tablets-today.org^
 ||tablets-world.com^
@@ -24330,7 +24333,6 @@
 ||trustonlinepharmacy.com^
 ||trustpharm.to^
 ||trustpharm7pills.com^
-||trustpharmsonline.com^
 ||trustss.com^
 ||trustydealmarket.com^
 ||trustytime888.io^
@@ -24629,6 +24631,7 @@
 ||up2sales.de^
 ||upanddesko.shop^
 ||upap-papu.post^
+||updez.com^
 ||upfirmness.com^
 ||upgazette.com^
 ||upgradeoutdoors.com^
@@ -25398,7 +25401,6 @@
 ||vruktazelin.at^
 ||vruktazelin.tech^
 ||vs-home.de^
-||vsgdew.shop^
 ||vswatches.net^
 ||vtmfr.com^
 ||vtoolstore.de^
@@ -25412,7 +25414,6 @@
 ||vw-insights.de^
 ||vwutaq.com^
 ||vxbtools.com^
-||vxjskiy.shop^
 ||vyjak.com^
 ||vynox.de^
 ||vynxaria.com^
@@ -26754,7 +26755,6 @@
 ||xinghly.com^
 ||xinyuekj.com^
 ||xiruilai.com^
-||xjyehli.shop^
 ||xkmtmsgm.shop^
 ||xlumina.at^
 ||xlumina.de^
@@ -26798,6 +26798,7 @@
 ||xprtcoin.com^
 ||xqnail.com.au^
 ||xrivalfitness.com^
+||xsdcmnet.com^
 ||xshopcloud.com^
 ||xspiegel.de^
 ||xsy198.com^
@@ -26893,6 +26894,7 @@
 ||yonexs.at^
 ||yoocaa.com^
 ||yoocare.com^
+||yoohal.com^
 ||yooofa.com^
 ||yootet.com^
 ||yorkbootsshop.de^
