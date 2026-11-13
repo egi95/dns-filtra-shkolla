@@ -1,8 +1,8 @@
 ! Title: Mashtrime / scam / fake shops (HaGeZi fake + Block List Project scam)
-! Source: https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/fake.txt (18848)
+! Source: https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/fake.txt (18853)
 ! Source: https://blocklistproject.github.io/Lists/adguard/scam-ags.txt (8527)
 ! Licenses: UT1 CC BY-SA 4.0; HaGeZi GPL-3.0; Block List Project Unlicense; CasCas2 see repo
-! Domains: 27200
+! Domains: 27205
 ||0-google.com^
 ||007-dvd.com^
 ||01crypto.com^
@@ -8473,7 +8473,6 @@
 ||flow-tex.de^
 ||flowartshop.com^
 ||flowehoney.com^
-||floweraup.com^
 ||flowercomedy.com^
 ||flowerdelivery.com^
 ||flowermodas.com^
@@ -9466,6 +9465,8 @@
 ||geschirrs-de.com^
 ||gesichtkorperbeauty.com^
 ||gestion-de-patrimoine-asnieres.fr^
+||gestion-deblock.com^
+||gestion.finance^
 ||gesuender-im-leben.com^
 ||gesunderrasen.com^
 ||gesundeswelpenhaus.de^
@@ -11711,6 +11712,7 @@
 ||imprestsion.com^
 ||improbuehne.de^
 ||improvementy.com^
+||impruneta.de^
 ||impulsa.shop^
 ||imr-powders.com^
 ||imrhys.com^
@@ -14357,6 +14359,7 @@
 ||lukeshoe.com^
 ||luksfamily.com^
 ||luladiffusion.com^
+||luladress.com^
 ||lululemoneu.shop^
 ||lululemonhamburg.de^
 ||lululemonrabatt.de^
@@ -20293,6 +20296,7 @@
 ||rotweibwein.com^
 ||rotweinbar.com^
 ||rotyka.com^
+||rougeriefinance.com^
 ||roulettegem.com^
 ||roullei.com^
 ||roussebois.com^
@@ -24030,6 +24034,7 @@
 ||tp-treuhand.de^
 ||tpcinvest.com^
 ||tpugilismf.lol^
+||tr-brokers.com^
 ||tr-handschuho.shop^
 ||trabo-garten.de^
 ||tracedream.com^
