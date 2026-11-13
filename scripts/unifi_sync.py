@@ -37,6 +37,15 @@ ALWAYS = {"mode": "ALWAYS"}
 ALLOW = ["kahoot.com", "kahoot.it", "wordwall.net", "quizizz.com", "blooket.com", "scratch.mit.edu", "code.org",
          "chess.com", "lichess.org", "khanacademy.org", "typing.com", "geogebra.org", "duolingo.com",
          "learningapps.org", "liveworksheets.com", "play.google.com", "apps.apple.com"]
+# shared hosting / big platforms: their IPs also serve Google, Microsoft 365, GitHub, AWS... (see shared())
+SHARED_PLATFORMS = [
+    "google.com", "google.co.uk", "googleusercontent.com", "googleapis.com", "gstatic.com", "blogspot.com",
+    "blogger.com", "appspot.com", "withgoogle.com", "firebaseapp.com", "web.app", "youtube.com",
+    "microsoft.com", "msn.com", "bing.com", "live.com", "office.com", "windows.com", "windows.net", "xbox.com",
+    "azurewebsites.net", "azureedge.net", "skype.com", "apple.com", "icloud.com", "amazonaws.com",
+    "cloudfront.net", "akamaized.net", "akamaihd.net", "fastly.net", "github.io", "githubusercontent.com",
+    "gitlab.io", "netlify.app", "vercel.app", "herokuapp.com", "pages.dev", "workers.dev", "wordpress.com",
+    "weebly.com", "wixsite.com", "tumblr.com", "yahoo.com", "yahoo.co.jp", "aol.com", "facebook.com"]
 # browser-game sites blocked in BGT 1 that are missing from UT1
 EXTRA_GAMES = ["poki-gdn.com"]
 SECURITY_CATS = ["ddos", "dangerous_material", "warez", "tricheur"]
@@ -53,6 +62,14 @@ def api(method, path, body=None):
         sys.exit(f"{method} {path}: HTTP {e.code} {e.read()[:300]!r}")
 
 
+def shared(d):
+    """True for a site hosted on a big shared platform. UniFi blocks a domain list by the IPs the names
+    resolve to, so blocking 1001juegos.blogspot.com blocks every Google IP behind it (Search, Docs...),
+    and a *.live.com game page blocks Outlook/Office. Such names are left to AdGuard in BGT 1 (it blocks by
+    name, without collateral) and are not sent to UniFi."""
+    return any(d == p or d.endswith("." + p) for p in SHARED_PLATFORMS)
+
+
 def read_list(category):
     path = os.path.join(LISTS, f"ut1-{category}.txt")
     doms = set()
@@ -60,7 +77,7 @@ def read_list(category):
         line = line.strip()
         if line.startswith("||") and line.endswith("^"):
             d = line[2:-1]
-            if not any(d == a or d.endswith("." + a) for a in ALLOW):
+            if not any(d == a or d.endswith("." + a) for a in ALLOW) and not shared(d):
                 doms.add(d)
     return doms
 
@@ -127,7 +144,7 @@ def read_merged(name):
         line = line.strip()
         if line.startswith("||") and line.endswith("^"):
             d = line[2:-1]
-            if not any(d == a or d.endswith("." + a) for a in ALLOW):
+            if not any(d == a or d.endswith("." + a) for a in ALLOW) and not shared(d):
                 doms.add(d)
     return doms
 
