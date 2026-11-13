@@ -1,8 +1,9 @@
 #!/usr/bin/env python3
 """Keep the UniFi (BGT 2) blocking in sync with the lists of this repository.
 
-- Games, only during lessons: Domain Lists "BGT Lojera UT1 #1..#N" (lists/bgt-lojera.txt = UT1 games + CasCas2
-  school-gaming, plus EXTRA_GAMES, educational sites removed) and one BLOCK policy per list and lesson block: "BGT Lojera UT1 #k - Ora n".
+- Games, only during lessons: Domain List "BGT Lojera UT1 #1" = the main browser-game sites only (UNIFI_GAMES)
+  and one BLOCK policy per lesson block, "BGT Lojera UT1 #1 - Ora n". The big UT1 list is NOT sent to UniFi any
+  more: 33,500 domains made the UDM apply every firewall change about an hour late (13 Nov 2026).
 - Security, always: Domain List "BGT Siguria UT1" (UT1 ddos, dangerous_material, warez, tricheur) and
   the BLOCK policy "BGT Siguria UT1 - gjithmone". The other security categories come from the UniFi Content Filter.
 - AI chatbots: Domain List "BGT AI UT1" and one BLOCK policy per lesson block, "BGT AI UT1 - Ora n",
@@ -48,6 +49,13 @@ SHARED_PLATFORMS = [
     "weebly.com", "wixsite.com", "tumblr.com", "yahoo.com", "yahoo.co.jp", "aol.com", "facebook.com"]
 # browser-game sites blocked in BGT 1 that are missing from UT1
 EXTRA_GAMES = ["poki-gdn.com"]
+# the main browser-game sites (the same fixed list as the BGT 1 router script) + Roblox
+UNIFI_GAMES = ["poki.com", "poki-gdn.com", "crazygames.com", "y8.com", "friv.com", "miniclip.com", "kizi.com",
+               "coolmathgames.com", "1v1.lol", "krunker.io", "agar.io", "slither.io", "armorgames.com",
+               "kongregate.com", "silvergames.com", "lagged.com", "gamedistribution.com", "gamemonetize.com",
+               "gamepix.com", "famobi.com", "itch.io", "addictinggames.com", "miniplay.com", "1001games.com",
+               "roblox.com"]
+EMPTY_LIST = "bosh.bgt-lojera.example"   # reserved name that never resolves
 SECURITY_CATS = ["ddos", "dangerous_material", "warez", "tricheur"]
 
 
@@ -165,21 +173,20 @@ def resolve_ids():
 
 def main():
     resolve_ids()
-    merged = read_merged("bgt-lojera")   # UT1 games + CasCas2 school-gaming (has poki.io, unblocked-games mirrors)
-    games = sorted((merged if merged else read_list("games")) | set(EXTRA_GAMES))
-    if len(games) < MIN_GAME_DOMAINS:
-        sys.exit(f"vetem {len(games)} domene lojerash, asgje nuk ndryshohet")
-    n = -(-len(games) // MAX_PER_LIST)
-    if n > MAX_GAME_LISTS:
-        sys.exit(f"{len(games)} domene kerkojne {n} lista (maksimumi {MAX_GAME_LISTS}), asgje nuk ndryshohet")
-    size = -(-len(games) // n)
-    chunks = [games[i:i + size] for i in range(0, len(games), size)]
-
+    # 13 Nov 2026: the 33,500-domain game lists made the UDM apply every firewall change about an hour late
+    # (measured: lesson rules came on 45-60 min after their start and stayed on through the breaks, and an
+    # API change needed ~68 min to take effect). UniFi therefore gets only the main browser-game sites; game
+    # apps are blocked by the DPI category "Games" (app block "BGT Sociale") and the game ports. The big
+    # list stays in AdGuard (BGT 1), which blocks by name at no cost.
+    games = sorted(set(UNIFI_GAMES))
     s = Sync()
-    for k, members in enumerate(chunks, 1):
-        gid = s.group(f"BGT Lojera UT1 #{k}", members)
-        for ora, start, end in BLOCKS:
-            s.policy(f"BGT Lojera UT1 #{k} - {ora}", gid, lesson(start, end))
+    gid = s.group("BGT Lojera UT1 #1", games)
+    for ora, start, end in BLOCKS:
+        s.policy(f"BGT Lojera UT1 #1 - {ora}", gid, lesson(start, end))
+    for k in range(2, MAX_GAME_LISTS + 1):          # old big lists: emptied (UniFi refuses an empty group)
+        if f"BGT Lojera UT1 #{k}" in s.groups:
+            s.group(f"BGT Lojera UT1 #{k}", [EMPTY_LIST])
+    chunks = [games]
 
     security = sorted(set().union(*(read_list(c) for c in SECURITY_CATS)))
     if security:
