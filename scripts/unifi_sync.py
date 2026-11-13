@@ -5,8 +5,9 @@
   school-gaming, plus EXTRA_GAMES, educational sites removed) and one BLOCK policy per list and lesson block: "BGT Lojera UT1 #k - Ora n".
 - Security, always: Domain List "BGT Siguria UT1" (UT1 ddos, dangerous_material, warez, tricheur) and
   the BLOCK policy "BGT Siguria UT1 - gjithmone". The other security categories come from the UniFi Content Filter.
-- AI chatbots, only on request (exams): Domain List "BGT AI UT1" and the BLOCK policy "BGT AI UT1 - provime",
-  created switched off. The script never changes whether an existing policy is on or off.
+- AI chatbots: Domain List "BGT AI UT1" and one BLOCK policy per lesson block, "BGT AI UT1 - Ora n",
+  created switched off. The script never changes whether an existing policy is on or off, nor its schedule
+  (the admin's modes blloko / lejo / orar are set by bgt-modi on the BGT 1 server).
 
 Creates what is missing and updates list members; objects with other names are never touched.
 Needs UNIFI_API_KEY and UNIFI_CONSOLE (the console id used in the api.ui.com connector URL).
@@ -109,7 +110,9 @@ class Sync:
             api("POST", "/v2/api/site/default/firewall-policies", policy_body(name, gid, schedule, enabled_when_new))
             self.created += 1
         elif p.get("destination", {}).get("web_group_id") != gid:
-            body = dict(policy_body(name, gid, schedule, p.get("enabled", enabled_when_new)), _id=p["_id"])
+            # keep the current on/off state and schedule: the admin's modes (blloko = ALWAYS) must survive the sync
+            body = dict(policy_body(name, gid, p.get("schedule") or schedule, p.get("enabled", enabled_when_new)),
+                        _id=p["_id"])
             api("PUT", f"/v2/api/site/default/firewall-policies/{p['_id']}", body)
             print(f"{name}: lista u lidh perseri")
 
@@ -170,9 +173,13 @@ def main():
     if learned:
         s.policy("BGT Mesuar nga BGT1 - gjithmone", s.group("BGT Mesuar nga BGT1", learned[:MAX_PER_LIST]), ALWAYS)
 
+    # AI: one policy per lesson block like the games, created switched off; the admin's modes
+    # (bgt-modi on the BGT 1 server) decide whether they are on, off or "all day".
     ai = sorted(read_list("ai"))
     if ai:
-        s.policy("BGT AI UT1 - provime", s.group("BGT AI UT1", ai), ALWAYS, enabled_when_new=False)
+        gid = s.group("BGT AI UT1", ai)
+        for ora, start, end in BLOCKS:
+            s.policy(f"BGT AI UT1 - {ora}", gid, lesson(start, end), enabled_when_new=False)
 
     print(f"lojera: {len(games)} domene ne {len(chunks)} lista; siguria: {len(security)}; AI: {len(ai)}; "
           f"rregulla te reja: {s.created}")
