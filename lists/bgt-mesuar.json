@@ -1,1 +1,226 @@
-{}
+{
+"gjithmone:aapljs.com": {
+"kind": "gjithmone",
+"domain": "aapljs.com",
+"first": 1794622637.3416238,
+"last": 1794622637.3416238,
+"max_clients": 2
+},
+"gjithmone:analytics-toolbar.falais.com": {
+"kind": "gjithmone",
+"domain": "analytics-toolbar.falais.com",
+"first": 1794622637.3416238,
+"last": 1794622637.3416238,
+"max_clients": 4
+},
+"gjithmone:analytics-toolbar.urban-vpn.com": {
+"kind": "gjithmone",
+"domain": "analytics-toolbar.urban-vpn.com",
+"first": 1794622637.3416238,
+"last": 1794622637.3416238,
+"max_clients": 4
+},
+"gjithmone:analytics.falais.com": {
+"kind": "gjithmone",
+"domain": "analytics.falais.com",
+"first": 1794622637.3416238,
+"last": 1794622637.3416238,
+"max_clients": 4
+},
+"gjithmone:anti-phishing-protection.falais.com": {
+"kind": "gjithmone",
+"domain": "anti-phishing-protection.falais.com",
+"first": 1794622637.3416238,
+"last": 1794622637.3416238,
+"max_clients": 4
+},
+"gjithmone:anti-phishing-protection.urban-vpn.com": {
+"kind": "gjithmone",
+"domain": "anti-phishing-protection.urban-vpn.com",
+"first": 1794622637.3416238,
+"last": 1794622637.3416238,
+"max_clients": 4
+},
+"gjithmone:antpeak.com": {
+"kind": "gjithmone",
+"domain": "antpeak.com",
+"first": 1794622637.3416238,
+"last": 1794622637.3416238,
+"max_clients": 6
+},
+"gjithmone:api.totallyacdn.com": {
+"kind": "gjithmone",
+"domain": "api.totallyacdn.com",
+"first": 1794622637.3416238,
+"last": 1794622637.3416238,
+"max_clients": 2
+},
+"gjithmone:api.windscribe.com": {
+"kind": "gjithmone",
+"domain": "api.windscribe.com",
+"first": 1794622637.3416238,
+"last": 1794622637.3416238,
+"max_clients": 2
+},
+"gjithmone:api2.sec-tunnel.com": {
+"kind": "gjithmone",
+"domain": "api2.sec-tunnel.com",
+"first": 1794622637.3416238,
+"last": 1794622637.3416238,
+"max_clients": 2
+},
+"gjithmone:authentication.falais.com": {
+"kind": "gjithmone",
+"domain": "authentication.falais.com",
+"first": 1794622637.3416238,
+"last": 1794622637.3416238,
+"max_clients": 4
+},
+"gjithmone:authentication.urban-vpn.com": {
+"kind": "gjithmone",
+"domain": "authentication.urban-vpn.com",
+"first": 1794622637.3416238,
+"last": 1794622637.3416238,
+"max_clients": 4
+},
+"gjithmone:cheapauth.com": {
+"kind": "gjithmone",
+"domain": "cheapauth.com",
+"first": 1794622637.3416238,
+"last": 1794622637.3416238,
+"max_clients": 2
+},
+"gjithmone:config-toolbar.falais.com": {
+"kind": "gjithmone",
+"domain": "config-toolbar.falais.com",
+"first": 1794622637.3416238,
+"last": 1794622637.3416238,
+"max_clients": 4
+},
+"gjithmone:config-toolbar.urban-vpn.com": {
+"kind": "gjithmone",
+"domain": "config-toolbar.urban-vpn.com",
+"first": 1794622637.3416238,
+"last": 1794622637.3416238,
+"max_clients": 4
+},
+"gjithmone:dns-tunnel-check.googlezip.net": {
+"kind": "gjithmone",
+"domain": "dns-tunnel-check.googlezip.net",
+"first": 1794622637.3416238,
+"last": 1794622637.3416238,
+"max_clients": 3
+},
+"gjithmone:dns11.quad9.net": {
+"kind": "gjithmone",
+"domain": "dns11.quad9.net",
+"first": 1794622637.3416238,
+"last": 1794622637.3416238,
+"max_clients": 4
+},
+"gjithmone:download.veepn.com": {
+"kind": "gjithmone",
+"domain": "download.veepn.com",
+"first": 1794622637.3416238,
+"last": 1794622637.3416238,
+"max_clients": 2
+},
+"gjithmone:freloop.com": {
+"kind": "gjithmone",
+"domain": "freloop.com",
+"first": 1794622637.3416238,
+"last": 1794622637.3416238,
+"max_clients": 2
+},
+"gjithmone:ipv4.oxylabs.io": {
+"kind": "gjithmone",
+"domain": "ipv4.oxylabs.io",
+"first": 1794622637.3416238,
+"last": 1794622637.3416238,
+"max_clients": 3
+},
+"gjithmone:nl138.rapidstaticserve.cc": {
+"kind": "gjithmone",
+"domain": "nl138.rapidstaticserve.cc",
+"first": 1794622637.3416238,
+"last": 1794622637.3416238,
+"max_clients": 2
+},
+"gjithmone:premzon.com": {
+"kind": "gjithmone",
+"domain": "premzon.com",
+"first": 1794622637.3416238,
+"last": 1794622637.3416238,
+"max_clients": 4
+},
+"gjithmone:proigor.com": {
+"kind": "gjithmone",
+"domain": "proigor.com",
+"first": 1794622637.3416238,
+"last": 1794622637.3416238,
+"max_clients": 4
+},
+"gjithmone:protonvpn.com": {
+"kind": "gjithmone",
+"domain": "protonvpn.com",
+"first": 1794622637.3416238,
+"last": 1794622637.3416238,
+"max_clients": 2
+},
+"gjithmone:qodami.com": {
+"kind": "gjithmone",
+"domain": "qodami.com",
+"first": 1794622637.3416238,
+"last": 1794622637.3416238,
+"max_clients": 2
+},
+"gjithmone:rapidsignin.com": {
+"kind": "gjithmone",
+"domain": "rapidsignin.com",
+"first": 1794622637.3416238,
+"last": 1794622637.3416238,
+"max_clients": 2
+},
+"gjithmone:sns.veepn.com": {
+"kind": "gjithmone",
+"domain": "sns.veepn.com",
+"first": 1794622637.3416238,
+"last": 1794622637.3416238,
+"max_clients": 2
+},
+"gjithmone:split-tool.com": {
+"kind": "gjithmone",
+"domain": "split-tool.com",
+"first": 1794622637.3416238,
+"last": 1794622637.3416238,
+"max_clients": 9
+},
+"gjithmone:tronyza.com": {
+"kind": "gjithmone",
+"domain": "tronyza.com",
+"first": 1794622637.3416238,
+"last": 1794622637.3416238,
+"max_clients": 2
+},
+"gjithmone:tunnel.googlezip.net": {
+"kind": "gjithmone",
+"domain": "tunnel.googlezip.net",
+"first": 1794622637.3416238,
+"last": 1794622637.3416238,
+"max_clients": 19
+},
+"gjithmone:vpn-api.proton.me": {
+"kind": "gjithmone",
+"domain": "vpn-api.proton.me",
+"first": 1794622637.3416238,
+"last": 1794622637.3416238,
+"max_clients": 6
+},
+"gjithmone:zorvian.com": {
+"kind": "gjithmone",
+"domain": "zorvian.com",
+"first": 1794622637.3416238,
+"last": 1794622637.3416238,
+"max_clients": 8
+}
+}
