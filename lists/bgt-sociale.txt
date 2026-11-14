@@ -1,12 +1,12 @@
 ! Title: Rrjete sociale (UT1 social_networks + HaGeZi social + Block List Project facebook, tiktok, twitter)
 ! Source: UT1 social_networks (715)
 ! Source: bgt-mesuar-sociale.txt (0)
-! Source: https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/social.txt (8159)
+! Source: https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/social.txt (8197)
 ! Source: https://blocklistproject.github.io/Lists/adguard/facebook-ags.txt (22361)
 ! Source: https://blocklistproject.github.io/Lists/adguard/tiktok-ags.txt (3722)
 ! Source: https://blocklistproject.github.io/Lists/adguard/twitter-ags.txt (1193)
 ! Licenses: UT1 CC BY-SA 4.0; HaGeZi GPL-3.0; Block List Project Unlicense; CasCas2 see repo
-! Domains: 35222
+! Domains: 35260
 ||0-1.fb.me^
 ||0-144-243f1.fbjs.facebook.com^
 ||0-157-99-m.lite.facebook.com^
@@ -199,6 +199,7 @@
 ||3dokby.toutiao50.com^
 ||3dp.chat^
 ||3rdwall.net^
+||3zi.ru^
 ||4-edge-chat-latest.facebook.com^
 ||4-edge-chat-latest.messenger.com^
 ||4-edge-chat.facebook.com^
@@ -212,6 +213,7 @@
 ||455676461606571.apps.fbsbx.com^
 ||45sukey.com^
 ||472064670264-p830d2k61ivgab1ihaq1oe5u50jf54q9.apps.googleusercontent.com^
+||4bear.com^
 ||4cdn.org^
 ||4chan.org^
 ||4channel.org^
@@ -219,7 +221,6 @@
 ||4erd.ac^
 ||4four.org^
 ||4g.fb.me^
-||4unt1ngt0n.social^
 ||4urwgge7.dns.facebook.com^
 ||5-edge-chat-latest.facebook.com^
 ||5-edge-chat-latest.messenger.com^
@@ -846,7 +847,6 @@
 ||akkoma.ascyltos.social^
 ||akkoma.flyerdonut.net^
 ||akkoma.lidny.org^
-||akkoma.moemoekyun.top^
 ||akkoma.noellabo.jp^
 ||akkoma.tomkrizan.com^
 ||akolades.com^
@@ -859,6 +859,7 @@
 ||alentours.cc^
 ||aleph.land^
 ||alerts.shilohnewark.org^
+||alexme.ru^
 ||alfredadler.social^
 ||algar.m.facebook.com^
 ||algufr.com^
@@ -890,6 +891,7 @@
 ||all.webcast-lb-lq-ttgw.l.bytedns.net^
 ||allav.me^
 ||allday20.messenger.com^
+||alleysmith.family^
 ||allmyfavorites.net^
 ||allo.m.facebook.com^
 ||allovertheplace.ca^
@@ -913,12 +915,12 @@
 ||alpha.messenger.com^
 ||alpha.vvv.facebook.com^
 ||alquimidia.cc^
+||alt-f4.sk^
 ||altavia.facebook.com^
 ||alteholz.social^
 ||altgag.net^
 ||altmedia.house^
 ||altmx.twitter.com^
-||alwayssleeping.com^
 ||am-et.de-de.zh-cn.fbjs.facebook.com^
 ||am-et.facebook.com^
 ||am-et.nn-no.pl-pl.tr-tr.prod.facebook.com^
@@ -982,7 +984,6 @@
 ||anchor.facebook.com^
 ||and.farewell.my^
 ||anda.lu^
-||andamunda.alda.ms^
 ||andrea.messenger.com^
 ||androidbook2020.keiji.io^
 ||androiddev.social^
@@ -995,7 +996,6 @@
 ||animal.business^
 ||animalesenfu.ga^
 ||anisaga.life^
-||ankoskey.net^
 ||anml.io^
 ||announcements.m.beta.facebook.com^
 ||anobii.com^
@@ -2327,6 +2327,7 @@
 ||as-in.th-th.de-de.prod.facebook.com^
 ||as-in.www.www.lite.facebook.com^
 ||asahdigital.fb.com^
+||asamblea.social^
 ||aschaffenburg.social^
 ||ascy.mooo.com^
 ||ash-appstore.fb.com^
@@ -2580,6 +2581,7 @@
 ||az-az.zh-tw.ro-ro.fbjs.facebook.com^
 ||az-az.zh-tw.upps.lite.facebook.com^
 ||az-az.zh.lite.facebook.com^
+||az-social.xyz^
 ||az.calmo.blue^
 ||az.social^
 ||azarlive.com^
@@ -2604,6 +2606,7 @@
 ||b.fb.me^
 ||b.i.instagram.com^
 ||b.ish.instagram.com^
+||b.koa.im^
 ||b.l.bytedns.net^
 ||b.messenger.com^
 ||b.ns.c10r.facebook.com^
@@ -2669,7 +2672,6 @@
 ||barkclub.xyz^
 ||barmano.com^
 ||barstool.twitter.com^
-||base.lc^
 ||basilisk.gallery^
 ||bastodon.bida.im^
 ||batchats.net^
@@ -2746,11 +2748,9 @@
 ||bemrose.social^
 ||benaristavern.com^
 ||bench.thecommonshub.com^
-||beo.social^
 ||beppo.online^
 ||bequeme-couch.de^
 ||beratna.net^
-||bergamot.social^
 ||berlin.social^
 ||bermus.dk^
 ||bertha.social^
@@ -2896,6 +2896,7 @@
 ||bideoteka.eus^
 ||bidule.menf.in^
 ||bidv.m.facebook.com^
+||bien-etre.social^
 ||big8686-com.autodiscover.oculusvr.com^
 ||bigbeans.solutions^
 ||bigrat.social^
@@ -2903,7 +2904,6 @@
 ||bigzipfiles.messenger.com^
 ||bihar.social^
 ||biii.li^
-||bikersgo.social^
 ||bildung.social^
 ||billboard.twitter.com^
 ||billboardgrammys.twitter.com^
@@ -2981,7 +2981,6 @@
 ||bliry.fr^
 ||blob.cat^
 ||blobfox.es^
-||bloc.in4matics.cat^
 ||block-test-facebook.developerdan.com^
 ||block-test.developerdan.com^
 ||blockchained.world^
@@ -3003,7 +3002,6 @@
 ||blog.bunk.computer^
 ||blog.byl.fr^
 ||blog.cashparkingtest.com^
-||blog.chikim.com^
 ||blog.cjeller.site^
 ||blog.de-lacom.be^
 ||blog.de.twitter.com^
@@ -3025,7 +3023,6 @@
 ||blog.gaza.onl^
 ||blog.gemnoc.ca^
 ||blog.harmonyfour.com^
-||blog.heartade.dev^
 ||blog.hilltown.studio^
 ||blog.hllcn.xyz^
 ||blog.information-superhighway.net^
@@ -3046,6 +3043,7 @@
 ||blog.leadingzeroes.com^
 ||blog.librescrum.org^
 ||blog.lite.facebook.com^
+||blog.luismarques.me^
 ||blog.mapsupport.club^
 ||blog.mbe.tv^
 ||blog.meghadeep.com^
@@ -3059,6 +3057,7 @@
 ||blog.palermo.nohost.me^
 ||blog.philipphoefer.de^
 ||blog.philsas.one^
+||blog.potetserver.no^
 ||blog.pt.twitter.com^
 ||blog.radmin.live^
 ||blog.raindog.de^
@@ -3217,6 +3216,7 @@
 ||bots.doo.dad^
 ||bots.fedi.cr^
 ||bots.krohsnest.com^
+||bots.mpaq.org^
 ||bots.robots.rodeo^
 ||bounce.twitter.com^
 ||boundcovers.com^
@@ -3224,6 +3224,7 @@
 ||box.net^
 ||boxing.twitter.com^
 ||boys-love.xyz^
+||boyslop.dev^
 ||bqdlot1ghj5uzk8wp4920sfvnr3iameycx76.fb.me^
 ||br-fr.af-za.ro-ro.fbjs.facebook.com^
 ||br-fr.facebook.com^
@@ -3235,7 +3236,6 @@
 ||br.newsroom.fb.com^
 ||br.terada.casa^
 ||br.yearinreview.fb.com^
-||brainport.social^
 ||branch.twitter.com^
 ||brand-dev.twitter.com^
 ||brand-staging.twitter.com^
@@ -3431,7 +3431,6 @@
 ||bytetcdn.com^
 ||bytewlb.akadns.net^
 ||bytps.snssdk.com^
-||byzantinenexus.io^
 ||c.bytetcdn.com^
 ||c.facebook.com^
 ||c.fb.messenger.com^
@@ -3545,9 +3544,9 @@
 ||callcentermaske.fbsbx.com^
 ||callcentermaske.internmcr.facebook.com^
 ||calobar.club^
+||camaapp.camfed.org^
 ||camarena.cc^
 ||camp.smolnet.org^
-||campduffel.social^
 ||campfyre.nickwebster.dev^
 ||can.fbsbx.com^
 ||canada.m.beta.facebook.com^
@@ -3556,7 +3555,6 @@
 ||canary.twitter.com^
 ||caneandable.social^
 ||cansoccer.social^
-||cantinho.falnes.io^
 ||canvas.facebook.com^
 ||canzan.chat^
 ||capcom.social^
@@ -3596,6 +3594,7 @@
 ||carstagram.com^
 ||cas.social^
 ||cascarilla.social^
+||casjay.social^
 ||castmsc1.xzcs3zlph.com^
 ||castmsc1.xzcs3zlph.com.edgesuite.net^
 ||casttt1.xzcs3zlph.com^
@@ -3604,8 +3603,6 @@
 ||catboy.baby^
 ||catcatnya.com^
 ||catgirls.technology^
-||catharsis.cafe^
-||catharsis.emancipe.org^
 ||cathode.church^
 ||catsocial.fyi^
 ||catster.com^
@@ -3625,6 +3622,7 @@
 ||cb-iq.pl-pl.tr-tr.prod.facebook.com^
 ||cb-iq.s.ar.ar.lite.facebook.com^
 ||cb.ameuma.net^
+||cbr.social^
 ||cc.tiktok.com^
 ||cc.toutiao.com^
 ||ccamatil.facebook.com^
@@ -3699,12 +3697,14 @@
 ||channel.org^
 ||channels.im^
 ||chaos-boe.byted.org^
+||chaos-gp.social^
 ||chaos.social^
 ||chaosfem.tw^
 ||chaosfurs.social^
 ||chaosphere.hostdon.jp^
 ||char.lissocial.com^
 ||charisskey.com^
+||charities.place^
 ||charlottesville.twitter.com^
 ||chaskey.net^
 ||chat.messenger.com^
@@ -3941,7 +3941,6 @@
 ||contentdistributionpolicy.fb.com^
 ||contentpop.com^
 ||contenttechtodon.org^
-||conversafiada.net^
 ||converse.twitter.com^
 ||convo.casa^
 ||coolkids.house^
@@ -3949,7 +3948,6 @@
 ||cooltwitter.com^
 ||coolviruses.download^
 ||copainsdavant.linternaute.com^
-||copland.social^
 ||coplus.social^
 ||cordel.social^
 ||core01.m.beta.facebook.com^
@@ -4063,7 +4061,6 @@
 ||creators.social^
 ||credit.snssdk.com^
 ||creemoseducacioninclusiva.uma.es^
-||cremebrul.ee^
 ||crib.social^
 ||crispsandwi.ch^
 ||critter.cafe^
@@ -4215,7 +4212,6 @@
 ||cuddly.pics^
 ||cuddly.space^
 ||cuddly.tube^
-||cultofshiv.wtf^
 ||cultur.social^
 ||cunnin.me^
 ||cupidslab.com^
@@ -4230,7 +4226,6 @@
 ||cutie.city^
 ||cuties.cloud^
 ||cuties.social^
-||cuties.zip^
 ||cville.online^
 ||cvjm.social^
 ||cwb.social^
@@ -4448,6 +4443,7 @@
 ||da-dk.zh-tw.upps.lite.facebook.com^
 ||da-dk.zh.lite.facebook.com^
 ||da-dk.zh.tw.lite.facebook.com^
+||daan.social^
 ||dacebook.com^
 ||daedal.io^
 ||daepi.so^
@@ -4469,6 +4465,7 @@
 ||darkmoon.fb.me^
 ||darkmoon.social^
 ||darkprism.christmas^
+||darkraislegs.org^
 ||darksheep.photo^
 ||darksheep.social^
 ||darktundra.xyz^
@@ -4518,6 +4515,7 @@
 ||dcsutodiscover.oculusvr.com^
 ||dd.fb.me^
 ||ddoskey.com^
+||ddtbanaketak.com^
 ||de-de.aap.lite.facebook.com^
 ||de-de.ad-dk.lite.facebook.com^
 ||de-de.af-za.lite.facebook.com^
@@ -4938,6 +4936,7 @@
 ||debaac5c.tt.x.bsgslb.cn^
 ||debate.twitter.com^
 ||debates.twitter.com^
+||dec.fix.wien^
 ||decentralis.social^
 ||deds.social^
 ||deelneming.pic.twitter.com^
@@ -4945,6 +4944,7 @@
 ||deepspace.social^
 ||defcon.social^
 ||deff.no^
+||degrowth.social^
 ||del-tec.latest.facebook.com^
 ||del.icio.us^
 ||delicious.com^
@@ -5247,7 +5247,6 @@
 ||doh.byteoversea.com^
 ||dol2day.de^
 ||domi.love^
-||domum.social^
 ||domystuff.com^
 ||don.dondododon.com^
 ||don.gomasy.jp^
@@ -5319,7 +5318,6 @@
 ||dreamfly.oculusvr.com^
 ||dreamforce.twitter.com^
 ||dreamhack.twitter.com^
-||dreamin.online^
 ||dreamleague.twitter.com^
 ||drehspiess-online.de^
 ||dreiecksnebel.alex-detsch.de^
@@ -5428,7 +5426,6 @@
 ||e.toutiao.com^
 ||e21.kyent.net^
 ||e3.twitter.com^
-||e4le.me^
 ||eager.oculusvr.com^
 ||eagleye.snssdk.com^
 ||eagleye.snssdk.com.w.kunluncan.com^
@@ -6250,6 +6247,7 @@
 ||effect.tiktok.com^
 ||eggware.social^
 ||egmont.facebook.com^
+||egomemei.com^
 ||ehrenamt.fb.com^
 ||eicker.news^
 ||eientei.org^
@@ -6737,7 +6735,6 @@
 ||entdiscovide.facebookbrand-2018-preprod.fb.com^
 ||entdiscovide.facebookbrand-2018.fb.com^
 ||entel.m.facebook.com^
-||enterprise.lemmy.ml^
 ||entertainment-autodiscover.oculusvr.com^
 ||entheoconnect.social^
 ||entomophagy.world^
@@ -7500,6 +7497,7 @@
 ||espinthebottle.com^
 ||esports.twitter.com^
 ||esq.social^
+||esquite.mazorca.org^
 ||essence.twitter.com^
 ||essencefest.twitter.com^
 ||essencefestival.twitter.com^
@@ -8016,7 +8014,6 @@
 ||f.ish.instagram.com^
 ||f.l.bytedns.net^
 ||f.messenger.com^
-||f.reun.de^
 ||f.starshard.space^
 ||f0055da6680-saszcseq1598645580-sonar.xz.fbcdn.net^
 ||f00bd35c580-ujchqzru1608599591-sonar.xz.fbcdn.net^
@@ -9264,6 +9261,7 @@
 ||famitsu.twitter.com^
 ||famiva.com^
 ||fanaticus.social^
+||fanboys.social^
 ||fandom.garden^
 ||fandom.ink^
 ||fanfare.horse^
@@ -9436,6 +9434,7 @@
 ||fbcallback.wechat.com^
 ||fbcb9d0b380-kzdnngfl1581599608-sonar.xz.fbcdn.net^
 ||fbcbc8e9680-pbchotmc1608992986-sonar.xz.fbcdn.net^
+||fbcdn-a.akamaihd.net^
 ||fbcdn-cachefill-shv-01-arn2.fbcdn.net^
 ||fbcdn-creative-a.akamaihd.net^
 ||fbcdn-photos-a.akamaihd.net^
@@ -9500,7 +9499,6 @@
 ||fbinfer.com^
 ||fbinnovation.com^
 ||fbjs.facebook.com^
-||fbk.moe^
 ||fbkbmeghbibjiafcnpoolefnkmampm.fbsbx.com^
 ||fblite-mini.c10r.facebook.com^
 ||fblite-p1.c10r.facebook.com^
@@ -9791,6 +9789,7 @@
 ||fed.dyne.org^
 ||fed.fsub.de^
 ||fed.identify.eu.org^
+||fed.mavzer.org^
 ||fed0ff43580-vfqsgpro1611740953-sonar.xz.fbcdn.net^
 ||fed3c59cc80-xgvbmcsj1592296751-sonar.xz.fbcdn.net^
 ||fed4a87de80-vzilcwrf1611911689-sonar.xz.fbcdn.net^
@@ -9809,6 +9808,7 @@
 ||feddit.rocks^
 ||feddit.uk^
 ||federate.social^
+||federated.glacier.dog^
 ||federated.photos^
 ||federatedfandom.net^
 ||federatedhub.org^
@@ -9826,6 +9826,7 @@
 ||fedi.eepycats.place^
 ||fedi.enbyinsi.de^
 ||fedi.engelise.online^
+||fedi.epicalert.xyz^
 ||fedi.fabrykajabo.li^
 ||fedi.flauschhaufen.jetzt^
 ||fedi.fraw.st^
@@ -9867,9 +9868,9 @@
 ||fedi.worf.win^
 ||fedi.xamk.fi^
 ||fedi.xirion.net^
-||fedi.yesmap.net^
 ||fedi.yutakobayashi.com^
 ||fedia.social^
+||fediblog.parleur.net^
 ||fedibook.de^
 ||fedibots.mldkyt.com^
 ||fedidb.org^
@@ -9928,6 +9929,7 @@
 ||felesitas.cloud^
 ||fellies.social^
 ||fem.elbarri.online^
+||fem.social^
 ||femboy.enterprises^
 ||femos.trobada.social^
 ||fenmou.cyou^
@@ -10159,8 +10161,8 @@
 ||fido.ebash.it^
 ||field.m.beta.facebook.com^
 ||fietkau.social^
+||fietser.social^
 ||fifthharmony.twitter.com^
-||fika.grin.hu^
 ||fikaverse.club^
 ||file-explorers.club^
 ||files.fb.com^
@@ -10347,9 +10349,9 @@
 ||foodvaccine.facebookbrand-dev.fb.com^
 ||foodvaccine.facebookbrand-preprod.fb.com^
 ||foojay.social^
+||foolisholivia.gay^
 ||forall.social^
 ||foralltime.icu^
-||forcefemm.ing^
 ||foresdon.jp^
 ||forestodon.com^
 ||foreveryou.ng^
@@ -10367,7 +10369,7 @@
 ||fortune-hl.snssdk.com^
 ||fortune.snssdk.com^
 ||fortune.snssdk.com.w.kunluncan.com^
-||forum-lucifer.com^
+||forum.castellvirtual.com^
 ||forum.guncadindex.com^
 ||forum.jmklab.dev^
 ||forum.storstad.net^
@@ -10391,6 +10393,7 @@
 ||fotolibre.social^
 ||fotolog.com^
 ||fotos.joaoaguiar.com.br^
+||fotos.rogerruckstuhl.ch^
 ||fotostrana.ru^
 ||fotz.cc^
 ||four-nine.club^
@@ -10963,6 +10966,7 @@
 ||freeofvirus.beta.facebook.com^
 ||freeradical.zone^
 ||freesewing.social^
+||freeski.msnis.net^
 ||freeware.m.beta.facebook.com^
 ||freiburg.social^
 ||freie-radios.org^
@@ -10991,8 +10995,6 @@
 ||friendica.helvetet.eu^
 ||friendica.kommune4.de^
 ||friendica.me^
-||friendica.mesnumeriques.fr^
-||friendica.myportal.social^
 ||friendica.namestaci.cz^
 ||friendica.opensocial.space^
 ||friendica.philipp.info^
@@ -11197,6 +11199,7 @@
 ||gayrobot.club^
 ||gays.com^
 ||gayweeb.vip^
+||gazette.live^
 ||gazouiller.fr^
 ||gb.latest.instagram.com^
 ||gb.lite.facebook.com^
@@ -11424,6 +11427,7 @@
 ||gingerhotels.m.facebook.com^
 ||gini.snssdk.com^
 ||ginpatu.moe^
+||gioia.news^
 ||gioia.social^
 ||giphy.fb.me^
 ||giphy.map.fastly.net^
@@ -11648,6 +11652,7 @@
 ||grpah.fb.me^
 ||grph.fb.me^
 ||grraph.fb.me^
+||grrl.me^
 ||grsaph.fb.me^
 ||grsph.fb.me^
 ||grtaph.fb.me^
@@ -11704,6 +11709,7 @@
 ||gu-in.m.prod.facebook.com^
 ||gu-in.pl-pl.tr-tr.prod.facebook.com^
 ||gu-in.s.ar.ar.lite.facebook.com^
+||guelph.social^
 ||guerrill.art^
 ||guild.explorers.gay^
 ||guild.pmdcollab.org^
@@ -11951,6 +11957,7 @@
 ||heliamask.facebookbrand-preprod.fb.com^
 ||helios.facebook.com^
 ||hell.cloud^
+||hellel.world^
 ||hellinger.wtf^
 ||hellions.cloud^
 ||hello.facebook.com^
@@ -12280,7 +12287,6 @@
 ||himagine.club^
 ||hippotterystudio.com^
 ||hiradai.space^
-||hiryu-yakiniku.hostdon.ne.jp^
 ||hispagatos.space^
 ||historiette.lokipropagand.art^
 ||hitchtube.fr^
@@ -12337,6 +12343,7 @@
 ||horizon-dev.twitter.com^
 ||horizon-staging.twitter.com^
 ||horizon.twitter.com^
+||horrortalk.social^
 ||hortensia.social^
 ||hosebird.twitter.com^
 ||hosekjan.cz^
@@ -12371,6 +12378,7 @@
 ||hounds.online^
 ||houseofholland.twitter.com^
 ||houshindai.net^
+||hovis.lol^
 ||howdee.social^
 ||howse.social^
 ||howseven.social^
@@ -12676,6 +12684,7 @@
 ||humano.social^
 ||humblevoice.com^
 ||hungthinhland.facebook.com^
+||hunni.space^
 ||hunterlife.net^
 ||hunters.zone^
 ||hunu.m.facebook.com^
@@ -12793,6 +12802,7 @@
 ||ic-lq.snssdk.com^
 ||ic.snssdk.com^
 ||ic.snssdk.com.w.kunluncan.com^
+||icanteventoot.help^
 ||icarecafe.com^
 ||ice-lolly.social^
 ||ice.ch3.st^
@@ -12963,6 +12973,7 @@
 ||id.snssdk.com^
 ||ide.fbsbx.com^
 ||idea.oksocial.net^
+||idealists.su^
 ||identi.ca^
 ||idf.social^
 ||idic.social^
@@ -14986,7 +14997,6 @@
 ||ironmask.4g.fb.me^
 ||irrelephant.co^
 ||is-a.cat^
-||is-a.catinsi.de^
 ||is-dyn1.snssdk.com^
 ||is-dyn3.snssdk.com^
 ||is-dyn5-hl.snssdk.com^
@@ -15518,7 +15528,6 @@
 ||it.snssdk.com^
 ||it.snssdk.com.w.kunluncan.com^
 ||it.yearinreview.fb.com^
-||itabashi.0j0.jp^
 ||italia.fb.com^
 ||italki.com^
 ||italy.fb.com^
@@ -15899,6 +15908,7 @@
 ||joinpeertube.org^
 ||jointaddress.twitter.com^
 ||jointsession.twitter.com^
+||joj.foundation^
 ||jonw.mayhem.academy^
 ||joomla.social^
 ||jornalismo.social^
@@ -16108,7 +16118,6 @@
 ||khalid.twitter.com^
 ||khiar.net^
 ||kidlinkz.com^
-||kiek.opensoos.nl^
 ||kill-corporations.enterprises^
 ||killerstartups.com^
 ||kiloduck.com^
@@ -16527,6 +16536,8 @@
 ||kusso-yotta.com^
 ||kutsuya.dev^
 ||kuu.moe^
+||kvarkki.nexus^
+||kviz.leemoon.network^
 ||kwick.rip^
 ||kwkz.ha72ki.cc^
 ||kwons134521.live.oculusvr.com^
@@ -16550,6 +16561,7 @@
 ||l.cinyour.facebook.com^
 ||l.cypherworld.net^
 ||l.developers.prod.facebook.com^
+||l.dongxi.ca^
 ||l.es-es.es-la.prod.facebook.com^
 ||l.es-la.zh-cn.fbjs.facebook.com^
 ||l.facebook.com^
@@ -16680,7 +16692,6 @@
 ||learntoprotect.fb.com^
 ||leaseysocial.com^
 ||lebensraum.slavery.trade^
-||lebrady.net^
 ||leclerc.m.facebook.com^
 ||lectura.social^
 ||leds.social^
@@ -16715,9 +16726,7 @@
 ||lemmy.0upti.me^
 ||lemmy.0xloc.org^
 ||lemmy.100010101.xyz^
-||lemmy.1095.me^
 ||lemmy.14042003.xyz^
-||lemmy.30p87.de^
 ||lemmy.4d2.org^
 ||lemmy.8bitar.io^
 ||lemmy.8th.world^
@@ -16730,8 +16739,6 @@
 ||lemmy.ansico.dk^
 ||lemmy.asc6.org^
 ||lemmy.asudox.dev^
-||lemmy.b0tt0m.xyz^
-||lemmy.balamb.fr^
 ||lemmy.beagle.quest^
 ||lemmy.belegost.net^
 ||lemmy.bennett.management^
@@ -16746,7 +16753,6 @@
 ||lemmy.blueberryicetea.com^
 ||lemmy.bmck.au^
 ||lemmy.bosio.info^
-||lemmy.bouniet.top^
 ||lemmy.brief.guru^
 ||lemmy.browntown.dev^
 ||lemmy.ca^
@@ -16759,7 +16765,6 @@
 ||lemmy.charles.wiki^
 ||lemmy.chillypenguin.net^
 ||lemmy.circenn.win^
-||lemmy.civl.cc^
 ||lemmy.cnnrduncan.com^
 ||lemmy.coupou.fr^
 ||lemmy.cringecollective.io^
@@ -16776,13 +16781,11 @@
 ||lemmy.decronym.xyz^
 ||lemmy.deedium.nl^
 ||lemmy.digitalcharon.in^
-||lemmy.dorfrollenspiel.de^
 ||lemmy.dougiepeart.co.uk^
 ||lemmy.draktis.com^
-||lemmy.drath.ru^
 ||lemmy.dryja.dev^
 ||lemmy.duckpond.social^
-||lemmy.durstig.online^
+||lemmy.eco.br^
 ||lemmy.eirides.net^
 ||lemmy.eknz.org^
 ||lemmy.electricmonk.io^
@@ -16805,14 +16808,15 @@
 ||lemmy.frozeninferno.xyz^
 ||lemmy.funami.tech^
 ||lemmy.glue.io^
+||lemmy.grey.fail^
 ||lemmy.grey.ooo^
 ||lemmy.grys.it^
+||lemmy.gumpri.ch^
 ||lemmy.halfbro.xyz^
 ||lemmy.halis.io^
 ||lemmy.hameteman.com^
 ||lemmy.hangdaan.com^
 ||lemmy.helvetet.eu^
-||lemmy.hkserv.space^
 ||lemmy.hogru.ch^
 ||lemmy.homenook.xyz^
 ||lemmy.horwood.cloud^
@@ -16822,7 +16826,6 @@
 ||lemmy.imagisphe.re^
 ||lemmy.inbutts.lol^
 ||lemmy.jacaranda.club^
-||lemmy.jann.dev^
 ||lemmy.jaypg.pw^
 ||lemmy.jelliefrontier.net^
 ||lemmy.johnnei.org^
@@ -16835,7 +16838,6 @@
 ||lemmy.kya.moe^
 ||lemmy.kzkr.xyz^
 ||lemmy.labfox.fr^
-||lemmy.lakes.house^
 ||lemmy.lidstah.info^
 ||lemmy.liebeleu.de^
 ||lemmy.linden.social^
@@ -16849,14 +16851,14 @@
 ||lemmy.malplena.net^
 ||lemmy.maquis196.io^
 ||lemmy.mariusdavid.fr^
-||lemmy.mats.ooo^
+||lemmy.masto.community^
 ||lemmy.mayer.rocks^
 ||lemmy.mbl.social^
 ||lemmy.meissners.me^
 ||lemmy.michaelsasser.org^
 ||lemmy.minecloud.ro^
 ||lemmy.minigubben.se^
-||lemmy.mio19.uk^
+||lemmy.ml^
 ||lemmy.mods4ever.com^
 ||lemmy.monster^
 ||lemmy.moocloud.party^
@@ -16882,11 +16884,10 @@
 ||lemmy.okr765.com^
 ||lemmy.onlylans.io^
 ||lemmy.openvuture.com^
+||lemmy.org^
 ||lemmy.organic-server.org^
 ||lemmy.ourheroandy.club^
 ||lemmy.patton.id.au^
-||lemmy.photon-grove.net^
-||lemmy.pi4.dad^
 ||lemmy.piepjes.net^
 ||lemmy.pierre-couy.fr^
 ||lemmy.pixelpassport.studio^
@@ -16898,11 +16899,12 @@
 ||lemmy.randomsonicnet.org^
 ||lemmy.reepay.org^
 ||lemmy.rhys.sh^
-||lemmy.rimfaxe.net^
 ||lemmy.rochegmr.com^
 ||lemmy.runesmite.com^
 ||lemmy.sador.me^
 ||lemmy.scam-mail.me^
+||lemmy.scotchandsawdust.duckdns.org^
+||lemmy.sdf.org^
 ||lemmy.secnd.me^
 ||lemmy.self-hosted.site^
 ||lemmy.selina.diy^
@@ -16914,6 +16916,7 @@
 ||lemmy.sietch.online^
 ||lemmy.skyjake.fi^
 ||lemmy.ssba.com^
+||lemmy.stad.social^
 ||lemmy.stage.anoxinon.de^
 ||lemmy.staphup.nl^
 ||lemmy.starlightkel.xyz^
@@ -16924,7 +16927,6 @@
 ||lemmy.tauata.com^
 ||lemmy.techtailors.net^
 ||lemmy.teqqy.de^
-||lemmy.tespia.org^
 ||lemmy.tgxn.net^
 ||lemmy.theknopps.com^
 ||lemmy.thewooskeys.com^
@@ -16953,8 +16955,6 @@
 ||lemmy.xeviousx.eu^
 ||lemmy.xoynq.com^
 ||lemmy.xurxia.net^
-||lemmy.zarioth.com^
-||lemmy.zimage.com^
 ||lemmy.zip^
 ||lemmy.zmartin.me^
 ||lemmy.zwanenburg.info^
@@ -16978,7 +16978,6 @@
 ||letsdobusiness.twitter.com^
 ||letsencrypt.bytecdn.cn^
 ||level-up.zone^
-||lewacki.space^
 ||lez.ovh^
 ||lf-c.snssdk.com^
 ||lf-c.snssdk.com.w.kunluncan.com^
@@ -17106,6 +17105,7 @@
 ||lifeool.xsns.jp^
 ||lifergeek.social^
 ||light-novels-fr.com^
+||light.contact^
 ||lightcrystal.fedicity.net^
 ||lighthouse.co.im^
 ||lightparty.me^
@@ -17123,6 +17123,7 @@
 ||lillesand.social^
 ||lily.network^
 ||lilymagic.com^
+||liminalgici.spacc.eu.org^
 ||limited-prod.giphy.map.fastly.net^
 ||limited-sni-prod.giphy.map.fastly.net^
 ||lin.ee^
@@ -17255,6 +17256,7 @@
 ||lizards.live^
 ||lju0ebyak5x92gsq8onzd1witpc3fh67r4mv.messenger.com^
 ||llc.messenger.com^
+||lm.9d.fi^
 ||lm.aap.lite.facebook.com^
 ||lm.boing.icu^
 ||lm.facebook.com^
@@ -17375,6 +17377,7 @@
 ||loquendotv.net^
 ||loquendotv.zsh.jp^
 ||lor.sh^
+||lorebound.club^
 ||lostpod.space^
 ||losvirus.messenger.com^
 ||lotuseffect.social^
@@ -17388,6 +17391,7 @@
 ||lovento.com^
 ||lowtech.li^
 ||lp1.pstatp.com^
+||ls-freunde.d-empires.de^
 ||lsbt.me^
 ||lsngl.us^
 ||lswagger.fbjs.facebook.com^
@@ -17497,7 +17501,6 @@
 ||lustigetiernamenbubble.de^
 ||lutaines.eu^
 ||lux-nightclub.com^
-||luxtube.lu^
 ||luzeed.org^
 ||lv-lv.af-za.ro-ro.fbjs.facebook.com^
 ||lv-lv.ar-ar.developers.prod.facebook.com^
@@ -17583,6 +17586,7 @@
 ||m.blablu.de^
 ||m.blasteh.uk^
 ||m.bmorepunk.social^
+||m.bus.la^
 ||m.campfi.rs^
 ||m.cb-iq.fbjs.facebook.com^
 ||m.chariri.moe^
@@ -17617,6 +17621,7 @@
 ||m.fr-ca.latest.facebook.com^
 ||m.fr-fr.cinyour.facebook.com^
 ||m.fru.bar^
+||m.futex.au^
 ||m.g3l.org^
 ||m.hi-in.dns.facebook.com^
 ||m.hu-hu.latest.facebook.com^
@@ -17648,6 +17653,7 @@
 ||m.mk-mk.af-za.ro-ro.fbjs.facebook.com^
 ||m.mobile.twitter.com^
 ||m.moec.top^
+||m.monika.im^
 ||m.musical.ly^
 ||m.n7m.xyz^
 ||m.nb-no.latest.facebook.com^
@@ -17797,7 +17803,6 @@
 ||mamutut.space^
 ||managingbias.fb.com^
 ||manc.xsns.jp^
-||manganiello.eu^
 ||mangostar.casa^
 ||maniakey.com^
 ||maniakey.homes^
@@ -17936,7 +17941,9 @@
 ||mast.rbg-l.de^
 ||mast.shbbl.ru^
 ||mast.shitpostbot.com^
+||mast.social-pod.org^
 ||mast.swfindercore.org^
+||mast.wmclark.com^
 ||mastd.racing^
 ||mastdn.social^
 ||masterchefmx.twitter.com^
@@ -17970,12 +17977,12 @@
 ||masto.hivane.net^
 ||masto.host^
 ||masto.ink^
+||masto.krashboyz.org^
 ||masto.labrafox.com^
 ||masto.masto.com^
 ||masto.measure.chat^
 ||masto.meowing.zip^
 ||masto.method.run^
-||masto.millforge.org^
 ||masto.mtcrew.org^
 ||masto.neuille.ovh^
 ||masto.news^
@@ -17994,6 +18001,7 @@
 ||masto.twib.me^
 ||masto.uno^
 ||masto.yttrx.com^
+||masto2.100flowers.tech^
 ||mastoart.social^
 ||mastobate.social^
 ||mastobot.ping.moi^
@@ -18012,7 +18020,6 @@
 ||mastodon-test.thenexus.today^
 ||mastodon-tw.com^
 ||mastodon.0011.lt^
-||mastodon.1984.cz^
 ||mastodon.1in1.net^
 ||mastodon.24bit48khz.de^
 ||mastodon.360.cymru^
@@ -18027,6 +18034,7 @@
 ||mastodon.allroads.social^
 ||mastodon.amaseto.com^
 ||mastodon.ameo.dev^
+||mastodon.amerharb.com^
 ||mastodon.ameth.org^
 ||mastodon.ampericus.net^
 ||mastodon.anesthetizeme.net^
@@ -18077,6 +18085,7 @@
 ||mastodon.catgirl.cloud^
 ||mastodon.cattail.uk^
 ||mastodon.catwuschel.com^
+||mastodon.cc^
 ||mastodon.ccqjv.com^
 ||mastodon.cde.social^
 ||mastodon.cedar-republic.com^
@@ -18124,10 +18133,10 @@
 ||mastodon.cultuur.social^
 ||mastodon.cultuurpers.nl^
 ||mastodon.cyperpunk.de^
-||mastodon.d14n.club^
 ||mastodon.dankim.com^
 ||mastodon.davinkevin.fr^
 ||mastodon.de^
+||mastodon.deadname.gay^
 ||mastodon.degroenecup.nl^
 ||mastodon.delta-t.work^
 ||mastodon.demo2.jp^
@@ -18192,7 +18201,6 @@
 ||mastodon.flyingmou.se^
 ||mastodon.fo^
 ||mastodon.fooddrinklife.com^
-||mastodon.fossit.fr^
 ||mastodon.fr^
 ||mastodon.freie.app^
 ||mastodon.friendnet.eu^
@@ -18239,7 +18247,6 @@
 ||mastodon.hetzner.social^
 ||mastodon.hexix.de^
 ||mastodon.hippo.wine^
-||mastodon.hiveagile.com^
 ||mastodon.hk^
 ||mastodon.hnaportal.net^
 ||mastodon.hns.au^
@@ -18248,6 +18255,7 @@
 ||mastodon.hosnet.fr^
 ||mastodon.hs-furtwangen.de^
 ||mastodon.hupel.info^
+||mastodon.hurley.page^
 ||mastodon.hypnoguys.com^
 ||mastodon.ie^
 ||mastodon.igl.ooo^
@@ -18269,10 +18277,12 @@
 ||mastodon.is-hardly.online^
 ||mastodon.isentropic.org^
 ||mastodon.j-makoto.online^
+||mastodon.jacobwhite.us^
 ||mastodon.jalgi.eus^
 ||mastodon.jatlarge.com^
 ||mastodon.jeckyll.net^
 ||mastodon.jj5fxl.net^
+||mastodon.joaoleitao.org^
 ||mastodon.juggler.jp^
 ||mastodon.juniperrae.net^
 ||mastodon.jwsoat.com^
@@ -18283,6 +18293,7 @@
 ||mastodon.keks.club^
 ||mastodon.kevinhooke.com^
 ||mastodon.kitchen^
+||mastodon.klaaspier.nl^
 ||mastodon.kleph.eu^
 ||mastodon.kodesumber.com^
 ||mastodon.kotet.jp^
@@ -18303,13 +18314,13 @@
 ||mastodon.libresilicon.com^
 ||mastodon.libretic.fr^
 ||mastodon.liersch.it^
-||mastodon.linkerror.com^
 ||mastodon.linuxmuster.net^
 ||mastodon.linuxserver.io^
 ||mastodon.lithium03.info^
 ||mastodon.liyuan.app^
 ||mastodon.lli.be^
 ||mastodon.lmddc.lu^
+||mastodon.loess-aauw.org^
 ||mastodon.logilab.fr^
 ||mastodon.london^
 ||mastodon.longlandclan.id.au^
@@ -18334,6 +18345,7 @@
 ||mastodon.mallegolhansen.com^
 ||mastodon.matrix.org^
 ||mastodon.mauve.moe^
+||mastodon.maxihan.com^
 ||mastodon.me.uk^
 ||mastodon.mediafaro.org^
 ||mastodon.medienzentrenbw.de^
@@ -18352,15 +18364,15 @@
 ||mastodon.moscow^
 ||mastodon.motcha.tech^
 ||mastodon.moule.world^
+||mastodon.mozysswamp.com^
 ||mastodon.muage.org^
 ||mastodon.murkworks.net^
 ||mastodon.mx^
 ||mastodon.my^
-||mastodon.my-ant.myds.me^
 ||mastodon.myaddomain.org^
 ||mastodon.n5h.co^
 ||mastodon.n6.io^
-||mastodon.naomina121.com^
+||mastodon.naiveapps.com^
 ||mastodon.naturalorder.me^
 ||mastodon.neat.computer^
 ||mastodon.neg9.org^
@@ -18384,7 +18396,6 @@
 ||mastodon.nzoss.nz^
 ||mastodon.obspm.fr^
 ||mastodon.ocert.at^
-||mastodon.octofriends.garden^
 ||mastodon.offerman.com^
 ||mastodon.oldstyle-project.org^
 ||mastodon.oledu.de^
@@ -18395,6 +18406,7 @@
 ||mastodon.openedx.uliege.be^
 ||mastodon.openriver.net^
 ||mastodon.opportunis.me^
+||mastodon.opter.org^
 ||mastodon.org.uk^
 ||mastodon.otherworldsink.com^
 ||mastodon.ouvaton.coop^
@@ -18406,7 +18418,6 @@
 ||mastodon.pathconnect.de^
 ||mastodon.peaceful.social^
 ||mastodon.ping.de^
-||mastodon.pirati.cz^
 ||mastodon.pix-n-chill.fr^
 ||mastodon.pixeloasis.eu^
 ||mastodon.pnpde.social^
@@ -18443,8 +18454,8 @@
 ||mastodon.runninginthenight.com^
 ||mastodon.sackettalum.net^
 ||mastodon.samfira.com^
+||mastodon.samtalsforum.se^
 ||mastodon.sandwich.net^
-||mastodon.satoshishop.de^
 ||mastodon.savvy.ch^
 ||mastodon.sc07.group^
 ||mastodon.schindlerfamily.de^
@@ -18503,10 +18514,10 @@
 ||mastodon.tokyo^
 ||mastodon.top^
 ||mastodon.totmin.ru^
+||mastodon.transgirl.fr^
 ||mastodon.transneptune.net^
 ||mastodon.transportevolved.com^
 ||mastodon.treegecko.com^
-||mastodon.triggerphra.se^
 ||mastodon.trueten.de^
 ||mastodon.tucsonsentinel.com^
 ||mastodon.tudgwal.fr^
@@ -18519,7 +18530,6 @@
 ||mastodon.uno^
 ||mastodon.unsuspicious.website^
 ||mastodon.unwi.re^
-||mastodon.usal.es^
 ||mastodon.uy^
 ||mastodon.vaporghost.at^
 ||mastodon.varjonvalo.fi^
@@ -18602,8 +18612,6 @@
 ||mbasic.facebook.com^
 ||mbasic.messenger.com^
 ||mbasic.prod.facebook.com^
-||mbin.level5.dev^
-||mbin.linuxnation.social^
 ||mbuzzy.com^
 ||mc.facebookmail.com^
 ||mcast1.toutiao50.com^
@@ -18643,7 +18651,9 @@
 ||media-staging.twitter.com^
 ||media.fb.com^
 ||media.interior.edu.uy^
+||media.krashboyz.org^
 ||media.nolog.cz^
+||media.nsh.is^
 ||media.opendigital.info^
 ||media.privacyinternational.org^
 ||media.sund-fornuft.dk^
@@ -18670,7 +18680,6 @@
 ||meettheboss.tv^
 ||meetup.com^
 ||meganekeesu.tokyo^
-||megumi1.top^
 ||meinungsschubla.de^
 ||meinvz.net^
 ||mejia.social^
@@ -18719,7 +18728,6 @@
 ||metacritics.zone^
 ||metal.social^
 ||metalhead.club^
-||metam.my^
 ||metapixl.com^
 ||metaskey.net^
 ||metasocial.com^
@@ -18738,6 +18746,7 @@
 ||mewe.facebookbrand-2018-preprod.fb.com^
 ||mewl.me^
 ||mexico.fb.com^
+||meyon.com.ye^
 ||mg-mg.ad-dk.lite.facebook.com^
 ||mg-mg.ar.ar.lite.facebook.com^
 ||mg-mg.es-es.is-is.fbjs.facebook.com^
@@ -18768,7 +18777,6 @@
 ||mi.bisco.moe^
 ||mi.blindalley.net^
 ||mi.bokukoha.dev^
-||mi.c-at.jp^
 ||mi.cbrx.io^
 ||mi.chikage.net^
 ||mi.dabiden.net^
@@ -18791,6 +18799,7 @@
 ||mi.kochudaho.me^
 ||mi.kuropen.org^
 ||mi.kyanos.one^
+||mi.lapiskey.xyz^
 ||mi.les-requin.net^
 ||mi.maikaze.moe^
 ||mi.maple-tree.net^
@@ -18802,12 +18811,12 @@
 ||mi.msjp.pro^
 ||mi.mtomo.uk^
 ||mi.mushus.net^
+||mi.nanako-net.info^
 ||mi.nekonet.cyou^
 ||mi.nu1.dev^
 ||mi.nyaa.app^
 ||mi.osamu-storage.info^
 ||mi.oya0831.net^
-||mi.re22.net^
 ||mi.rerac.dev^
 ||mi.riperbool.com^
 ||mi.seanut.app^
@@ -18984,6 +18993,7 @@
 ||misskey.favskey.online^
 ||misskey.fearisfreedom.com^
 ||misskey.flowers^
+||misskey.frainsan.net^
 ||misskey.frick96.com^
 ||misskey.fryer.net.au^
 ||misskey.fumbledice.party^
@@ -18992,9 +19002,11 @@
 ||misskey.gallen881.com^
 ||misskey.gamelore.fun^
 ||misskey.gg^
+||misskey.gingarenpo.com^
 ||misskey.gothloli.club^
 ||misskey.gourry.zip^
 ||misskey.greent.jp^
+||misskey.grid-space.io^
 ||misskey.grtsinry43.com^
 ||misskey.hacusk.net^
 ||misskey.hakoniwa-project.com^
@@ -19025,6 +19037,7 @@
 ||misskey.kzfk.win^
 ||misskey.kzkr.xyz^
 ||misskey.lag129.net^
+||misskey.lagrstudio.com^
 ||misskey.lalafell.org^
 ||misskey.lazywildcat.net^
 ||misskey.lehhair.net^
@@ -19077,10 +19090,8 @@
 ||misskey.saku.cool^
 ||misskey.sakuzyo.net^
 ||misskey.sangeunahna.com^
-||misskey.scn-adm1n.f5.si^
 ||misskey.seitendan.com^
 ||misskey.semikoron.work^
-||misskey.sharkbot.xyz^
 ||misskey.shinamonlifelog.uk^
 ||misskey.shinanoji.xyz^
 ||misskey.shinanomai.xyz^
@@ -19105,11 +19116,9 @@
 ||misskey.takashi-tkg.com^
 ||misskey.takehi.to^
 ||misskey.takeko.cyou^
-||misskey.takutk.com^
 ||misskey.tarohouse.net^
 ||misskey.tech^
 ||misskey.tiff-38.net^
-||misskey.titilat.com^
 ||misskey.tobitti.net^
 ||misskey.tosaken1116.com^
 ||misskey.tr^
@@ -19133,7 +19142,6 @@
 ||misskey.yukineko.me^
 ||misskey.yukoduka.com^
 ||misskey.yunpon.club^
-||misskey.yurut.net^
 ||misskey00.moirai.dev^
 ||misskey6.subaseka.net^
 ||misskeymint.net^
@@ -19145,7 +19153,6 @@
 ||mitir.social^
 ||mitre10.facebook.com^
 ||mivatter.com^
-||miwkey.miwpayou0808.info^
 ||mixi.jp^
 ||mixx.com^
 ||mizstadon.com^
@@ -19238,6 +19245,7 @@
 ||mk.gregorius.club^
 ||mk.howamun.day^
 ||mk.ilyamikcoder.com^
+||mk.iwashi.rip^
 ||mk.kakun.jp^
 ||mk.keimai.space^
 ||mk.lutic.at^
@@ -19262,7 +19270,6 @@
 ||mk.takejohn.jp^
 ||mk.tebukuro.xyz^
 ||mk.tenpest-moon.uk^
-||mk.therwi.net^
 ||mk.yopo.work^
 ||mk.yurax2.dev^
 ||mk.zvz.be^
@@ -19649,6 +19656,7 @@
 ||mst-staging.collocall.de^
 ||mst.akari-network.jp^
 ||mst.canor.kr^
+||mst.nekonohige.jp^
 ||mst.ramsdr.ru^
 ||mst.universoalterno.es^
 ||mst3k.interlinked.me^
@@ -19697,6 +19705,7 @@
 ||mstdn.isometry.group^
 ||mstdn.jp^
 ||mstdn.justpost.fyi^
+||mstdn.kemono-friends.info^
 ||mstdn.kgtkr.net^
 ||mstdn.klamath.jp^
 ||mstdn.kodein.be^
@@ -19720,6 +19729,7 @@
 ||mstdn.obh8.net^
 ||mstdn.ofraglapis.net^
 ||mstdn.omisosiru.net^
+||mstdn.one^
 ||mstdn.otyakai.xyz^
 ||mstdn.owu.one^
 ||mstdn.party^
@@ -19732,10 +19742,11 @@
 ||mstdn.schoolidol.club^
 ||mstdn.science^
 ||mstdn.shalyu.run^
+||mstdn.sids-ai.net^
 ||mstdn.social^
 ||mstdn.sparkdream.io^
 ||mstdn.starnix.network^
-||mstdn.strafpla.net^
+||mstdn.studiofreesia.com^
 ||mstdn.sublimer.me^
 ||mstdn.superspeed-fall.com^
 ||mstdn.syoshida.org^
@@ -19810,7 +19821,6 @@
 ||mta73.e.twitter.com^
 ||mta8.e.twitter.com^
 ||mta9.e.twitter.com^
-||mtd.task.vc^
 ||mtdn.anyqn.com^
 ||mtdn.nexusresearchlabstest.com^
 ||mtg-bkk-v1.l.byteoversea.net^
@@ -19822,7 +19832,6 @@
 ||mttr.twitter.com^
 ||mtv.twitter.com^
 ||mu.isnssdk.com^
-||mu.zaitcev.nu^
 ||mubi.com^
 ||mublog.nl^
 ||mudhut.social^
@@ -19879,6 +19888,7 @@
 ||mustardon.tokyo^
 ||mustodon.kattsu.com^
 ||mutirao.social^
+||mutual.tls.zone^
 ||mux.twitter.com^
 ||mva.byteoversea.com^
 ||mva.isnssdk.com^
@@ -20010,6 +20020,7 @@
 ||natuyasumisskey.jp^
 ||naughtylittleangels.xyz^
 ||nautilus.place^
+||navi.social^
 ||naymz.com^
 ||nayukana.info^
 ||nb-no.ad-dk.lite.facebook.com^
@@ -20159,7 +20170,6 @@
 ||nekomimisskey.online^
 ||nekos.social^
 ||nekton.social^
-||nemuzatu.de5.net^
 ||neo.gyara.moe^
 ||neon.cybre.stream^
 ||neon.ecarlate.app^
@@ -20257,6 +20267,7 @@
 ||nightcord.de^
 ||nightmask3.facebookbrand-preprod.fb.com^
 ||nightmask3.fbsbx.com^
+||nijimiss.moe^
 ||nike.m.facebook.com^
 ||nike.twitter.com^
 ||nikebreaking2.twitter.com^
@@ -20597,12 +20608,14 @@
 ||notacult.social^
 ||note.lono.space^
 ||notebook.stereofictional.com^
+||notes.mroberts.me^
 ||nothing-ever.works^
 ||notifyback-cn.snssdk.com^
 ||notifyback-sg.isnssdk.com^
 ||notifyback-va.isnssdk.com^
 ||notifyback-va.isnssdk.com.edgekey.net^
 ||notizie.bida.im^
+||notorious.gay^
 ||notwork.in^
 ||nova.facebook.com^
 ||novatube.net^
@@ -20692,7 +20705,6 @@
 ||occm.cc^
 ||occult.club^
 ||occult.town^
-||oceanplayground.social^
 ||oculus-verts-shv-01-ssn1.facebook.com^
 ||oculus.c10r.facebook.com^
 ||oculus.com^
@@ -20909,7 +20921,6 @@
 ||orkut.com^
 ||orkut.li^
 ||orphaned.monster^
-||orreadi.com^
 ||ortensia-moe-moe.club^
 ||orthis.social^
 ||orwell.fun^
@@ -20952,6 +20963,7 @@
 ||oursky.social^
 ||oursocial.club^
 ||ourtribeonline.com^
+||ourtube.africa^
 ||ousaemichan1.oculusvr.com^
 ||outcast.am^
 ||outdoorenthusiasts.space^
@@ -20981,6 +20993,7 @@
 ||ozhika.me^
 ||ozlabs.house^
 ||ozonteam.m.facebook.com^
+||p-misskey.pusyuuwanko.com^
 ||p-t2.byteoversea.com^
 ||p-upload.facebook.com^
 ||p-upload.latest.facebook.com^
@@ -21365,14 +21378,12 @@
 ||packmates.org^
 ||pad.venzano.fr^
 ||pader.social^
-||paella.moe^
 ||page.snssdk.com^
 ||pages.facebook.com^
 ||pages.facebookmail.com^
 ||pages.sadmansk.com^
 ||paktodon.asia^
 ||palaver.p3x.de^
-||pale.hellel.world^
 ||paltalk.messenger.com^
 ||pan.rent^
 ||panafricanfutures.com^
@@ -21494,7 +21505,6 @@
 ||peertube-demo.lern.link^
 ||peertube.0011.lt^
 ||peertube.10mn.space^
-||peertube.1312.media^
 ||peertube.22f.uk^
 ||peertube.agentn86.xyz^
 ||peertube.anduin.net^
@@ -21513,7 +21523,6 @@
 ||peertube.boc47.org^
 ||peertube.boger.dev^
 ||peertube.casually.cat^
-||peertube.cif.su^
 ||peertube.cirkau.art^
 ||peertube.cocamserverguild.com^
 ||peertube.communecter.org^
@@ -21535,16 +21544,13 @@
 ||peertube.fenarinarsa.com^
 ||peertube.fourangrydachshunds.nohost.me^
 ||peertube.fr^
-||peertube.gaialabs.ch^
-||peertube.gegeweb.eu^
-||peertube.gravitywell.xyz^
 ||peertube.heise.de^
 ||peertube.helvetet.eu^
 ||peertube.hlpnet.dk^
-||peertube.in.ua^
 ||peertube.interhop.org^
 ||peertube.intrapology.com^
 ||peertube.iridescent.nz^
+||peertube.iriseden.eu^
 ||peertube.jackbot.fr^
 ||peertube.kawateam.fr^
 ||peertube.kx.studio^
@@ -21564,7 +21570,6 @@
 ||peertube.lyclpg.itereva.pf^
 ||peertube.marud.fr^
 ||peertube.meditationsteps.org^
-||peertube.mesnumeriques.fr^
 ||peertube.mit.edu^
 ||peertube.monlycee.net^
 ||peertube.mpu.edu.mo^
@@ -21583,7 +21588,6 @@
 ||peertube.protagio.org^
 ||peertube.public.cat^
 ||peertube.qtg.fr^
-||peertube.r2.enst.fr^
 ||peertube.ra.no^
 ||peertube.redgate.tv^
 ||peertube.researchinstitute.at^
@@ -21632,8 +21636,8 @@
 ||pennyfeatherbooks.com^
 ||pensieve.club^
 ||penstagram.bubblec.at^
-||pentimento.me^
 ||people.twitter.com^
+||peoplegroup.social^
 ||peoplemaking.games^
 ||peoplepractices.fb.com^
 ||perfshield.facebook.com^
@@ -21643,7 +21647,6 @@
 ||pernambucanas.m.facebook.com^
 ||persadon.com^
 ||pet.tax^
-||pete.warpnine.de^
 ||peter9961.oculusvr.com^
 ||petlover.eu.org^
 ||pets.contact^
@@ -21731,11 +21734,10 @@
 ||picuki.com^
 ||picwebws.pstatp.com.wsglb0.com^
 ||piczo.com^
-||pie.dasneuland.de^
 ||pie.gravitywell.xyz^
+||piefed.aurionblack.com^
 ||piefed.ca^
 ||piefed.diffrint.org^
-||piefed.dk^
 ||piefed.iridescent.nz^
 ||piefed.keyboardvagabond.com^
 ||piefed.linenoise.vip^
@@ -21743,7 +21745,6 @@
 ||piefed.nz^
 ||piefed.social^
 ||piefed.wjs018.xyz^
-||piefed.world^
 ||piefed.zeromedia.vip^
 ||piefed.zip^
 ||piefeed.com^
@@ -21871,6 +21872,7 @@
 ||pixelfed.albertmin.com^
 ||pixelfed.amaseto.com^
 ||pixelfed.apobangpo.art^
+||pixelfed.arecki.site^
 ||pixelfed.art^
 ||pixelfed.ashevillains.org^
 ||pixelfed.au^
@@ -21899,10 +21901,12 @@
 ||pixelfed.eus^
 ||pixelfed.familiar.media^
 ||pixelfed.familie-berner.de^
+||pixelfed.fftlt.net^
 ||pixelfed.fr^
 ||pixelfed.franjo.fr^
 ||pixelfed.furryfandom.me^
 ||pixelfed.global^
+||pixelfed.gohaveanewone.com^
 ||pixelfed.graal369.com^
 ||pixelfed.heavyrubberslave.com^
 ||pixelfed.helvetet.eu^
@@ -21915,8 +21919,8 @@
 ||pixelfed.louy.social^
 ||pixelfed.lovetux.net^
 ||pixelfed.lt^
+||pixelfed.marcelendechaps.nl^
 ||pixelfed.mayer.rocks^
-||pixelfed.mesnumeriques.fr^
 ||pixelfed.moe^
 ||pixelfed.mrak.at^
 ||pixelfed.mrpetovan.com^
@@ -21939,7 +21943,6 @@
 ||pixelfed.sdmtube.fr^
 ||pixelfed.seboto.de^
 ||pixelfed.social^
-||pixelfed.stage.anoxinon.de^
 ||pixelfed.takeko.cyou^
 ||pixelfed.tommydavids.synology.me^
 ||pixelfed.tw^
@@ -21950,12 +21953,12 @@
 ||pixelfed.wmcan.net^
 ||pixelfedsweden.se^
 ||pixelfedup.social^
-||pixelfeed.chaos-gp.social^
 ||pixelfur.maw.best^
 ||pixelfyn.social^
 ||pixelgit.fbjs.facebook.com^
 ||pixelgroovy.com^
 ||pixelig.social^
+||pixelis.luisa.is^
 ||pixelix.social^
 ||pixellas.fbjs.facebook.com^
 ||pixelmarch.fbjs.facebook.com^
@@ -22112,6 +22115,7 @@
 ||pl-pl.zh.lite.facebook.com^
 ||pl-pl.zh.tw.lite.facebook.com^
 ||pl-pwc.fb.me^
+||pl.catboyindustries.co^
 ||pl.chipmunk.land^
 ||pl.eragon.re^
 ||pl.facebookbrand-2018-dev.fb.com^
@@ -22154,11 +22158,11 @@
 ||play.dotlan.net^
 ||play.mittdata.se^
 ||playahead.se^
-||player.ojamajo.moe^
 ||playerschamp.twitter.com^
 ||playfire.com^
 ||playlist.com^
 ||playpen7.fbjs.facebook.com^
+||plaza.vncp.it^
 ||plazma.oculusvr.com^
 ||please-dominate.me^
 ||pleroma.comix.gr^
@@ -22193,7 +22197,6 @@
 ||pmk.noflm.cc^
 ||pmp.fb.com^
 ||pmth.us^
-||pneumastodon.com^
 ||pnn.com^
 ||pnoom.gallery^
 ||pnw-mastodon.com^
@@ -22217,7 +22220,6 @@
 ||pokemon.mastportal.info^
 ||pokemon.men^
 ||pokeski.fd-sns.com^
-||pol.social^
 ||poland.fb.com^
 ||polaris-ns.byteoversea.com^
 ||polaroid.absturztau.be^
@@ -22268,6 +22270,7 @@
 ||portugaltheman.twitter.com^
 ||posskey.com^
 ||possum.city^
+||post.ebin.club^
 ||post.naskya.net^
 ||post.sup39.dev^
 ||post.syobon.net^
@@ -22353,6 +22356,7 @@
 ||procolix.social^
 ||procrastodon.net^
 ||procursus.social^
+||procydon.net^
 ||prod.facebook.com^
 ||prod.facebookvirtualassistant.com^
 ||prod.giphy.map.fastly.net^
@@ -22931,6 +22935,7 @@
 ||pt.thishorsie.rocks^
 ||pt01.lehrerfortbildung-bw.de^
 ||pt8.dev.cyber4edu.org^
+||ptdr.duniter.eu^
 ||pttworkplace.facebook.com^
 ||ptuebiz-010utodiscover.oculusvr.com^
 ||pub-respiratory-advil-us-stg-sj.facebookbrand-dev.fb.com^
@@ -23300,7 +23305,6 @@
 ||rat.party^
 ||rateitall.com^
 ||ratherbemaking.games^
-||ratingen.social^
 ||ravelry.com^
 ||ravenation.club^
 ||rawsugar.com^
@@ -23326,6 +23330,7 @@
 ||reading-hl.snssdk.com^
 ||reading.snssdk.com^
 ||readitswapit.co.uk^
+||reads.netsphere.pub^
 ||real-escape.jp^
 ||realbitcoin.cash^
 ||realgamjao.oculusvr.com^
@@ -23335,6 +23340,7 @@
 ||reax.work^
 ||rebel-lion.uk^
 ||rebelbase.site^
+||recht.social^
 ||recipekey.com^
 ||recipezaar.com^
 ||reclaim.rocks^
@@ -23451,7 +23457,9 @@
 ||review.fb.com^
 ||review.intern.facebook.com^
 ||review.internmc.facebook.com^
+||revolu.forum^
 ||revolutionize.social^
+||rewt.link^
 ||rfj.social^
 ||rfmaska.alpha.facebook.com^
 ||rgaph.fb.me^
@@ -23645,6 +23653,7 @@
 ||roslin.autodiscover.oculusvr.com^
 ||rossgram.ru^
 ||rosti.social^
+||route66.social^
 ||rozwoj-dev.fb.com^
 ||rozwoj-preprod.fb.com^
 ||rozwoj-uat.fb.com^
@@ -23871,6 +23880,7 @@
 ||s.bytetcdn.com^
 ||s.chars.jp^
 ||s.chode.org^
+||s.datais.me^
 ||s.fb.com^
 ||s.ipstatp.com^
 ||s.ktsn.dev^
@@ -24034,9 +24044,11 @@
 ||schach.social^
 ||schaumburg.social^
 ||schleicher.social^
+||schleuss.online^
 ||schmaker.eu^
 ||schnauzer.social^
 ||schnee.fd-sns.com^
+||schoffelen.net^
 ||schoolahead.social^
 ||schuelervz.net^
 ||schuppentier.social^
@@ -25345,6 +25357,7 @@
 ||searchportal.fbjs.facebook.com^
 ||seaswallow.me^
 ||sechtor.social^
+||secrets.brussels^
 ||secure-edge-latest-shv-01-iev1.facebook.com^
 ||secure-edge-latest-shv-01-jnb1.facebook.com^
 ||secure-edge-latest-shv-01-vie1.facebook.com^
@@ -25384,10 +25397,10 @@
 ||security3.snssdk.com^
 ||security3.snssdk.com.w.kunluncan.com^
 ||securitycafe.ca^
-||seediqbale.xyz^
 ||seeedstudio.social^
 ||seformer.fb.com^
 ||segeln.social^
+||seglerinfo.social^
 ||segyeuhak1live.oculusvr.com^
 ||seka.pona.la^
 ||sekai-biyori.duckdns.org^
@@ -25593,9 +25606,9 @@
 ||share-test.musemuse.cn^
 ||share.musemuse.cn^
 ||share.oculusvr.com^
-||share.tube^
 ||sharebright.net^
 ||sharecipe.com^
+||shared.graphics^
 ||sharedblog.it^
 ||sharedconfession.com^
 ||sharekola.ng^
@@ -25623,9 +25636,9 @@
 ||shelter.moe^
 ||shemeansbusiness.fb.com^
 ||shigekix5.vi-vn.lite.facebook.com^
+||shigusegubu.club^
 ||shiina.cafe^
 ||shimobukure-chan.xsns.jp^
-||shin.mugicha.club^
 ||shinamikaidou42.com^
 ||shiro.dog^
 ||shitpost.cloud^
@@ -25645,7 +25658,6 @@
 ||shopfacebook.com^
 ||shopping.m.beta.facebook.com^
 ||shopping.twitter.com^
-||shork.nerdmusic.net^
 ||shork.social^
 ||shortcut-virus-remover.prod.facebook.com^
 ||shortcut-virus-remover.scgraph.facebook.com^
@@ -25705,7 +25717,6 @@
 ||simoncrowe.blog^
 ||simpy.com^
 ||sin-api.twitter.com^
-||sin.tyaku.com^
 ||sinemaskop.new.facebook.com^
 ||sinners.heavendivided.net^
 ||sipgate.social^
@@ -25725,6 +25736,7 @@
 ||sixnations.twitter.com^
 ||sixxvirus.fbsbx.com^
 ||sizecraft.social^
+||sizeriot.com^
 ||sizetube.com^
 ||sjtu.closed.social^
 ||sk-sk.aap.lite.facebook.com^
@@ -25943,7 +25955,6 @@
 ||smf1-stream-data-api.twitter.com^
 ||smfc.twitter.com^
 ||smithtodon.org^
-||smithwalkerranch.com^
 ||smolhaj.social^
 ||smr-aliva-useast2a.byteoversea.com^
 ||smr-aliva.byteoversea.com^
@@ -26001,9 +26012,11 @@
 ||sneakerwave.net^
 ||sneed.social^
 ||snep.place^
+||snep.spot^
 ||snf-19213.ok-kno.grnetcloud.net^
 ||snipe.pics^
 ||sniper-boe.byted.org^
+||snipesearch.video^
 ||snipit.org^
 ||snooker.uk.to^
 ||snowdon.jp^
@@ -26016,7 +26029,6 @@
 ||sns.mochimochi-planet.com^
 ||sns.mouii.net^
 ||sns.ourt-ai.work^
-||sns.tsubasaori.be^
 ||sns.wamom.f5.si^
 ||snssdk.com^
 ||snssdk.com.bdgslb.com^
@@ -26046,6 +26058,7 @@
 ||soapbox.minaduki.dev^
 ||soc.bosio.info^
 ||soc.bosionet.it^
+||soc.citizen4.eu^
 ||soc.eli173.com^
 ||soc.jra.sh^
 ||soc.kvet.ch^
@@ -26085,6 +26098,7 @@
 ||social.amsterdam.nl^
 ||social.anaproy.nl^
 ||social.anartist.org^
+||social.andrewwet.com^
 ||social.anjara.eu^
 ||social.annacon.be^
 ||social.anoxinon.de^
@@ -26132,6 +26146,7 @@
 ||social.brianenigma.com^
 ||social.brush-and-tale.com^
 ||social.bsdlab.au^
+||social.bufu.link^
 ||social.bund.de^
 ||social.butnot.today^
 ||social.c-moser.at^
@@ -26145,6 +26160,7 @@
 ||social.ccc-ffm.space^
 ||social.chalec.org^
 ||social.chaotikum.org^
+||social.chatik.pl^
 ||social.chatty.monster^
 ||social.chiefgyk3d.com^
 ||social.circl.lu^
@@ -26182,6 +26198,7 @@
 ||social.data.coop^
 ||social.datarek.nl^
 ||social.datasolace.com^
+||social.dawgsec.com^
 ||social.dcomms.colnodo.apc.org^
 ||social.dednet.co^
 ||social.del-c.net^
@@ -26201,13 +26218,12 @@
 ||social.diva.exchange^
 ||social.dn42.us^
 ||social.dog-s.global^
-||social.doghub.eu^
 ||social.doma.dev^
 ||social.drastical.tech^
+||social.driscoll.co^
 ||social.dromografos.report^
 ||social.dryan.com^
 ||social.ds106.us^
-||social.dsmouse.net^
 ||social.duniter.org^
 ||social.dvd-regal.org^
 ||social.dytrych.cloud^
@@ -26244,7 +26260,6 @@
 ||social.ffconf.org^
 ||social.ffl.name^
 ||social.ffmuc.net^
-||social.finkhaeuser.de^
 ||social.firehawk-systems.com^
 ||social.firestrike.de^
 ||social.fischbyte.de^
@@ -26279,19 +26294,21 @@
 ||social.ggbox.fr^
 ||social.gigglez.net^
 ||social.gitea.io^
+||social.gl-como.it^
 ||social.glitched.systems^
 ||social.globalpirates.net^
 ||social.gnuweeb.org^
+||social.goonj.xyz^
 ||social.grat.gay^
 ||social.greenpeace.at^
 ||social.grifdail.fr^
 ||social.griff.la^
-||social.grimneko.de^
 ||social.groene.nl^
 ||social.growyourown.services^
 ||social.gryf-kujawy.pl^
 ||social.gyahunkoubou.com^
 ||social.hackerspace.pl^
+||social.hamburg^
 ||social.harding.dev^
 ||social.hardlimit.com^
 ||social.hastily.cc^
@@ -26302,6 +26319,7 @@
 ||social.highenergymagic.net^
 ||social.hnws.me^
 ||social.horrorhub.club^
+||social.humanite.fr^
 ||social.iamforum.space^
 ||social.ikklegemz.me^
 ||social.ikklegemz.net^
@@ -26347,7 +26365,6 @@
 ||social.landshut.org^
 ||social.lansky.name^
 ||social.learntosolveit.com^
-||social.leinde.de^
 ||social.lfx.dev^
 ||social.librem.one^
 ||social.linodians.com^
@@ -26358,9 +26375,9 @@
 ||social.lom.audio^
 ||social.lomia.uk^
 ||social.longwing.us^
+||social.looperlative.com^
 ||social.luca.run^
 ||social.ludepress.com^
-||social.luebcke.eu^
 ||social.luizpicolo.com.br^
 ||social.lukas-schieren.de^
 ||social.lviv.dcomm.net.ua^
@@ -26374,7 +26391,6 @@
 ||social.marcus.io^
 ||social.marud.fr^
 ||social.maschinendeck.org^
-||social.masi.family^
 ||social.masked.cloud^
 ||social.massalabs.com^
 ||social.mastodon.site^
@@ -26401,11 +26417,14 @@
 ||social.mrtoto.net^
 ||social.mtrichardson.com^
 ||social.muchametow.de^
+||social.muenchen.de^
 ||social.multiverset.net^
 ||social.museus.gov.br^
 ||social.mushroomfm.com^
 ||social.musing.studio^
 ||social.mygem88.com^
+||social.mykolayiv.dcomm.net.ua^
+||social.nacka.io^
 ||social.naguski.pl^
 ||social.nah.re^
 ||social.narsol.org^
@@ -26421,6 +26440,7 @@
 ||social.nerdnet.ovh^
 ||social.nerdzoom.media^
 ||social.netlandish.com^
+||social.neuronal.ia.br^
 ||social.ng1n.net^
 ||social.ngi.eu^
 ||social.nifeeden.com^
@@ -26431,7 +26451,6 @@
 ||social.noleron.com^
 ||social.noparking.net^
 ||social.nrwonline.org^
-||social.nubecula.org^
 ||social.nuberu.org^
 ||social.numerique.gouv.fr^
 ||social.oarsnet.nl^
@@ -26441,8 +26460,8 @@
 ||social.odenseye.wiki^
 ||social.oevents.co.za^
 ||social.okoyono.de^
+||social.older-gamers.eu^
 ||social.on2it.net^
-||social.onlinesession.app^
 ||social.onnenai.cc^
 ||social.openinfra.dev^
 ||social.openrightsgroup.org^
@@ -26463,7 +26482,6 @@
 ||social.periodismoindependiente.org^
 ||social.perspective-daily.de^
 ||social.phantanews.de^
-||social.phoenixradio1208.com^
 ||social.photography^
 ||social.piewpiew.se^
 ||social.pincade.com.au^
@@ -26493,6 +26511,7 @@
 ||social.raytec.co^
 ||social.realnephestate.xyz^
 ||social.reapers.de^
+||social.rebellion.global^
 ||social.redflag.ps^
 ||social.regenpfeifer.net^
 ||social.restless.systems^
@@ -26514,13 +26533,13 @@
 ||social.sachsen-anhalt.de^
 ||social.sachsen.de^
 ||social.sargasso.nl^
+||social.satyrn.ai^
 ||social.sceneworld.org^
 ||social.schleswig-holstein.de^
 ||social.sciences.re^
 ||social.screamingatmyscreen.com^
 ||social.scribblers.club^
 ||social.sdfeu.org^
-||social.seanmcgregor.ca^
 ||social.secret-wg.org^
 ||social.security.plumbing^
 ||social.securitytheater.net^
@@ -26548,32 +26567,32 @@
 ||social.sssa.africa^
 ||social.stage.anoxinon.de^
 ||social.starshipjennings.com^
+||social.starsyn.space^
 ||social.streetcollective-leipzig.de^
 ||social.student.uibk.ac.at^
 ||social.subpolygon.com^
-||social.sucb.de^
 ||social.suchtbasis.de^
 ||social.sunet.se^
+||social.sveken.au^
 ||social.swagg.net^
 ||social.swordandfiddle.co.uk^
 ||social.sydenham.org.uk^
-||social.synacek.org^
 ||social.szp.lol^
 ||social.taker.fr^
 ||social.targaryen.house^
 ||social.tchncs.de^
-||social.team-prism.rocks^
 ||social.teb.sex.pl^
+||social.technology^
 ||social.techreclaimers.club^
 ||social.tepitus.de^
+||social.tgjb.org^
 ||social.the-gdn.net^
 ||social.the-mansfields.co.uk^
 ||social.theheart.land^
 ||social.thej.in^
 ||social.thelab.uno^
 ||social.themoto.network^
-||social.theokadas.com^
-||social.thetaits.net^
+||social.thirdculture.diy^
 ||social.thirdculture.top^
 ||social.threefoldeight.com^
 ||social.timespiral.co.jp^
@@ -26586,6 +26605,7 @@
 ||social.treehouse.systems^
 ||social.trojaner.dev^
 ||social.troll.academy^
+||social.trom.tf^
 ||social.tsueri.cloud^
 ||social.tulsa.ok.us^
 ||social.tupo.space^
@@ -26642,6 +26662,7 @@
 ||social.yolo.ventures^
 ||social.yoniflix.homes^
 ||social.yoyodyne-it.eu^
+||social.zclan.net^
 ||social.zdx.fr^
 ||social.zell-mbc.com^
 ||social.zendit.digital^
@@ -26679,6 +26700,7 @@
 ||softwaremill.social^
 ||sok.facebook.com^
 ||sok.m.facebook.com^
+||solarcene.community^
 ||solareclipse.twitter.com^
 ||solarpunk.moe^
 ||solarsystem.social^
@@ -26686,7 +26708,6 @@
 ||solderma.sk^
 ||solent.social^
 ||solidcharity.net^
-||solutionpoint.in^
 ||somamis.it^
 ||some.hacklab.fi^
 ||someone.elses.computer^
@@ -26911,11 +26932,11 @@
 ||sonico.com^
 ||sonomu.club^
 ||sonora.radioaconchego.org^
-||sopadeletras.club^
 ||soph.zip^
 ||sopuli.xyz^
 ||soratomo.info^
 ||sorgatronmedia.social^
+||sosyal.mavzer.org^
 ||sota.sotamedia.org^
 ||soukun.io^
 ||soundcafe.nl^
@@ -26931,6 +26952,7 @@
 ||space.lilygl.net^
 ||space.starnest.app^
 ||space.toutiao.com^
+||spaceplace.jonathancandler.com^
 ||spacerslike.us^
 ||spacetraveler.work^
 ||spaceup.city^
@@ -27221,6 +27243,7 @@
 ||sq-al.zh.lite.facebook.com^
 ||sq-al.zh.tw.lite.facebook.com^
 ||squad.town^
+||squatch.online^
 ||squawk.mytransponder.com^
 ||squawk.social^
 ||squeak.games^
@@ -27532,6 +27555,7 @@
 ||subversive.zone^
 ||succeedtogether.facebook.com^
 ||succubi.services^
+||sudhirpanda.com^
 ||sueden.social^
 ||suffigo.com^
 ||sugarloving.com^
@@ -27580,6 +27604,7 @@
 ||sustainability.fb.com^
 ||sustainabilitybeta.fb.com^
 ||sutemos.lt^
+||suya.place^
 ||sv-se.apps.ja-jp.fbjs.facebook.com^
 ||sv-se.ar-ar.ar-ar.vi-vn.lite.facebook.com^
 ||sv-se.ar-ar.developers.prod.facebook.com^
@@ -27768,6 +27793,7 @@
 ||swissodon.ch^
 ||swisttal.social^
 ||swm.facebook.com^
+||swurl.land^
 ||sxsw.twitter.com^
 ||syagcom.facebook.com^
 ||syasai.club^
@@ -27905,12 +27931,10 @@
 ||tankie.tube^
 ||tanoshii.site^
 ||tanuki.hostdon.ne.jp^
-||tanukitunes.com^
 ||tanztee.social^
 ||tapbots.social^
 ||tapir.tkf.me^
 ||tappedin.org^
-||tardigram.com^
 ||tardis.team^
 ||taringa.net^
 ||tarte.nuage-libre.fr^
@@ -27961,6 +27985,7 @@
 ||techhangout.social^
 ||techhub.social^
 ||techlover.eu^
+||techniclip.com^
 ||technomusicology.club^
 ||techopolis.social^
 ||techpolicy.social^
@@ -28204,6 +28229,7 @@
 ||thegoldenglobes.twitter.com^
 ||theha.us^
 ||thehappyfamily.stream^
+||theillegal.site^
 ||theinstagramhack.com^
 ||theinternet.social^
 ||thejuddkramer.com^
@@ -28233,7 +28259,6 @@
 ||thevaccinesuk.messenger.com^
 ||thevipvipers.space^
 ||thewarmup.twitter.com^
-||theweird.space^
 ||thicc.horse^
 ||things.uk^
 ||thinktank.brainstormes.org^
@@ -28502,7 +28527,6 @@
 ||toot.lat^
 ||toot.legacycode.rocks^
 ||toot.lgbt^
-||toot.li^
 ||toot.lv^
 ||toot.majorshouse.com^
 ||toot.me.uk^
@@ -28522,6 +28546,7 @@
 ||toot.techbeat.in^
 ||toot.teckids.org^
 ||toot.thoughtworks.com^
+||toot.tinsleyviaduct.com^
 ||toot.turbo.chat^
 ||toot.tux.si^
 ||toot.wales^
@@ -28906,6 +28931,7 @@
 ||transparency.facebook.com^
 ||transparency.twitter.com^
 ||transparent.ruhr^
+||transzh.social^
 ||traph.fb.me^
 ||trashbrain.org^
 ||travbuddy.com^
@@ -28963,6 +28989,7 @@
 ||tsearchold-hl.snssdk.com^
 ||tsel.messenger.com^
 ||tsukihi.me^
+||tsundere.love^
 ||tt-video.hrlb.ks-cdn.com^
 ||tt-video.hrlb.ks-cdn1.com^
 ||tt.dy1.com.xi.zwtianshangm.com^
@@ -28990,6 +29017,7 @@
 ||tube-langues-vivantes.apps.education.fr^
 ||tube-maternelle.apps.education.fr^
 ||tube-numerique-educatif.apps.education.fr^
+||tube-sciences-technologies.apps.education.fr^
 ||tube.anjara.eu^
 ||tube.aquilenet.fr^
 ||tube.area404.cloud^
@@ -29003,6 +29031,7 @@
 ||tube.chaoszone.tv^
 ||tube.communia.org^
 ||tube.contactsplus.live^
+||tube.cosmicflow.space^
 ||tube.crapaud-fou.org^
 ||tube.cyano.at^
 ||tube.dev.displ.eu^
@@ -29046,17 +29075,17 @@
 ||tube.lab.nrw^
 ||tube.linkse.media^
 ||tube.logidroflex.com^
+||tube.mgppu.ru^
 ||tube.moep.tv^
 ||tube.moment.at^
 ||tube.move-it-online.net^
-||tube.nogafa.org^
 ||tube.numerique.gouv.fr^
 ||tube.oisux.org^
 ||tube.opentech-auc.org^
 ||tube.org.il^
+||tube.p2p.legal^
 ||tube.penzberg.me^
 ||tube.picasoft.net^
-||tube.portes-imaginaire.org^
 ||tube.pustule.org^
 ||tube.raccoon.quest^
 ||tube.rbg-l.de^
@@ -29083,7 +29112,6 @@
 ||tube.ullihome.de^
 ||tube.undernet.uy^
 ||tube.unif.app^
-||tube.villejuif.fr^
 ||tube.waag.org^
 ||tube.webcontact.de^
 ||tube.xrtv.nl^
@@ -29106,6 +29134,7 @@
 ||tukika.com^
 ||tum.social^
 ||tumblr.com^
+||tuohy.org^
 ||turath.tn^
 ||turboclip.com^
 ||turbotime.turboteam.xyz^
@@ -29138,7 +29167,6 @@
 ||tv.terrapreta.org.br^
 ||tv.undersco.re^
 ||tv.ursal.nl^
-||tvculturaviva.org.br^
 ||tvirus.messenger.com^
 ||tvitero.com^
 ||tvn7flix.fr^
@@ -29194,6 +29222,7 @@
 ||two-bits.org^
 ||twogate.social^
 ||twoot.site^
+||twt.cymru^
 ||twtrdns.net^
 ||twttr.com^
 ||twttr.net^
@@ -29247,7 +29276,9 @@
 ||uchu-teien.com^
 ||uclfinal.twitter.com^
 ||uddannelse.social^
+||udon.icu^
 ||ueaeduec.m.facebook.com^
+||uesantandreu.social^
 ||uestc.social^
 ||ufes.twitter.com^
 ||uff.rip^
@@ -29467,8 +29498,8 @@
 ||ustglobal.facebook.com^
 ||ustglobal.m.facebook.com^
 ||ustrendy.com^
-||usuarix.net^
 ||usuzakuraya.us^
+||utaskey.net^
 ||utopia.cool^
 ||utopia.pm^
 ||uts.facebook.com^
@@ -29909,6 +29940,7 @@
 ||vedimak.ru^
 ||vee.seedy.cc^
 ||veedeo.org^
+||veenus.art^
 ||vegancirclejerk.com^
 ||veganism.social^
 ||velospace.org^
@@ -29946,7 +29978,6 @@
 ||vex.quest^
 ||vg23wcast.qfyf1toi.com^
 ||vgg.lol^
-||vgn.church^
 ||vhs.absturztau.be^
 ||vhs.social^
 ||vhsky.cz^
@@ -30073,11 +30104,9 @@
 ||vi8qtl.dns.facebook.com^
 ||viacom.m.facebook.com^
 ||viadeo.com^
-||vibe.kittenapproved.com^
 ||vice.twitter.com^
 ||vid.kinuseka.us^
 ||vid.northbound.online^
-||vid.pathsecho.quest^
 ||vid.pretok.tv^
 ||vid.prometheus.systems^
 ||vid.samtripoli.com^
@@ -30244,10 +30273,11 @@
 ||video.arghacademy.org^
 ||video.asonix.dog^
 ||video.audiovisuel-participatif.org^
+||video.barcelo.ynh.fr^
 ||video.beta.facebook.com^
-||video.bilecik.edu.tr^
 ||video.blender.org^
 ||video.canadiancivil.com^
+||video.cartoon-aa.xyz^
 ||video.cat-jump.xyz^
 ||video.cats-home.net^
 ||video.cdninstagram.com^
@@ -30421,6 +30451,7 @@
 ||video.fhnl3-1.fna.fbcdn.net^
 ||video.fhrk1-1.fna.fbcdn.net^
 ||video.fhrk3-1.fna.fbcdn.net^
+||video.fhtagn.org^
 ||video.fhyd3-1.fna.fbcdn.net^
 ||video.ficn6-1.fna.fbcdn.net^
 ||video.fiev1-1.fna.fbcdn.net^
@@ -30616,7 +30647,6 @@
 ||video.infinito.nexus^
 ||video.infojournal.fr^
 ||video.ipng.ch^
-||video.kinkyboyspodcast.com^
 ||video.lern.link^
 ||video.liberta.vip^
 ||video.linux.it^
@@ -30636,6 +30666,7 @@
 ||video.mysticalvoid.site^
 ||video.na-prostem.si^
 ||video.ngi.eu^
+||video.nyc^
 ||video.ocs.nu^
 ||video.octofriends.garden^
 ||video.olos311.org^
@@ -30668,7 +30699,6 @@
 ||video.tkz.es^
 ||video.tmmd.club^
 ||video.trollmandsforeningen.dk^
-||video.tsundere.love^
 ||video.twitter.com^
 ||video.violoncello.ch^
 ||video.wakkeren.nl^
@@ -30698,6 +30728,7 @@
 ||videos.cloudron.io^
 ||videos.coletivos.org^
 ||videos.domainepublic.net^
+||videos.engs.am^
 ||videos.erg.be^
 ||videos.evoludata.com^
 ||videos.explain-it.org^
@@ -30727,14 +30758,17 @@
 ||videos.ritimo.org^
 ||videos.scanlines.xyz^
 ||videos.shmalls.pw^
+||videos.squat.net^
 ||videos.supertuxkart.net^
 ||videos.testimonia.org^
 ||videos.toromedia.com^
+||videos.trom.tf^
 ||videos.tuist.io^
 ||videos.ubuntu-paris.org^
 ||videos.yeswiki.net^
 ||videosift.com^
 ||videotheque.uness.fr^
+||videotube.duckdns.org^
 ||videowisent.maw.best^
 ||viditube.site^
 ||vids.stary.pc.pl^
@@ -30868,14 +30902,12 @@
 ||vpn10.error.our.intern.facebook.com^
 ||vpn2.byted.org^
 ||vraph.fb.me^
-||vrc-ins.net^
 ||vrccl.life^
 ||vrforgood.oculus.com^
 ||vrforinclusion.fb.com^
 ||vrienden.social^
 ||vrnd.online^
 ||vs.snssdk.com^
-||vsme.cc^
 ||vsp.fb.com^
 ||vsptest.fb.com^
 ||vss365mast.org^
@@ -30929,7 +30961,6 @@
 ||warningpic.twitter.com^
 ||warpday.net^
 ||waskuisland.com^
-||watch.goodluckgabe.life^
 ||watch.linuxrenaissance.com^
 ||watch.makearmy.io^
 ||watch.nuked.social^
@@ -31266,6 +31297,7 @@
 ||white.instagram.com^
 ||white.ish.instagram.com^
 ||whitesmokebbq.social^
+||whitespashe.uk^
 ||whocare.xyz^
 ||whoissick.org^
 ||wholesome.computer^
@@ -31397,6 +31429,7 @@
 ||wrily.foad.me.uk^
 ||write.as^
 ||write.bauxite.tech^
+||write.croustifed.net^
 ||write.dadadock.com^
 ||write.data.coop^
 ||write.grin.hu^
@@ -31431,6 +31464,7 @@
 ||ws2.messenger.com^
 ||wspanialy.eu^
 ||wtf.lt^
+||wtf.zip^
 ||wtfayla.com^
 ||wubba.boo^
 ||wue.social^
@@ -33611,6 +33645,7 @@
 ||wxw.cat^
 ||wxw.moe^
 ||wykop.pl^
+||wyrdsweb.net^
 ||wyrm.cutepenguin.fans^
 ||x.com^
 ||x.continuity.space^
@@ -33621,6 +33656,7 @@
 ||x.l.bytedns.net^
 ||x.miku.today^
 ||x.mxteam.spb.ru^
+||x.xiaoten.com^
 ||x.zyi.io^
 ||x22lookaside.fbsbx.com^
 ||xanga.com^
@@ -33688,6 +33724,7 @@
 ||xn--pnibles-bya.xn--transposes-i7a.eu^
 ||xn--ratatskr-r4a.de^
 ||xn--s8w913fdga.chn.moe^
+||xn--samsprka-f0a.se^
 ||xn--y9a6bah4ck.xn--y9a3aq^
 ||xn--y9aey5fdz.xn--y9a3aq^
 ||xnode.chat^
@@ -34352,6 +34389,8 @@
 ||zacbrown.twitter.com^
 ||zacbrownband.twitter.com^
 ||zannel.com^
+||zanqa.net^
+||zarja.crq.systems^
 ||zb.natamoko.jp^
 ||zbb.twitter.com^
 ||zdchannel.snssdk.com^
@@ -35177,7 +35216,6 @@
 ||zocial.ee^
 ||zohup.com^
 ||zohup.vip^
-||zoinks.one^
 ||zoji.com^
 ||zombienet.org^
 ||zomglol.wtf^
