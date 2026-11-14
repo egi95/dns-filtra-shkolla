@@ -5,6 +5,12 @@ on:
   schedule:
     - cron: "30 2 * * *"
   workflow_dispatch:
+    inputs:
+      allow_daytime_sync:
+        description: "Lejo ndryshime UniFi jashte 00:00-07:00 per nje nderhyrje manuale te miratuar"
+        required: false
+        type: boolean
+        default: false
 
 permissions:
   contents: write
@@ -107,4 +113,10 @@ jobs:
         env:
           UNIFI_API_KEY: ${{ secrets.UNIFI_API_KEY }}
           UNIFI_CONSOLE: ${{ secrets.UNIFI_CONSOLE }}
-        run: python3 scripts/unifi_sync.py
+          BGT_ALLOW_DAYTIME_SYNC: ${{ inputs.allow_daytime_sync }}
+        run: |
+          args=()
+          if [ "$BGT_ALLOW_DAYTIME_SYNC" = "true" ]; then
+            args+=(--allow-daytime)
+          fi
+          python3 scripts/unifi_sync.py "${args[@]}"

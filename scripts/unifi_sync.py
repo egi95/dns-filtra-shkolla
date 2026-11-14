@@ -3,7 +3,8 @@
 
 - Games, only during lessons: Domain List "BGT Lojera UT1 #1" = the main browser-game sites only (UNIFI_GAMES)
   and one BLOCK policy per lesson block, "BGT Lojera UT1 #1 - Ora n". The big UT1 list is NOT sent to UniFi any
-  more: 33,500 domains made the UDM apply every firewall change about an hour late (13 Nov 2026).
+  more. The reported delay was not established as a list-size effect: the 14 Nov audit found differing
+  event/reporting timestamps, and an isolated live policy test applied within a few seconds.
 - Security, always: Domain List "BGT Siguria UT1" (UT1 ddos, dangerous_material, warez, tricheur) and
   the BLOCK policy "BGT Siguria UT1 - gjithmone". The other security categories come from the UniFi Content Filter.
 - AI chatbots: Domain List "BGT AI UT1" and one BLOCK policy per lesson block, "BGT AI UT1 - Ora n",
@@ -18,6 +19,20 @@ import os
 import sys
 import urllib.error
 import urllib.request
+from datetime import datetime
+from zoneinfo import ZoneInfo
+
+
+def maintenance_window(now=None):
+    """Automatic configuration sync starts only before 07:00 in the school's time zone."""
+    local = (now or datetime.now(ZoneInfo("Europe/Belgrade"))).astimezone(ZoneInfo("Europe/Belgrade"))
+    return local.hour < 7
+
+
+if __name__ == "__main__" and "--allow-daytime" not in sys.argv and not maintenance_window():
+    print("SKIP UniFi: jashte orarit 00:00-07:00 te shkolles; listat e publikuara ruhen. "
+          "Per nje nderhyrje te miratuar manualisht perdor --allow-daytime.")
+    sys.exit(0)
 
 KEY = os.environ["UNIFI_API_KEY"].strip()
 CONSOLE = os.environ["UNIFI_CONSOLE"].strip()
@@ -173,11 +188,10 @@ def resolve_ids():
 
 def main():
     resolve_ids()
-    # 13 Nov 2026: the 33,500-domain game lists made the UDM apply every firewall change about an hour late
-    # (measured: lesson rules came on 45-60 min after their start and stayed on through the breaks, and an
-    # API change needed ~68 min to take effect). UniFi therefore gets only the main browser-game sites; game
-    # apps are blocked by the DPI category "Games" (app block "BGT Sociale") and the game ports. The big
-    # list stays in AdGuard (BGT 1), which blocks by name at no cost.
+    # Keep UniFi's game list small. Large lists were previously suspected of delayed enforcement,
+    # but that cause is unproven; the 14 Nov audit distinguished delayed event reporting from enforcement.
+    # App Blocking and game-port rules complement these domains. The complete DNS list stays in AdGuard;
+    # it still consumes resources and its performance must be measured under school load.
     games = sorted(set(UNIFI_GAMES))
     s = Sync()
     gid = s.group("BGT Lojera UT1 #1", games)
