@@ -1,8 +1,8 @@
 ! Title: Mashtrime / scam / fake shops (HaGeZi fake + Block List Project scam)
-! Source: https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/fake.txt (18778)
+! Source: https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/fake.txt (18777)
 ! Source: https://blocklistproject.github.io/Lists/adguard/scam-ags.txt (8527)
 ! Licenses: UT1 CC BY-SA 4.0; HaGeZi GPL-3.0; Block List Project Unlicense; CasCas2 see repo
-! Domains: 27130
+! Domains: 27129
 ||0-google.com^
 ||007-dvd.com^
 ||01crypto.com^
@@ -169,7 +169,6 @@
 ||3racingparts.com^
 ||3sixteenonline.org^
 ||3stepdivorce.com^
-||4-pfoten-freizeit.de^
 ||4-sex.ru^
 ||419.email^
 ||420-lab.com^
@@ -617,7 +616,6 @@
 ||aipharmaweekly.com^
 ||aipohealth.com^
 ||air-adult.com^
-||air-jordan4.com^
 ||air-uposterreich.at^
 ||air-uposterreich.com^
 ||air-yeezyshoes.com^
@@ -1753,6 +1751,7 @@
 ||aurorastocks.com^
 ||aurorastore.pro^
 ||aurudium.com^
+||aurum.foundation^
 ||aus-gelassen.de^
 ||ausdispensary.net^
 ||ausgabetag.com^
@@ -1985,6 +1984,7 @@
 ||babycookie.online^
 ||babyfuntoys.com^
 ||babygea.com^
+||babyglueck.shop^
 ||babyglueckshop.com^
 ||babylissde.de^
 ||babymio-tirol.com^
@@ -2652,6 +2652,7 @@
 ||betonruttler.com^
 ||betonspot.com^
 ||betontop.com^
+||betrailo.com^
 ||betrendy.site^
 ||betrmode.com^
 ||betrugs-check.de^
@@ -2910,7 +2911,6 @@
 ||bioxtrim.com^
 ||biozentrolo.shop^
 ||bipubunny.com^
-||biranco.com^
 ||birdbreedersclassifieds.com^
 ||birdbreederstore.com^
 ||birdmanspetsources.com^
@@ -3476,7 +3476,6 @@
 ||briscofinance.com^
 ||briskrhythm.com^
 ||briskwith.com^
-||british-columbia-hotels.com^
 ||britishessentiils.com^
 ||britishieltscertification.com^
 ||brivani.com.br^
@@ -5045,6 +5044,7 @@
 ||covid19vaccinationid.com^
 ||coviviocapital.com^
 ||covshop.de^
+||cowboy-brothers.de^
 ||cowboy-green.com^
 ||cowboybootsnew.com^
 ||coyojo.com^
@@ -7459,11 +7459,11 @@
 ||etsytees.com^
 ||etsytelemall.com^
 ||ettern24.de^
+||etvgozkl.shop^
 ||eu-first.com^
 ||eu-fuehrerschein-agentur.com^
 ||eu-fuehrerschein-mpu.com^
 ||eu-meds.net^
-||eu-meds.online^
 ||eu-pharmacy-online.com^
 ||eu-pillstore.com^
 ||eu-segway.com^
@@ -8450,7 +8450,6 @@
 ||flow-tex.de^
 ||flowartshop.com^
 ||flowehoney.com^
-||floweraup.com^
 ||flowercomedy.com^
 ||flowerdelivery.com^
 ||flowermodas.com^
@@ -9443,6 +9442,7 @@
 ||gestion-deblock.com^
 ||gestion.finance^
 ||gesuender-im-leben.com^
+||gesund-kaufen.com^
 ||gesunderrasen.com^
 ||gesundeswelpenhaus.de^
 ||gesundheits-apo.com^
@@ -12918,7 +12918,6 @@
 ||kingteeshop.com^
 ||kingteestore.com^
 ||kingwans.com^
-||kingwwy.com^
 ||kinkr.club^
 ||kinkylocals.co.uk^
 ||kino.tolle-nachrichten.com^
@@ -15178,7 +15177,6 @@
 ||menfrog.com^
 ||menido.de^
 ||menily.com^
-||menilyshop.com^
 ||menke-bahr.com^
 ||mennique.com^
 ||mens-health-ph.com^
@@ -15701,6 +15699,7 @@
 ||moedllbahnlippe.shop^
 ||moegov.me^
 ||moeller-immobilien.net^
+||moellerbrennholz.de^
 ||moensale.com^
 ||mogati.shop^
 ||moglichinderlademarket.shop^
@@ -18344,6 +18343,7 @@
 ||pharmacy-europe.com^
 ||pharmacy-true.com^
 ||pharmacy-xl.org^
+||pharmacyeurope24.com^
 ||pharmacyinventory.org^
 ||pharmacymarketonline.com^
 ||pharmacyonline24.com^
@@ -19670,6 +19670,7 @@
 ||reifenivo.de^
 ||reifenritter.com^
 ||reifensverkauf.com^
+||reifenvaro.com^
 ||reifkogel24.de^
 ||reilesenthel.de.com^
 ||reimers-partner.de^
@@ -21049,7 +21050,6 @@
 ||sexfinderonline.com^
 ||sexfriend.fr^
 ||sexhotel.fr^
-||sexicats.com^
 ||sexinspektor.com^
 ||sexkontakt-at.com^
 ||sexkontakt.com^
@@ -22198,7 +22198,6 @@
 ||spybot-now.com^
 ||spybulbcamera.de^
 ||spydersale.de^
-||spydiscount24.com^
 ||spyshield.org^
 ||spyshop.at^
 ||spyxe.com^
@@ -22373,6 +22372,7 @@
 ||steroide-medikamente.com^
 ||steroide360.com^
 ||sterreich.at^
+||steuben-gmbh.de^
 ||stevemaddenosterreich.com^
 ||steveoplumbing.com^
 ||steyrtracteursgmbh.at^
@@ -26063,7 +26063,6 @@
 ||wolfgangcontainers.de^
 ||wolfganggmbh.de^
 ||wolfmode.de^
-||wolftoothbike.com^
 ||wolke-hundebett.de^
 ||wolkenfreund.de^
 ||wolkenschaukel.de^
