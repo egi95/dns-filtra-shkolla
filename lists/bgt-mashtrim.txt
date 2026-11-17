@@ -1,8 +1,8 @@
 ! Title: Mashtrime / scam / fake shops (HaGeZi fake + Block List Project scam)
-! Source: https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/fake.txt (18777)
+! Source: https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/fake.txt (18814)
 ! Source: https://blocklistproject.github.io/Lists/adguard/scam-ags.txt (8527)
 ! Licenses: UT1 CC BY-SA 4.0; HaGeZi GPL-3.0; Block List Project Unlicense; CasCas2 see repo
-! Domains: 27129
+! Domains: 27166
 ||0-google.com^
 ||007-dvd.com^
 ||01crypto.com^
@@ -973,6 +973,7 @@
 ||am-onlinehandel.de^
 ||amaminow.it^
 ||amantisecreti.com^
+||amara-fiore.com^
 ||amarbhosale.com^
 ||amarego.com^
 ||amarillogazette.com^
@@ -1632,6 +1633,7 @@
 ||at.pkajwb.shop^
 ||at.qfmiceden.shop^
 ||at.rattaay.com^
+||at.trabajo.org^
 ||at.ultimate-gainz.com^
 ||at.vbrcw.shop^
 ||at1075.wedqc.shop^
@@ -2460,6 +2462,7 @@
 ||bergxperten.de^
 ||berichtkfz.de^
 ||berichtprofi.de^
+||berindo.de^
 ||beriuty.com^
 ||berizen.com^
 ||berk-designs.de^
@@ -2911,6 +2914,7 @@
 ||bioxtrim.com^
 ||biozentrolo.shop^
 ||bipubunny.com^
+||biranco.com^
 ||birdbreedersclassifieds.com^
 ||birdbreederstore.com^
 ||birdmanspetsources.com^
@@ -2952,7 +2956,6 @@
 ||bitcoinmotion.com^
 ||bitcoinmotion.io^
 ||bitcoins-central.com^
-||bitconnect.co^
 ||bitcostar.com^
 ||bitebuns.com^
 ||bitecbrennstoffe.de^
@@ -3476,6 +3479,7 @@
 ||briscofinance.com^
 ||briskrhythm.com^
 ||briskwith.com^
+||british-columbia-hotels.com^
 ||britishessentiils.com^
 ||britishieltscertification.com^
 ||brivani.com.br^
@@ -4371,6 +4375,7 @@
 ||chihuahuapuppiesforsale1.com^
 ||chikepod.com^
 ||childeducationalshop.com^
+||childmake.com^
 ||chillgod.com^
 ||chilllady.com^
 ||chimballsas.com^
@@ -4445,6 +4450,7 @@
 ||cifad-ae.com^
 ||cifuentesdresseshop.com^
 ||cigarettesbtc.com^
+||cigarettescigs.com^
 ||cigartrade.net^
 ||cillva.com^
 ||cimerwatch.com^
@@ -5323,6 +5329,7 @@
 ||d1xkyo9j4r7vnn.cloudfront.net^
 ||d2-si.fr^
 ||d2020yrahex7kc.cloudfront.net^
+||dablement.com^
 ||daboisdechauff.com^
 ||dabstarspharmacy.com^
 ||dach-remscheid.de^
@@ -5654,6 +5661,7 @@
 ||decorationmaterialsonline.com^
 ||decorativk.com^
 ||decorazioninatalizi.com^
+||decordew.com^
 ||decorevery.com^
 ||decorhomechristmas.com^
 ||decorlivio.com^
@@ -5967,6 +5975,7 @@
 ||deweinwelthub.com^
 ||dewello-shop.de^
 ||dewohntraum.com^
+||dewskdt.shop^
 ||dexer-handel.de^
 ||dexoraoutlet.com^
 ||dexxxlutz.shop^
@@ -7016,6 +7025,7 @@
 ||elektrokueche.de^
 ||elektromedis.com^
 ||elektronikdesigner.de^
+||elektronikoutlet.com^
 ||elektronikshopping.com^
 ||elektronio.de^
 ||elektronischermarkt.de^
@@ -7110,6 +7120,7 @@
 ||elwenkoffer.de^
 ||elwenrimowa.de^
 ||elwods.store^
+||elwomis.de^
 ||elysiumbikes.com^
 ||elysiumcycles.com^
 ||elyvanedepot.com^
@@ -7338,6 +7349,7 @@
 ||erektionspillen.com^
 ||erfrisch-endes.de^
 ||ergeb-nisse.de^
+||ergo-brennholz.de^
 ||eriaisste.com^
 ||erik-online.company.site^
 ||erinnersegel.com^
@@ -7464,6 +7476,7 @@
 ||eu-fuehrerschein-agentur.com^
 ||eu-fuehrerschein-mpu.com^
 ||eu-meds.net^
+||eu-meds.online^
 ||eu-pharmacy-online.com^
 ||eu-pillstore.com^
 ||eu-segway.com^
@@ -7545,6 +7558,7 @@
 ||eurorxdrugs.cc^
 ||eurorxdrugs.com^
 ||euroshopping.store^
+||eurotech-diamant.de^
 ||eurotrustchemical.org^
 ||eurous.net^
 ||eurshopping.com^
@@ -8450,6 +8464,7 @@
 ||flow-tex.de^
 ||flowartshop.com^
 ||flowehoney.com^
+||floweraup.com^
 ||flowercomedy.com^
 ||flowerdelivery.com^
 ||flowermodas.com^
@@ -10872,6 +10887,7 @@
 ||herzogberlin.de^
 ||herzstil.de^
 ||heshengd.com^
+||heudorfer-fahrradladen.de^
 ||heute-horoskope.de^
 ||hevia.finance^
 ||hewittgunshop.com^
@@ -11260,6 +11276,7 @@
 ||hotelladen.com^
 ||hotels-colombo.com^
 ||hotelsinperm.ru^
+||hotelsinvienna.org^
 ||hotelsofmenorca.com^
 ||hotelwareus.com^
 ||hotelwhales.com^
@@ -11902,6 +11919,7 @@
 ||intelligentbelgianmalinois.com^
 ||intelligents.store^
 ||intelligiblei.com^
+||intellisynex.com^
 ||intendjoy.com^
 ||intentionalk.com^
 ||inter-parcel.com^
@@ -12331,7 +12349,6 @@
 ||joox388-online.com^
 ||joponwithlovestore.shop^
 ||jorassicfruit.com^
-||jordan-1s.com^
 ||jordan-shoes.us.com^
 ||jordan1.uk.com^
 ||jordanat.at^
@@ -12918,6 +12935,7 @@
 ||kingteeshop.com^
 ||kingteestore.com^
 ||kingwans.com^
+||kingwwy.com^
 ||kinkr.club^
 ||kinkylocals.co.uk^
 ||kino.tolle-nachrichten.com^
@@ -12927,6 +12945,7 @@
 ||kiqutilaumpartnersnet.click^
 ||kiranolir.com^
 ||kirbmayer.com^
+||kirche-lennep.de^
 ||kircheaustreten.de^
 ||kircherto.shop^
 ||kirchner-kollegen.com^
@@ -14337,6 +14356,7 @@
 ||lunarisgirl.net^
 ||lunarr-solar-systems.xyz^
 ||lunaryfinance.com^
+||lunaseacoffees.com^
 ||lunavelle-official.com^
 ||lunaxadv.myshopify.com^
 ||luner-boutique.com^
@@ -15177,6 +15197,7 @@
 ||menfrog.com^
 ||menido.de^
 ||menily.com^
+||menilyshop.com^
 ||menke-bahr.com^
 ||mennique.com^
 ||mens-health-ph.com^
@@ -16395,6 +16416,7 @@
 ||ncunionnews.com^
 ||ncwisconsinnews.com^
 ||ncwvnews.com^
+||ndb-shop.com^
 ||ndfinitee.com^
 ||ndnorthnews.com^
 ||ndsemulator.com^
@@ -16688,6 +16710,7 @@
 ||nintendodsemulators.com^
 ||ninthcit.de^
 ||niomo.shop^
+||nirana.de^
 ||niruox.com^
 ||nittogeschaft.com^
 ||nituralelements.com^
@@ -18151,6 +18174,8 @@
 ||pellets-skog.com^
 ||pelletsgeschaft.com^
 ||pelletshoponline.com^
+||pelletsrl.com^
+||pelletwerk.com^
 ||pelopel.com^
 ||peluxiv.at^
 ||peluxiv.com^
@@ -19548,7 +19573,6 @@
 ||realcuckoldcouples.com^
 ||realdocumentproviders.com^
 ||realestate-unique.com^
-||realestate.immobilien^
 ||realexpliciting.com^
 ||realfastdocument.com^
 ||realghostguns.com^
@@ -20535,6 +20559,7 @@
 ||sangaa.co^
 ||sangamonsun.com^
 ||sanitaer-meier.de^
+||sanitaerfreude.com^
 ||sanitaetshausshop.com^
 ||sanitatsbedarf24.com^
 ||sanjoaquintimes.com^
@@ -20627,6 +20652,7 @@
 ||sboxcontainers.com^
 ||scalaskanews.com^
 ||scaletedious.com^
+||scandiwarm.com^
 ||scanner-drivers.com^
 ||scanner-drivers.ru^
 ||scannero.io^
@@ -21050,6 +21076,7 @@
 ||sexfinderonline.com^
 ||sexfriend.fr^
 ||sexhotel.fr^
+||sexicats.com^
 ||sexinspektor.com^
 ||sexkontakt-at.com^
 ||sexkontakt.com^
@@ -21258,6 +21285,7 @@
 ||shophillspet.com^
 ||shophoneybadger.com^
 ||shopify-pay.de^
+||shopjamei.com^
 ||shopjbweld.com^
 ||shopjopandi.shop^
 ||shopkamagra.org^
@@ -22000,6 +22028,7 @@
 ||spar-allianz.de^
 ||spar-markt.de^
 ||sparfuchs-vergleich.base44.app^
+||sparfuchs.shop^
 ||sparhaustechnik.de^
 ||sparkamerad.de^
 ||sparkauf.eu^
@@ -23278,11 +23307,13 @@
 ||temptingchats.com^
 ||temptlife.com^
 ||tempusluxor.com.br^
+||temude.com^
 ||ten-estate.com^
 ||tenddaily.com^
 ||tendencyn.com^
 ||tendenicy.com^
 ||tenderplanets.com^
+||teneva.de^
 ||tengoa.com^
 ||tennis-babolat.com^
 ||tennisbedarf.com^
@@ -23676,6 +23707,7 @@
 ||timesofnetherland.com^
 ||timesofspanish.com^
 ||timmanteau.xyz^
+||timsneakers.com^
 ||timtamperformo.shop^
 ||tinagarten.de^
 ||tinarasen.com^
@@ -23820,6 +23852,7 @@
 ||tonyteacupchihuahuapuppies.zohosites.com^
 ||tooeut.com^
 ||toolandmaintenance.com^
+||toolbaypro.com^
 ||toolblitzz.myshopify.com^
 ||toolbrathirs.shop^
 ||toolclearancesale.com^
@@ -25304,6 +25337,7 @@
 ||vorratswerk.shop^
 ||vorsorge-karte.com^
 ||vortexashop.net^
+||vorwerk-com.de^
 ||vorwerk-de.com^
 ||vorwerk-deutschland.de^
 ||vorwerk-shopline.com^
@@ -25518,6 +25552,7 @@
 ||waynecountytoday.com^
 ||wayofwade.at^
 ||wayrumble.com^
+||wbdhyer.shop^
 ||wbecrisfro.com^
 ||wbougisay.com^
 ||wbymall.store^
@@ -26675,6 +26710,7 @@
 ||xeond.com^
 ||xera.pro^
 ||xerofootwearuk.com^
+||xeroshoesnz.com^
 ||xevago.com^
 ||xfether.com^
 ||xflyrc.com^
@@ -26824,6 +26860,7 @@
 ||yonexdeutschland.com^
 ||yonexdeutschland.de^
 ||yonexs.at^
+||yonook.com^
 ||yoocaa.com^
 ||yoocare.com^
 ||yoohal.com^
