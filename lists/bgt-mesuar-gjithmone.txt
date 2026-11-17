@@ -1,6 +1,6 @@
 ! Title: Mesuar - Bllokuar nga AdGuard i BGT 1
-! Updated: 2026-11-16 03:19
-! Domains: 32
+! Updated: 2026-11-17 03:20
+! Domains: 37
 ||aapljs.com^
 ||analytics-toolbar.falais.com^
 ||analytics-toolbar.urban-vpn.com^
@@ -8,6 +8,7 @@
 ||anti-phishing-protection.falais.com^
 ||anti-phishing-protection.urban-vpn.com^
 ||antpeak.com^
+||api-pro.urban-vpn.com^
 ||api.totallyacdn.com^
 ||api.windscribe.com^
 ||api2.sec-tunnel.com^
@@ -17,11 +18,15 @@
 ||config-toolbar.falais.com^
 ||config-toolbar.urban-vpn.com^
 ||dns-tunnel-check.googlezip.net^
+||dns.google^
 ||dns11.quad9.net^
 ||download.veepn.com^
 ||freloop.com^
+||ip.oxylabs.io^
 ||ipv4.oxylabs.io^
+||ipv6.oxylabs.io^
 ||nl138.rapidstaticserve.cc^
+||plus.hisball.com^
 ||premzon.com^
 ||proigor.com^
 ||protonvpn.com^

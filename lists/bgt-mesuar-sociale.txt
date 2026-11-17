@@ -1,3 +1,6 @@
 ! Title: Mesuar - Rrjete sociale (BGT 2 DPI)
-! Updated: 2026-11-16 03:19
-! Domains: 0
+! Updated: 2026-11-17 03:20
+! Domains: 3
+||cdninstagram.com^
+||facebook.com^
+||instagram.com^
