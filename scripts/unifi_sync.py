@@ -157,6 +157,25 @@ class Sync:
             print(f"{name}: lista u lidh perseri")
 
 
+# Exact AI service hosts on otherwise shared platforms. Keep their parent domains
+# out of the firewall group to preserve general access to school services.
+AI_SERVICE_HOSTS = {
+    "copilot.microsoft.com", "gemini.google.com", "aistudio.google.com",
+    "generativelanguage.googleapis.com", "copilot-proxy.githubusercontent.com",
+    "githubcopilot.com", "api.githubcopilot.com", "api.individual.githubcopilot.com",
+    "api.business.githubcopilot.com", "api.enterprise.githubcopilot.com",
+}
+
+
+def ai_members():
+    # The campus feed includes UT1. Missing/empty source files must never replace
+    # the live group with only the supplemental service hosts.
+    domains = read_merged("bgt-ai")
+    if not domains:
+        raise ValueError("Missing or empty bgt-ai feed")
+    return sorted(domains | AI_SERVICE_HOSTS)
+
+
 def read_merged(name):
     """A merged list built by build_lists.py (UT1 + other collections), minus the educational exceptions."""
     path = os.path.join(LISTS, f"{name}.txt")
@@ -213,7 +232,7 @@ def main():
 
     # AI: one policy per lesson block like the games, created switched off; the admin's modes
     # (bgt-modi on the BGT 1 server) decide whether they are on, off or "all day".
-    ai = sorted(read_list("ai"))
+    ai = ai_members()
     if ai:
         gid = s.group("BGT AI UT1", ai)
         for ora, start, end in BLOCKS:
