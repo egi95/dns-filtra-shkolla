@@ -14,6 +14,8 @@
 Creates what is missing and updates list members; objects with other names are never touched.
 Needs UNIFI_API_KEY and UNIFI_CONSOLE (the console id used in the api.ui.com connector URL).
 """
+from ai_hosts import AI_SERVICE_HOSTS
+
 import json
 import os
 import sys
@@ -155,16 +157,6 @@ class Sync:
                         _id=p["_id"])
             api("PUT", f"/v2/api/site/default/firewall-policies/{p['_id']}", body)
             print(f"{name}: lista u lidh perseri")
-
-
-# Exact AI service hosts on otherwise shared platforms. Keep their parent domains
-# out of the firewall group to preserve general access to school services.
-AI_SERVICE_HOSTS = {
-    "copilot.microsoft.com", "gemini.google.com", "aistudio.google.com",
-    "generativelanguage.googleapis.com", "copilot-proxy.githubusercontent.com",
-    "githubcopilot.com", "api.githubcopilot.com", "api.individual.githubcopilot.com",
-    "api.business.githubcopilot.com", "api.enterprise.githubcopilot.com",
-}
 
 
 def ai_members():

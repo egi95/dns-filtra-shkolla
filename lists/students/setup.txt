@@ -1,0 +1,2 @@
+! Bootstrap for registering disabled student subscriptions
+||bgt-setup.invalid^

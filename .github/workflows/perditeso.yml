@@ -81,6 +81,7 @@ jobs:
 
           # merged category lists: UT1 + HaGeZi + Block List Project + CasCas2 (games, torrent, social)
           python3 scripts/build_lists.py
+          python3 scripts/build_student_filters.py
 
           # index of all lists with their size and AdGuard URL
           {
