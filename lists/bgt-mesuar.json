@@ -45,7 +45,7 @@
 "kind": "gjithmone",
 "domain": "antpeak.com",
 "first": 1794622637.3416238,
-"last": 1794881602.7043989,
+"last": 1794968008.106246,
 "max_clients": 6
 },
 "gjithmone:api-pro.urban-vpn.com": {
@@ -53,6 +53,13 @@
 "domain": "api-pro.urban-vpn.com",
 "first": 1794881602.7043989,
 "last": 1794881602.7043989,
+"max_clients": 2
+},
+"gjithmone:api.surfshark.com": {
+"kind": "gjithmone",
+"domain": "api.surfshark.com",
+"first": 1794968008.106246,
+"last": 1794968008.106246,
 "max_clients": 2
 },
 "gjithmone:api.totallyacdn.com": {
@@ -115,8 +122,8 @@
 "kind": "gjithmone",
 "domain": "dns-tunnel-check.googlezip.net",
 "first": 1794622637.3416238,
-"last": 1794881602.7043989,
-"max_clients": 4
+"last": 1794968008.106246,
+"max_clients": 5
 },
 "gjithmone:dns.google": {
 "kind": "gjithmone",
@@ -137,6 +144,13 @@
 "domain": "download.veepn.com",
 "first": 1794622637.3416238,
 "last": 1794622637.3416238,
+"max_clients": 2
+},
+"gjithmone:edge.surfeasy.com": {
+"kind": "gjithmone",
+"domain": "edge.surfeasy.com",
+"first": 1794968008.106246,
+"last": 1794968008.106246,
 "max_clients": 2
 },
 "gjithmone:freloop.com": {
@@ -192,7 +206,7 @@
 "kind": "gjithmone",
 "domain": "proigor.com",
 "first": 1794622637.3416238,
-"last": 1794622637.3416238,
+"last": 1794968008.106246,
 "max_clients": 4
 },
 "gjithmone:protonvpn.com": {
@@ -227,7 +241,7 @@
 "kind": "gjithmone",
 "domain": "split-tool.com",
 "first": 1794622637.3416238,
-"last": 1794881602.7043989,
+"last": 1794968008.106246,
 "max_clients": 9
 },
 "gjithmone:tronyza.com": {
@@ -241,7 +255,7 @@
 "kind": "gjithmone",
 "domain": "tunnel.googlezip.net",
 "first": 1794622637.3416238,
-"last": 1794881602.7043989,
+"last": 1794968008.106246,
 "max_clients": 24
 },
 "gjithmone:vpn-api.proton.me": {
@@ -250,6 +264,13 @@
 "first": 1794622637.3416238,
 "last": 1794881602.7043989,
 "max_clients": 6
+},
+"gjithmone:www.lookmovie2.to": {
+"kind": "gjithmone",
+"domain": "www.lookmovie2.to",
+"first": 1794968008.106246,
+"last": 1794968008.106246,
+"max_clients": 2
 },
 "gjithmone:zorvian.com": {
 "kind": "gjithmone",
