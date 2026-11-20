@@ -1,10 +1,10 @@
 # Listat (formati AdGuard)
 
-Perditesuar: 2026-11-20 10:14 UTC. Burimi: UT1, Universite Toulouse Capitole, CC BY-SA 4.0.
+Perditesuar: 2026-11-20 10:32 UTC. Burimi: UT1, Universite Toulouse Capitole, CC BY-SA 4.0.
 
 | Lista | Domene | URL per AdGuard Home |
 |---|---|---|
-| bgt-ai | 656 | https://raw.githubusercontent.com/egi95/dns-filtra-shkolla/main/lists/bgt-ai.txt |
+| bgt-ai | 673 | https://raw.githubusercontent.com/egi95/dns-filtra-shkolla/main/lists/bgt-ai.txt |
 | bgt-anashkalimi | 117293 | https://raw.githubusercontent.com/egi95/dns-filtra-shkolla/main/lists/bgt-anashkalimi.txt |
 | bgt-blp-redirect | 108682 | https://raw.githubusercontent.com/egi95/dns-filtra-shkolla/main/lists/bgt-blp-redirect.txt |
 | bgt-droga | 26337 | https://raw.githubusercontent.com/egi95/dns-filtra-shkolla/main/lists/bgt-droga.txt |
@@ -17,6 +17,7 @@ Perditesuar: 2026-11-20 10:14 UTC. Burimi: UT1, Universite Toulouse Capitole, CC
 | bgt-mesuar-lojera | 0 | https://raw.githubusercontent.com/egi95/dns-filtra-shkolla/main/lists/bgt-mesuar-lojera.txt |
 | bgt-mesuar-sociale | 3 | https://raw.githubusercontent.com/egi95/dns-filtra-shkolla/main/lists/bgt-mesuar-sociale.txt |
 | bgt-nsfw-ai | 87 | https://raw.githubusercontent.com/egi95/dns-filtra-shkolla/main/lists/bgt-nsfw-ai.txt |
+| bgt-proxy-confirmed | 344 | https://raw.githubusercontent.com/egi95/dns-filtra-shkolla/main/lists/bgt-proxy-confirmed.txt |
 | bgt-safesearch | 202 | https://raw.githubusercontent.com/egi95/dns-filtra-shkolla/main/lists/bgt-safesearch.txt |
 | bgt-siguria | 25479 | https://raw.githubusercontent.com/egi95/dns-filtra-shkolla/main/lists/bgt-siguria.txt |
 | bgt-sociale | 35260 | https://raw.githubusercontent.com/egi95/dns-filtra-shkolla/main/lists/bgt-sociale.txt |
