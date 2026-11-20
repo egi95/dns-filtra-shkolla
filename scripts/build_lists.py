@@ -59,10 +59,15 @@ LISTS_DEF = {
         "remote": [f"{HAGEZI}/anti.piracy.txt", f"{BLP}/piracy-ags.txt", f"{BLP}/torrent-ags.txt"],
         "allow": [], "min": 20000,
     },
-    # stored for later, NOT switched on anywhere until the school decides
     "bgt-ai": {
-        "title": "AI chatbote (UT1 ai) - vetem per provime",
-        "local": ["ai"], "remote": [], "allow": [], "min": 30,
+        "title": "AI chatbots and APIs (UT1 and Nullgen)",
+        "local": ["ai"],
+        "remote": ["https://raw.githubusercontent.com/nullgen-inc/ai-blocklist/main/lists/ai.domains.txt"],
+        "allow": ["google.com", "microsoft.com", "github.com", "amazon.com", "adobe.com",
+                  "apple.com", "office.com", "m365.cloud.microsoft", "factory.com", "playground.com",
+                  "sourcegraph.com", "assistant.googleapis.com", "aiplatform.googleapis.com"],
+        "min": 30,
+        "license": "UT1 CC BY-SA 4.0; Nullgen CC0-1.0",
     },
     "bgt-mashtrim": {
         "title": "Mashtrime / scam / fake shops (HaGeZi fake + Block List Project scam)",
@@ -146,12 +151,20 @@ def build(name, d):
     for url in d["remote"]:
         try:
             got = parse(fetch(url))
+            if name == "bgt-ai" and len(got) < 100:
+                raise ValueError("Incomplete AI source")
             doms |= got
             used.append(f"{url} ({len(got)})")
         except Exception as e:  # one failing source must not break the night
             print(f"{name}: burimi deshtoi {url}: {e}", file=sys.stderr)
+            if name == "bgt-ai":
+                return
     allow = d["allow"]
-    doms = {x for x in doms if not any(x == a or x.endswith("." + a) for a in allow)}
+    if name == "bgt-ai":
+        from ai_hosts import AI_SERVICE_HOSTS
+        doms = (doms - set(allow)) | AI_SERVICE_HOSTS
+    else:
+        doms = {x for x in doms if not any(x == a or x.endswith("." + a) for a in allow)}
     path = os.path.join(LISTS, f"{name}.txt")
     old = old_count(path)
     if len(doms) < d["min"] or len(doms) < old // 2:
