@@ -37,6 +37,7 @@ ALLOW_GAMES = ["kahoot.com", "kahoot.it", "wordwall.net", "quizizz.com", "blooke
 ALLOW_SOCIAL = ["whatsapp.com", "whatsapp.net", "wa.me", "viber.com", "viber.co"]
 
 FIREWALLA = "https://raw.githubusercontent.com/firewalla/fw-public-lists/main/"
+SHADOW = "https://raw.githubusercontent.com/ShadowWhisperer/BlockLists/master/Lists/"
 F5_AI = "https://raw.githubusercontent.com/f5devcentral/sslo-script-tools/main/sslo-generative-ai-categories/"
 # Firewalla publishes these feeds as pointers to the same HaGeZi project.
 MIRRORS = {
@@ -45,6 +46,11 @@ MIRRORS = {
 }
 
 LISTS_DEF = {
+    "bgt-proxy-confirmed": {
+        "title": "Dedicated student proxy domains confirmed by UT1 and ShadowWhisperer",
+        "local": ["redirector"], "remote": [], "allow": ALLOW_GAMES + ALLOW_SOCIAL,
+        "min": 40, "license": "UT1 CC BY-SA 4.0; ShadowWhisperer Unlicense",
+    },
     "bgt-nsfw-ai": {
         "title": "Adult AI services (Firewalla)", "local": [],
         "remote": [FIREWALLA + "nsfw-ai.txt"], "allow": [], "min": 40,
@@ -80,7 +86,7 @@ LISTS_DEF = {
                   "apple.com", "office.com", "m365.cloud.microsoft", "factory.com", "playground.com",
                   "sourcegraph.com", "assistant.googleapis.com", "aiplatform.googleapis.com"],
         "min": 30,
-        "license": "UT1 CC BY-SA 4.0; Nullgen CC0-1.0; additional domains from Firewalla and F5 DevCentral, see source URLs",
+        "license": "UT1 CC BY-SA 4.0; Nullgen CC0-1.0; additional domains from Firewalla and F5 DevCentral, see source URLs; ShadowWhisperer Unlicense",
     },
     "bgt-mashtrim": {
         "title": "Mashtrime / scam / fake shops (HaGeZi fake + Block List Project scam)",
@@ -200,13 +206,26 @@ def build(name, d):
             print(f"{name}: burimi deshtoi {url}: {e}", file=sys.stderr)
             if name in {"bgt-ai", "bgt-nsfw-ai"} or url in MIRRORS:
                 raise
+    if name == "bgt-proxy-confirmed":
+        url = SHADOW + "Tunnels"
+        doms &= wildcard_domains(url, 500)
+        # Limit the extra group to explicitly named proxy services. Dual-use
+        # vendor homepages also appear in both upstream catalogs.
+        doms = {h for h in doms if "proxy" in h or "unblock" in h}
+        if len(doms) < d["min"] or len(doms) < old_count(os.path.join(LISTS, name + ".txt")) // 2:
+            raise ValueError("Incomplete confirmed proxy list")
+        used.append(f"{url} (intersection with UT1, dedicated proxy names)")
     allow = d["allow"]
     if name == "bgt-ai":
         from ai_hosts import AI_SERVICE_HOSTS
         fw = FIREWALLA + "ai-provider.txt"
         broad = F5_AI + "ai-tools-urls"
         chat = F5_AI + "ai-category-chat"
-        confirmed = wildcard_domains(fw, 700) & wildcard_domains(broad, 1200)
+        firewalla_domains = wildcard_domains(fw, 700)
+        f5_domains = wildcard_domains(broad, 1200)
+        shadow_url = SHADOW + "AI"
+        shadow_domains = wildcard_domains(shadow_url, 80)
+        confirmed = (firewalla_domains & f5_domains) | (shadow_domains & (firewalla_domains | f5_domains))
         if len(confirmed) < 100:
             raise ValueError("AI catalogs have too few matching domains")
         chats = wildcard_domains(chat, 70)
@@ -215,7 +234,7 @@ def build(name, d):
         additions = {host for host in confirmed | chats
                      if not any(host == base or host.endswith("." + base) for base in shared)}
         doms |= additions
-        used += [f"{fw} + {broad} (matched: {len(confirmed)})", f"{chat} ({len(chats)})"]
+        used += [f"{fw}, {broad}, {shadow_url} (at least two sources: {len(confirmed)})", f"{chat} ({len(chats)})"]
         doms = (doms - set(allow)) | AI_SERVICE_HOSTS
     else:
         doms = {x for x in doms if not any(x == a or x.endswith("." + a) for a in allow)}

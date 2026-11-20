@@ -8,6 +8,7 @@
 ||agentgpt.reworkd.ai^$client=10.10.0.0/16,important
 ||ai-hay.vn^$client=10.10.0.0/16,important
 ||ai-writer.com^$client=10.10.0.0/16,important
+||ai.google^$client=10.10.0.0/16,important
 ||ai.ls^$client=10.10.0.0/16,important
 ||ai21.com^$client=10.10.0.0/16,important
 ||ai2sql.io^$client=10.10.0.0/16,important
@@ -66,6 +67,7 @@
 ||article.audio^$client=10.10.0.0/16,important
 ||articleforge.com^$client=10.10.0.0/16,important
 ||artiphoria.ai^$client=10.10.0.0/16,important
+||artspace.ai^$client=10.10.0.0/16,important
 ||asknotion.app^$client=10.10.0.0/16,important
 ||askrobi.com^$client=10.10.0.0/16,important
 ||askyourpdf.com^$client=10.10.0.0/16,important
@@ -133,6 +135,7 @@
 ||chatgenie.xyz^$client=10.10.0.0/16,important
 ||chatglm.cn^$client=10.10.0.0/16,important
 ||chatgpt.com^$client=10.10.0.0/16,important
+||chatgpt4rus.ru^$client=10.10.0.0/16,important
 ||chatgptwriter.ai^$client=10.10.0.0/16,important
 ||chathub.gg^$client=10.10.0.0/16,important
 ||chatkit.app^$client=10.10.0.0/16,important
@@ -160,6 +163,7 @@
 ||cohesive.so^$client=10.10.0.0/16,important
 ||colomboai.com^$client=10.10.0.0/16,important
 ||cometcore.co^$client=10.10.0.0/16,important
+||comfy.org^$client=10.10.0.0/16,important
 ||comicsmaker.ai^$client=10.10.0.0/16,important
 ||compose.ai^$client=10.10.0.0/16,important
 ||compute.hyper.space^$client=10.10.0.0/16,important
@@ -194,6 +198,7 @@
 ||daftart.ai^$client=10.10.0.0/16,important
 ||dailybot.com^$client=10.10.0.0/16,important
 ||dall-efree.com^$client=10.10.0.0/16,important
+||dang.ai^$client=10.10.0.0/16,important
 ||dante-ai.com^$client=10.10.0.0/16,important
 ||dappergpt.com^$client=10.10.0.0/16,important
 ||davinci.ai^$client=10.10.0.0/16,important
@@ -249,6 +254,7 @@
 ||flair.ai^$client=10.10.0.0/16,important
 ||fliki.ai^$client=10.10.0.0/16,important
 ||flowgpt.com^$client=10.10.0.0/16,important
+||flux1.ai^$client=10.10.0.0/16,important
 ||forefront.ai^$client=10.10.0.0/16,important
 ||forethought.ai^$client=10.10.0.0/16,important
 ||formulabot.com^$client=10.10.0.0/16,important
@@ -357,6 +363,7 @@
 ||lexica.art^$client=10.10.0.0/16,important
 ||lexii.ai^$client=10.10.0.0/16,important
 ||libraria.dev^$client=10.10.0.0/16,important
+||linke.ai^$client=10.10.0.0/16,important
 ||llama.com^$client=10.10.0.0/16,important
 ||lmarena.ai^$client=10.10.0.0/16,important
 ||lmsys.org^$client=10.10.0.0/16,important
@@ -373,6 +380,7 @@
 ||mage.space^$client=10.10.0.0/16,important
 ||magicbuddy.chat^$client=10.10.0.0/16,important
 ||magicform.ai^$client=10.10.0.0/16,important
+||magichour.ai^$client=10.10.0.0/16,important
 ||magicstudio.com^$client=10.10.0.0/16,important
 ||magnific.ai^$client=10.10.0.0/16,important
 ||magnific.com^$client=10.10.0.0/16,important
@@ -380,6 +388,7 @@
 ||masterpiecestudio.com^$client=10.10.0.0/16,important
 ||mcp-proxy.anthropic.com^$client=10.10.0.0/16,important
 ||merlin.foyer.work^$client=10.10.0.0/16,important
+||meshy.ai^$client=10.10.0.0/16,important
 ||meta-agents-apps.workers.dev^$client=10.10.0.0/16,important
 ||meta.ai^$client=10.10.0.0/16,important
 ||metaaiusercontent.com^$client=10.10.0.0/16,important
@@ -441,6 +450,7 @@
 ||personal.ai^$client=10.10.0.0/16,important
 ||pfpmaker.com^$client=10.10.0.0/16,important
 ||phind.com^$client=10.10.0.0/16,important
+||phot.ai^$client=10.10.0.0/16,important
 ||photomath.com^$client=10.10.0.0/16,important
 ||photomath.net^$client=10.10.0.0/16,important
 ||pi.ai^$client=10.10.0.0/16,important
@@ -449,6 +459,7 @@
 ||pictory.ai^$client=10.10.0.0/16,important
 ||pika.art^$client=10.10.0.0/16,important
 ||pixai.art^$client=10.10.0.0/16,important
+||pixelcut.ai^$client=10.10.0.0/16,important
 ||pixlr.com^$client=10.10.0.0/16,important
 ||pixverse.ai^$client=10.10.0.0/16,important
 ||platform.claude.com^$client=10.10.0.0/16,important
@@ -457,6 +468,7 @@
 ||playgroundai.com^$client=10.10.0.0/16,important
 ||podcastle.ai^$client=10.10.0.0/16,important
 ||poe.com^$client=10.10.0.0/16,important
+||pollo.ai^$client=10.10.0.0/16,important
 ||postwise.ai^$client=10.10.0.0/16,important
 ||pplx.ai^$client=10.10.0.0/16,important
 ||predis.ai^$client=10.10.0.0/16,important
@@ -485,6 +497,7 @@
 ||runwayml.com^$client=10.10.0.0/16,important
 ||rytr.me^$client=10.10.0.0/16,important
 ||scholarcy.com^$client=10.10.0.0/16,important
+||scite.ai^$client=10.10.0.0/16,important
 ||sdxlturbo.ai^$client=10.10.0.0/16,important
 ||seaart.ai^$client=10.10.0.0/16,important
 ||searchie.io^$client=10.10.0.0/16,important
@@ -502,6 +515,7 @@
 ||soofy.io^$client=10.10.0.0/16,important
 ||sora.chatgpt.com^$client=10.10.0.0/16,important
 ||sora.com^$client=10.10.0.0/16,important
+||soulfun.ai^$client=10.10.0.0/16,important
 ||soulgen.net^$client=10.10.0.0/16,important
 ||soundful.com^$client=10.10.0.0/16,important
 ||soundraw.io^$client=10.10.0.0/16,important
@@ -585,11 +599,14 @@
 ||vidyo.ai^$client=10.10.0.0/16,important
 ||viggle.ai^$client=10.10.0.0/16,important
 ||visus.ai^$client=10.10.0.0/16,important
+||vivago.ai^$client=10.10.0.0/16,important
 ||vizcom.ai^$client=10.10.0.0/16,important
 ||vizologi.com^$client=10.10.0.0/16,important
+||voice.ai^$client=10.10.0.0/16,important
 ||voiceflow.com^$client=10.10.0.0/16,important
 ||voicemod.net^$client=10.10.0.0/16,important
 ||waa-pa.clients6.google.com^$client=10.10.0.0/16,important
+||wan.video^$client=10.10.0.0/16,important
 ||warmer.ai^$client=10.10.0.0/16,important
 ||webwhiz.lemonsqueezy.com^$client=10.10.0.0/16,important
 ||wellsaidlabs.com^$client=10.10.0.0/16,important

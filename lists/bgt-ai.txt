@@ -1,10 +1,10 @@
 ! Title: AI services (UT1, Nullgen, Firewalla and F5 DevCentral)
 ! Source: UT1 ai (77)
 ! Source: https://raw.githubusercontent.com/nullgen-inc/ai-blocklist/main/lists/ai.domains.txt (211)
-! Source: https://raw.githubusercontent.com/firewalla/fw-public-lists/main/ai-provider.txt + https://raw.githubusercontent.com/f5devcentral/sslo-script-tools/main/sslo-generative-ai-categories/ai-tools-urls (matched: 296)
+! Source: https://raw.githubusercontent.com/firewalla/fw-public-lists/main/ai-provider.txt, https://raw.githubusercontent.com/f5devcentral/sslo-script-tools/main/sslo-generative-ai-categories/ai-tools-urls, https://raw.githubusercontent.com/ShadowWhisperer/BlockLists/master/Lists/AI (at least two sources: 322)
 ! Source: https://raw.githubusercontent.com/f5devcentral/sslo-script-tools/main/sslo-generative-ai-categories/ai-category-chat (182)
-! Licenses: UT1 CC BY-SA 4.0; Nullgen CC0-1.0; additional domains from Firewalla and F5 DevCentral, see source URLs
-! Domains: 656
+! Licenses: UT1 CC BY-SA 4.0; Nullgen CC0-1.0; additional domains from Firewalla and F5 DevCentral, see source URLs; ShadowWhisperer Unlicense
+! Domains: 673
 ||10web.io^
 ||ab.bot^
 ||ab.chatgpt.com^
@@ -13,6 +13,7 @@
 ||agentgpt.reworkd.ai^
 ||ai-hay.vn^
 ||ai-writer.com^
+||ai.google^
 ||ai.ls^
 ||ai21.com^
 ||ai2sql.io^
@@ -71,6 +72,7 @@
 ||article.audio^
 ||articleforge.com^
 ||artiphoria.ai^
+||artspace.ai^
 ||asknotion.app^
 ||askrobi.com^
 ||askyourpdf.com^
@@ -138,6 +140,7 @@
 ||chatgenie.xyz^
 ||chatglm.cn^
 ||chatgpt.com^
+||chatgpt4rus.ru^
 ||chatgptwriter.ai^
 ||chathub.gg^
 ||chatkit.app^
@@ -165,6 +168,7 @@
 ||cohesive.so^
 ||colomboai.com^
 ||cometcore.co^
+||comfy.org^
 ||comicsmaker.ai^
 ||compose.ai^
 ||compute.hyper.space^
@@ -199,6 +203,7 @@
 ||daftart.ai^
 ||dailybot.com^
 ||dall-efree.com^
+||dang.ai^
 ||dante-ai.com^
 ||dappergpt.com^
 ||davinci.ai^
@@ -254,6 +259,7 @@
 ||flair.ai^
 ||fliki.ai^
 ||flowgpt.com^
+||flux1.ai^
 ||forefront.ai^
 ||forethought.ai^
 ||formulabot.com^
@@ -362,6 +368,7 @@
 ||lexica.art^
 ||lexii.ai^
 ||libraria.dev^
+||linke.ai^
 ||llama.com^
 ||lmarena.ai^
 ||lmsys.org^
@@ -378,6 +385,7 @@
 ||mage.space^
 ||magicbuddy.chat^
 ||magicform.ai^
+||magichour.ai^
 ||magicstudio.com^
 ||magnific.ai^
 ||magnific.com^
@@ -385,6 +393,7 @@
 ||masterpiecestudio.com^
 ||mcp-proxy.anthropic.com^
 ||merlin.foyer.work^
+||meshy.ai^
 ||meta-agents-apps.workers.dev^
 ||meta.ai^
 ||metaaiusercontent.com^
@@ -446,6 +455,7 @@
 ||personal.ai^
 ||pfpmaker.com^
 ||phind.com^
+||phot.ai^
 ||photomath.com^
 ||photomath.net^
 ||pi.ai^
@@ -454,6 +464,7 @@
 ||pictory.ai^
 ||pika.art^
 ||pixai.art^
+||pixelcut.ai^
 ||pixlr.com^
 ||pixverse.ai^
 ||platform.claude.com^
@@ -462,6 +473,7 @@
 ||playgroundai.com^
 ||podcastle.ai^
 ||poe.com^
+||pollo.ai^
 ||postwise.ai^
 ||pplx.ai^
 ||predis.ai^
@@ -490,6 +502,7 @@
 ||runwayml.com^
 ||rytr.me^
 ||scholarcy.com^
+||scite.ai^
 ||sdxlturbo.ai^
 ||seaart.ai^
 ||searchie.io^
@@ -507,6 +520,7 @@
 ||soofy.io^
 ||sora.chatgpt.com^
 ||sora.com^
+||soulfun.ai^
 ||soulgen.net^
 ||soundful.com^
 ||soundraw.io^
@@ -590,11 +604,14 @@
 ||vidyo.ai^
 ||viggle.ai^
 ||visus.ai^
+||vivago.ai^
 ||vizcom.ai^
 ||vizologi.com^
+||voice.ai^
 ||voiceflow.com^
 ||voicemod.net^
 ||waa-pa.clients6.google.com^
+||wan.video^
 ||warmer.ai^
 ||webwhiz.lemonsqueezy.com^
 ||wellsaidlabs.com^

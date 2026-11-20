@@ -226,6 +226,9 @@ def vpn_sources():
     doh = read_list("doh")
     hagezi = read_merged("bgt-hagezi-vpn-proxy") or set()
     residential = read_list("residential-proxies")
+    confirmed = read_merged("bgt-proxy-confirmed") or set()
+    if len(confirmed) < 40:
+        raise ValueError("Missing confirmed proxy feed")
     if len(vpn) < 3000 or len(doh) < 1000 or len(hagezi) < 8000:
         raise ValueError("Incomplete VPN feeds; preserve live UniFi groups")
 
@@ -236,7 +239,7 @@ def vpn_sources():
         )
 
     return {name: {d for d in domains if safe(d)}
-            for name, domains in (("UT1 VPN", vpn), ("UT1 DoH", doh), ("UT1 residential proxies", residential), ("HaGeZi", hagezi))}
+            for name, domains in (("UT1 VPN", vpn), ("UT1 DoH", doh), ("UT1 residential proxies", residential), ("HaGeZi", hagezi), ("UT1 + ShadowWhisperer", confirmed))}
 
 
 def sync_vpn(sync, sources):
