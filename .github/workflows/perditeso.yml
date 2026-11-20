@@ -31,7 +31,7 @@ jobs:
         run: |
           set -euo pipefail
           mkdir -p lists
-          # every category of the mirror; "adult" (4.6M domains) is left out: too big for GitHub and for the routers
+          # All domain categories for the operational lists. The full archive, including adult and URL paths, is stored in Releases.
           cats=$(curl -fsSL --retry 3 https://api.github.com/repos/olbat/ut1-blacklists/contents/blacklists \
                  | python3 -c 'import json,sys; print(" ".join(sorted(x["name"] for x in json.load(sys.stdin) if x["type"]=="dir")))')
           for cat in $cats; do
@@ -65,7 +65,7 @@ jobs:
           combined = {
               "bgt-siguria": ["ddos", "hacking", "cryptojacking", "stalkerware", "dangerous_material", "drogue",
                               "agressif", "warez", "dating", "tricheur"],
-              "bgt-anashkalimi": ["vpn", "redirector"],
+              "bgt-anashkalimi": ["vpn", "redirector", "residential-proxies", "doh"],
           }
           for name, cats in combined.items():
               doms = set()
@@ -109,6 +109,21 @@ jobs:
           git commit -m "Perditesim automatik i listave $(date -u +%F)"
           git pull --rebase -q origin main
           git push
+
+      - name: Arkivo katalogun e plote zyrtar UT1
+        if: github.event.schedule != '17 4 * * *'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          curl -fsSL --retry 3 --max-time 150 https://dsi.ut-capitole.fr/blacklists/download/all.tar.gz -o /tmp/ut1-all.tar.gz
+          tar -tzf /tmp/ut1-all.tar.gz > /tmp/ut1-entries.txt
+          grep -Eq '(^|/)adult/domains$' /tmp/ut1-entries.txt
+          grep -Eq '(^|/)vpn/domains$' /tmp/ut1-entries.txt
+          if ! gh release view ut1-catalog >/dev/null 2>&1; then
+            gh release create ut1-catalog --title "UT1 full category archive" --notes "Official Universite Toulouse Capitole archive, including adult domains and URL paths. Source: https://dsi.ut-capitole.fr/blacklists/" --latest=false
+          fi
+          gh release upload ut1-catalog /tmp/ut1-all.tar.gz --clobber
 
       # BGT 2: UniFi cannot read a list URL, so the Domain Lists and lesson policies are synced through its API.
       # (BGT 1 needs nothing here: its AdGuard Home downloads the lists itself every 24 h.)

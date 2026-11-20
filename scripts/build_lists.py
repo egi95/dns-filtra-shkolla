@@ -37,6 +37,15 @@ ALLOW_GAMES = ["kahoot.com", "kahoot.it", "wordwall.net", "quizizz.com", "blooke
 ALLOW_SOCIAL = ["whatsapp.com", "whatsapp.net", "wa.me", "viber.com", "viber.co"]
 
 LISTS_DEF = {
+    "bgt-hagezi-vpn-proxy": {
+        "title": "HaGeZi encrypted DNS, VPN, Tor and proxies",
+        "local": [], "remote": [f"{HAGEZI}/doh-vpn-proxy-bypass.txt"], "allow": [], "min": 8000,
+    },
+    "bgt-blp-redirect": {
+        "title": "Block List Project redirects and URL shorteners",
+        "local": [], "remote": [f"{BLP}/redirect-ags.txt"], "allow": [], "min": 50000,
+        "license": "See the upstream source header and repository license",
+    },
     "bgt-lojera": {
         "title": "Lojera (UT1 games + CasCas2 school-gaming)",
         "local": ["games"],
@@ -152,7 +161,8 @@ def build(name, d):
         f.write(f"! Title: {d['title']}\n")
         for u in used:
             f.write(f"! Source: {u}\n")
-        f.write("! Licenses: UT1 CC BY-SA 4.0; HaGeZi GPL-3.0; Block List Project Unlicense; CasCas2 see repo\n")
+        license_note = d.get("license", "UT1 CC BY-SA 4.0; HaGeZi GPL-3.0; Block List Project see upstream; CasCas2 see repo")
+        f.write(f"! Licenses: {license_note}\n")
         f.write(f"! Domains: {len(doms)}\n")
         f.writelines(f"||{x}^\n" for x in sorted(doms))
     print(f"{name}: {len(doms)} domene (dje {old})")

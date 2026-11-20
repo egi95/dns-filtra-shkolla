@@ -197,6 +197,45 @@ def resolve_ids():
     print(f"id: rrjeti {NETWORK_DEFAULT}, zonat {ZONE_INTERNAL} -> {ZONE_EXTERNAL}")
 
 
+VPN_GROUP = "BGT VPN domene"
+VPN_SHARED_HOSTING = (
+    "azure.com", "cloudflare.com", "github.com", "amazon.com", "cdn77.org",
+    "digitaloceanspaces.com", "onrender.com", "railway.app", "duckdns.org",
+    "no-ip.org", "ddns.net", "dynu.net", "ovh.net", "linode.com",
+)
+
+
+def vpn_sources():
+    vpn = read_list("vpn")
+    doh = read_list("doh")
+    hagezi = read_merged("bgt-hagezi-vpn-proxy") or set()
+    residential = read_list("residential-proxies")
+    if len(vpn) < 3000 or len(doh) < 1000 or len(hagezi) < 8000:
+        raise ValueError("Incomplete VPN feeds; preserve live UniFi groups")
+
+    def safe(domain):
+        return not shared(domain) and not any(
+            domain == base or domain.endswith("." + base)
+            for base in (*ALLOW, *VPN_SHARED_HOSTING)
+        )
+
+    return {name: {d for d in domains if safe(d)}
+            for name, domains in (("UT1 VPN", vpn), ("UT1 DoH", doh), ("UT1 residential proxies", residential), ("HaGeZi", hagezi))}
+
+
+def sync_vpn(sync, sources):
+    members = sorted(set().union(*sources.values()))
+    for i in range(0, len(members), MAX_PER_LIST):
+        name = f"{VPN_GROUP} {i // MAX_PER_LIST + 1:02d}"
+        gid = sync.group(name, members[i:i + MAX_PER_LIST])
+        sync.policy(name + " - gjithmone", gid, ALWAYS)
+    for name in sync.groups:
+        if name.startswith(VPN_GROUP + " ") and name.rsplit(" ", 1)[-1].isdigit():
+            if int(name.rsplit(" ", 1)[-1]) > (len(members) + MAX_PER_LIST - 1) // MAX_PER_LIST:
+                sync.group(name, [EMPTY_LIST])
+    print(f"VPN + DNS i enkriptuar: {len(members)} domene unike ({ {k: len(v) for k, v in sources.items()} })")
+
+
 def main():
     resolve_ids()
     # Keep UniFi's game list small. Large lists were previously suspected of delayed enforcement,
@@ -229,6 +268,8 @@ def main():
         gid = s.group("BGT AI UT1", ai)
         for ora, start, end in BLOCKS:
             s.policy(f"BGT AI UT1 - {ora}", gid, lesson(start, end), enabled_when_new=False)
+
+    sync_vpn(s, vpn_sources())
 
     print(f"lojera: {len(games)} domene ne {len(chunks)} lista; siguria: {len(security)}; AI: {len(ai)}; "
           f"rregulla te reja: {s.created}")
