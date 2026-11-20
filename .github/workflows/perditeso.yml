@@ -3,8 +3,7 @@ name: Perditeso listat
 
 on:
   schedule:
-    - cron: "30 2 * * *"
-    - cron: "17 4 * * *"  # retry UniFi within the maintenance window when the first run is delayed
+    - cron: "17 * * * *"  # Select by actual school time, including delayed starts.
   workflow_dispatch:
     inputs:
       allow_daytime_sync:
@@ -21,13 +20,39 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
+  window:
+    runs-on: ubuntu-latest
+    outputs:
+      proceed: ${{ steps.time.outputs.proceed }}
+      day: ${{ steps.time.outputs.day }}
+    steps:
+      - id: time
+        env:
+          EVENT: ${{ github.event_name }}
+          TZ: Europe/Belgrade
+        run: |
+          echo "day=$(date +%F)" >> "$GITHUB_OUTPUT"
+          if [[ "$EVENT" == workflow_dispatch || $(date +%H) < 07 ]]; then
+            echo "proceed=true" >> "$GITHUB_OUTPUT"
+          fi
   perditeso:
+    needs: window
+    if: needs.window.outputs.proceed == 'true'
     runs-on: ubuntu-latest
     steps:
+      - name: Kontrollo a eshte verifikuar kjo nate
+        id: done
+        uses: actions/cache/restore@v4
+        with:
+          path: .night-verified
+          key: unifi-verified-v1-${{ needs.window.outputs.day }}
+          lookup-only: true
       - uses: actions/checkout@v4
+        with:
+          ref: main
 
       - name: Shkarko dhe konverto listat UT1
-        if: github.event.schedule != '17 4 * * *'
+        if: github.event_name == 'workflow_dispatch' || steps.done.outputs.cache-hit != 'true'
         run: |
           set -euo pipefail
           mkdir -p lists
@@ -100,7 +125,7 @@ jobs:
           } > lists/README.md
 
       - name: Ruaj ndryshimet
-        if: github.event.schedule != '17 4 * * *'
+        if: github.event_name == 'workflow_dispatch' || steps.done.outputs.cache-hit != 'true'
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
@@ -111,7 +136,7 @@ jobs:
           git push
 
       - name: Arkivo katalogun e plote zyrtar UT1
-        if: github.event.schedule != '17 4 * * *'
+        if: github.event_name == 'workflow_dispatch' || steps.done.outputs.cache-hit != 'true'
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
@@ -128,7 +153,8 @@ jobs:
       # BGT 2: UniFi cannot read a list URL, so the Domain Lists and lesson policies are synced through its API.
       # (BGT 1 needs nothing here: its AdGuard Home downloads the lists itself every 24 h.)
       - name: Sinkronizo UniFi (BGT 2)
-        if: github.repository == 'egi95/dns-filtra-shkolla'
+        id: sync
+        if: github.repository == 'egi95/dns-filtra-shkolla' && (github.event_name == 'workflow_dispatch' || steps.done.outputs.cache-hit != 'true')
         env:
           UNIFI_API_KEY: ${{ secrets.UNIFI_API_KEY }}
           UNIFI_CONSOLE: ${{ secrets.UNIFI_CONSOLE }}
@@ -138,4 +164,15 @@ jobs:
           if [ "$BGT_ALLOW_DAYTIME_SYNC" = "true" ]; then
             args+=(--allow-daytime)
           fi
+          if [[ "$BGT_ALLOW_DAYTIME_SYNC" != true && $(TZ=Europe/Belgrade date +%H) > 06 ]]; then
+            echo "Listat u publikuan. Zbatimi ne UniFi pret dritaren e nates." >> "$GITHUB_STEP_SUMMARY"
+            exit 0
+          fi
           python3 scripts/unifi_sync.py "${args[@]}"
+          touch .night-verified
+      - name: Shenjo naten pas verifikimit ne router
+        if: github.event_name == 'schedule' && steps.done.outputs.cache-hit != 'true' && hashFiles('.night-verified') != ''
+        uses: actions/cache/save@v4
+        with:
+          path: .night-verified
+          key: unifi-verified-v1-${{ needs.window.outputs.day }}

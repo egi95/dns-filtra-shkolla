@@ -34,7 +34,7 @@ def maintenance_window(now=None):
 if __name__ == "__main__" and "--allow-daytime" not in sys.argv and not maintenance_window():
     print("SKIP UniFi: jashte orarit 00:00-07:00 te shkolles; listat e publikuara ruhen. "
           "Per nje nderhyrje te miratuar manualisht perdor --allow-daytime.")
-    sys.exit(0)
+    sys.exit(2)
 
 KEY = os.environ["UNIFI_API_KEY"].strip()
 CONSOLE = os.environ["UNIFI_CONSOLE"].strip()
@@ -131,8 +131,11 @@ class Sync:
         self.groups = {g["name"]: g for g in api("GET", "/api/s/default/rest/firewallgroup")["data"]}
         self.policies = {p["name"]: p for p in api("GET", "/v2/api/site/default/firewall-policies")}
         self.created = 0
+        self.expected_groups = {}
+        self.expected_policies = {}
 
     def group(self, name, members):
+        self.expected_groups[name] = set(members)
         body = {"name": name, "group_type": "domain-group", "group_members": members}
         g = self.groups.get(name)
         if g is None:
@@ -146,7 +149,20 @@ class Sync:
             print(f"{name}: pa ndryshim ({len(members)} domene)")
         return g["_id"]
 
+    def verify(self):
+        groups = {g["name"]: set(g["group_members"]) for g in api("GET", "/api/s/default/rest/firewallgroup")["data"]}
+        policies = {p["name"]: p for p in api("GET", "/v2/api/site/default/firewall-policies")}
+        for name, expected in self.expected_groups.items():
+            if groups.get(name) != expected:
+                raise RuntimeError(f"Membership mismatch: {name}")
+        for name, gid in self.expected_policies.items():
+            p = policies.get(name, {})
+            if (p.get("action") != "BLOCK" or p.get("destination", {}).get("web_group_id") != gid
+                    or p.get("source", {}).get("network_ids") != [NETWORK_DEFAULT]):
+                raise RuntimeError(f"Policy mismatch: {name}")
+
     def policy(self, name, gid, schedule, enabled_when_new=True):
+        self.expected_policies[name] = gid
         p = self.policies.get(name)
         if p is None:
             api("POST", "/v2/api/site/default/firewall-policies", policy_body(name, gid, schedule, enabled_when_new))
@@ -242,7 +258,8 @@ def main():
     # but that cause is unproven; the 14 Nov audit distinguished delayed event reporting from enforcement.
     # App Blocking and game-port rules complement these domains. The complete DNS list stays in AdGuard;
     # it still consumes resources and its performance must be measured under school load.
-    games = sorted(set(UNIFI_GAMES))
+    learned_games = read_merged("bgt-mesuar-lojera") or set()
+    games = sorted(set(UNIFI_GAMES) | set(sorted(learned_games)[:200]))
     s = Sync()
     gid = s.group("BGT Lojera UT1 #1", games)
     for ora, start, end in BLOCKS:
@@ -276,6 +293,7 @@ def main():
             s.policy(f"BGT AI UT1 - {ora}", gid, lesson(start, end), enabled_when_new=False)
 
     sync_vpn(s, vpn_sources())
+    s.verify()
 
     print(f"lojera: {len(games)} domene ne {len(chunks)} lista; siguria: {len(security)}; AI: {len(ai)}; "
           f"rregulla te reja: {s.created}")
