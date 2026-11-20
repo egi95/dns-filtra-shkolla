@@ -11,6 +11,7 @@
 ||aoyo.ai^$client=10.10.0.0/16,important
 ||api.anthropic.com^$client=10.10.0.0/16,important
 ||api.business.githubcopilot.com^$client=10.10.0.0/16,important
+||api.deepai.org^$client=10.10.0.0/16,important
 ||api.enterprise.githubcopilot.com^$client=10.10.0.0/16,important
 ||api.githubcopilot.com^$client=10.10.0.0/16,important
 ||api.individual.githubcopilot.com^$client=10.10.0.0/16,important
@@ -78,6 +79,7 @@
 ||correkt.ai^$client=10.10.0.0/16,important
 ||cursor.com^$client=10.10.0.0/16,important
 ||cursor.sh^$client=10.10.0.0/16,important
+||deepai.org^$client=10.10.0.0/16,important
 ||deepfind.co^$client=10.10.0.0/16,important
 ||deepseek.com^$client=10.10.0.0/16,important
 ||devin.ai^$client=10.10.0.0/16,important
@@ -247,6 +249,7 @@
 ||wordtune.com^$client=10.10.0.0/16,important
 ||writesonic.com^$client=10.10.0.0/16,important
 ||ws.chatgpt.com^$client=10.10.0.0/16,important
+||www.deepai.org^$client=10.10.0.0/16,important
 ||x.ai^$client=10.10.0.0/16,important
 ||xdash.ai^$client=10.10.0.0/16,important
 ||yiyan.baidu.com^$client=10.10.0.0/16,important

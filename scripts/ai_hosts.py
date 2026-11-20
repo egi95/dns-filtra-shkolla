@@ -1,5 +1,6 @@
 """Dedicated AI endpoints shared by both school filters."""
 AI_SERVICE_HOSTS = {
+    "deepai.org", "www.deepai.org", "api.deepai.org",
     "copilot.cloud.microsoft", "gemini.gstatic.com",
     "alkali.generativelanguage.googleapis.com", "notebooklm-pa.googleapis.com",
     "notebooklm.google.com", "copilot.github.com",

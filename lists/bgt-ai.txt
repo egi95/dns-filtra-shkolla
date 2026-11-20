@@ -2,7 +2,7 @@
 ! Source: UT1 ai (77)
 ! Source: https://raw.githubusercontent.com/nullgen-inc/ai-blocklist/main/lists/ai.domains.txt (211)
 ! Licenses: UT1 CC BY-SA 4.0; Nullgen CC0-1.0
-! Domains: 254
+! Domains: 257
 ||ab.chatgpt.com^
 ||ai-hay.vn^
 ||aistudio.google.com^
@@ -14,6 +14,7 @@
 ||aoyo.ai^
 ||api.anthropic.com^
 ||api.business.githubcopilot.com^
+||api.deepai.org^
 ||api.enterprise.githubcopilot.com^
 ||api.githubcopilot.com^
 ||api.individual.githubcopilot.com^
@@ -81,6 +82,7 @@
 ||correkt.ai^
 ||cursor.com^
 ||cursor.sh^
+||deepai.org^
 ||deepfind.co^
 ||deepseek.com^
 ||devin.ai^
@@ -250,6 +252,7 @@
 ||wordtune.com^
 ||writesonic.com^
 ||ws.chatgpt.com^
+||www.deepai.org^
 ||x.ai^
 ||xdash.ai^
 ||yiyan.baidu.com^
