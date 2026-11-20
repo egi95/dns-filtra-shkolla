@@ -1,6 +1,6 @@
 ! Title: Motore kerkimi pa SafeSearch (HaGeZi nosafesearch)
 ! Source: https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/nosafesearch.txt (202)
-! Licenses: UT1 CC BY-SA 4.0; HaGeZi GPL-3.0; Block List Project Unlicense; CasCas2 see repo
+! Licenses: UT1 CC BY-SA 4.0; HaGeZi GPL-3.0; Block List Project see upstream; CasCas2 see repo
 ! Domains: 202
 ||100searchengines.com^
 ||alltheinternet.com^

@@ -1,10 +1,10 @@
 ! Title: Torrent / pirateri (UT1 warez + HaGeZi anti-piracy + Block List Project piracy, torrent)
 ! Source: UT1 warez (1524)
-! Source: https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/anti.piracy.txt (62437)
+! Source: https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/anti.piracy.txt (62435)
 ! Source: https://blocklistproject.github.io/Lists/adguard/piracy-ags.txt (2154)
 ! Source: https://blocklistproject.github.io/Lists/adguard/torrent-ags.txt (2620)
-! Licenses: UT1 CC BY-SA 4.0; HaGeZi GPL-3.0; Block List Project Unlicense; CasCas2 see repo
-! Domains: 66047
+! Licenses: UT1 CC BY-SA 4.0; HaGeZi GPL-3.0; Block List Project see upstream; CasCas2 see repo
+! Domains: 66046
 ||0-123movies.com^
 ||0-123movies.site^
 ||0.arenabg.com^
@@ -12845,7 +12845,6 @@
 ||filmapik.beer^
 ||filmapik.bio^
 ||filmapik.biz^
-||filmapik.cam^
 ||filmapik.cc^
 ||filmapik.co.in^
 ||filmapik.coupons^
@@ -15161,6 +15160,7 @@
 ||futemax.ke^
 ||futemax.kim^
 ||futemax.koeln^
+||futemax.limited^
 ||futemax.lt^
 ||futemax.ltda^
 ||futemax.luxury^
@@ -18513,7 +18513,6 @@
 ||hindmovie.tax^
 ||hindmoviez.bet^
 ||hindmoviez.biz^
-||hindmoviez.click^
 ||hindmoviez.com^
 ||hindmoviez.email^
 ||hindmoviez.wiki^
@@ -21178,6 +21177,7 @@
 ||kinoxarxar.online^
 ||kinoxax-official.cyou^
 ||kinoxbr.com^
+||kinoxcapital.com^
 ||kinoxed.website^
 ||kinoxelura.store^
 ||kinoxen.site^
@@ -22682,6 +22682,7 @@
 ||lion-king-lordfilm.top^
 ||lionsgateplay.com^
 ||lisatrialidea.com^
+||lisellitorrentit.com^
 ||litaapks.com^
 ||liteaio.com^
 ||liteapks.com^
@@ -23019,7 +23020,6 @@
 ||lookmovies.life^
 ||lookmovies.living^
 ||lookmovies.media^
-||lookmovies.monster^
 ||lookmovies.nexus^
 ||lookmovies.onl^
 ||lookmovies.online^
@@ -41092,7 +41092,6 @@
 ||movierulz.kim^
 ||movierulz.land^
 ||movierulz.lifestyle^
-||movierulz.makeup^
 ||movierulz.mba^
 ||movierulz.media^
 ||movierulz.mobi^
@@ -47482,6 +47481,7 @@
 ||pro-warez.biz^
 ||pro-windows.net^
 ||pro-zik.com^
+||proanimetric.com^
 ||proaudiotorrents.org^
 ||proclyatie-lordfilme.ru^
 ||proclyatue-lordfilms.ru^
@@ -49323,7 +49323,6 @@
 ||rus-lordfilmkap.lat^
 ||rus-media.org^
 ||rus-serial-lordfilm.com^
-||rus-serial-lordfilm.online^
 ||rus-serial-lordfilm.org^
 ||rusaalochka-lordfilm.ru^
 ||rusalka-lordfilm.ru^
@@ -49724,7 +49723,6 @@
 ||sdmoviespoint.my^
 ||sdmoviespoint.osaka^
 ||sdmoviespoint.party^
-||sdmoviespoint.rest^
 ||sdmoviespoint.sbs^
 ||sdmoviespoint.style^
 ||sdmoviespoint.town^
@@ -55584,6 +55582,7 @@
 ||thefap.net^
 ||thefieldawarezone.info^
 ||thefiles.ro^
+||thefilmypocket.com^
 ||theflashwarez.com^
 ||theflixer.tv^
 ||theflixertv.to^

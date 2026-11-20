@@ -1,7 +1,7 @@
 ! Title: Video / streaming per ore mesimore (UT1 audio-video + Block List Project youtube)
 ! Source: UT1 audio-video (3620)
 ! Source: https://blocklistproject.github.io/Lists/adguard/youtube-ags.txt (24280)
-! Licenses: UT1 CC BY-SA 4.0; HaGeZi GPL-3.0; Block List Project Unlicense; CasCas2 see repo
+! Licenses: UT1 CC BY-SA 4.0; HaGeZi GPL-3.0; Block List Project see upstream; CasCas2 see repo
 ! Domains: 27900
 ||01streaming.click^
 ||01streaming.stream^

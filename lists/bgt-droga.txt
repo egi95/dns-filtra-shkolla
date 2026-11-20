@@ -2,7 +2,7 @@
 ! Source: UT1 drogue (436)
 ! Source: https://blocklistproject.github.io/Lists/adguard/drugs-ags.txt (26023)
 ! Source: https://blocklistproject.github.io/Lists/adguard/vaping-ags.txt (108)
-! Licenses: UT1 CC BY-SA 4.0; HaGeZi GPL-3.0; Block List Project Unlicense; CasCas2 see repo
+! Licenses: UT1 CC BY-SA 4.0; HaGeZi GPL-3.0; Block List Project see upstream; CasCas2 see repo
 ! Domains: 26337
 ||0-24bpautomentes.hu^
 ||000host.totaocimall.com^

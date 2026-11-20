@@ -1,15 +1,17 @@
 # Listat (formati AdGuard)
 
-Perditesuar: 2026-11-19 10:31 UTC. Burimi: UT1, Universite Toulouse Capitole, CC BY-SA 4.0.
+Perditesuar: 2026-11-20 08:36 UTC. Burimi: UT1, Universite Toulouse Capitole, CC BY-SA 4.0.
 
 | Lista | Domene | URL per AdGuard Home |
 |---|---|---|
 | bgt-ai | 77 | https://raw.githubusercontent.com/egi95/dns-filtra-shkolla/main/lists/bgt-ai.txt |
-| bgt-anashkalimi | 114219 | https://raw.githubusercontent.com/egi95/dns-filtra-shkolla/main/lists/bgt-anashkalimi.txt |
+| bgt-anashkalimi | 117293 | https://raw.githubusercontent.com/egi95/dns-filtra-shkolla/main/lists/bgt-anashkalimi.txt |
+| bgt-blp-redirect | 108682 | https://raw.githubusercontent.com/egi95/dns-filtra-shkolla/main/lists/bgt-blp-redirect.txt |
 | bgt-droga | 26337 | https://raw.githubusercontent.com/egi95/dns-filtra-shkolla/main/lists/bgt-droga.txt |
-| bgt-kercenime | 222609 | https://raw.githubusercontent.com/egi95/dns-filtra-shkolla/main/lists/bgt-kercenime.txt |
+| bgt-hagezi-vpn-proxy | 16615 | https://raw.githubusercontent.com/egi95/dns-filtra-shkolla/main/lists/bgt-hagezi-vpn-proxy.txt |
+| bgt-kercenime | 223876 | https://raw.githubusercontent.com/egi95/dns-filtra-shkolla/main/lists/bgt-kercenime.txt |
 | bgt-lojera | 33769 | https://raw.githubusercontent.com/egi95/dns-filtra-shkolla/main/lists/bgt-lojera.txt |
-| bgt-mashtrim | 19249 | https://raw.githubusercontent.com/egi95/dns-filtra-shkolla/main/lists/bgt-mashtrim.txt |
+| bgt-mashtrim | 19243 | https://raw.githubusercontent.com/egi95/dns-filtra-shkolla/main/lists/bgt-mashtrim.txt |
 | bgt-mesuar-gjithmone | 40 | https://raw.githubusercontent.com/egi95/dns-filtra-shkolla/main/lists/bgt-mesuar-gjithmone.txt |
 | bgt-mesuar-kandidat | 0 | https://raw.githubusercontent.com/egi95/dns-filtra-shkolla/main/lists/bgt-mesuar-kandidat.txt |
 | bgt-mesuar-lojera | 0 | https://raw.githubusercontent.com/egi95/dns-filtra-shkolla/main/lists/bgt-mesuar-lojera.txt |
@@ -19,7 +21,7 @@ Perditesuar: 2026-11-19 10:31 UTC. Burimi: UT1, Universite Toulouse Capitole, CC
 | bgt-sociale | 35260 | https://raw.githubusercontent.com/egi95/dns-filtra-shkolla/main/lists/bgt-sociale.txt |
 | bgt-spamhaus-drop | 0 | https://raw.githubusercontent.com/egi95/dns-filtra-shkolla/main/lists/bgt-spamhaus-drop.txt |
 | bgt-tor-ip | 0 | https://raw.githubusercontent.com/egi95/dns-filtra-shkolla/main/lists/bgt-tor-ip.txt |
-| bgt-torrent | 66047 | https://raw.githubusercontent.com/egi95/dns-filtra-shkolla/main/lists/bgt-torrent.txt |
+| bgt-torrent | 66046 | https://raw.githubusercontent.com/egi95/dns-filtra-shkolla/main/lists/bgt-torrent.txt |
 | bgt-video | 27900 | https://raw.githubusercontent.com/egi95/dns-filtra-shkolla/main/lists/bgt-video.txt |
 | ut1-agressif | 266 | https://raw.githubusercontent.com/egi95/dns-filtra-shkolla/main/lists/ut1-agressif.txt |
 | ut1-ai | 77 | https://raw.githubusercontent.com/egi95/dns-filtra-shkolla/main/lists/ut1-ai.txt |
