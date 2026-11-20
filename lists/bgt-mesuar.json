@@ -45,7 +45,7 @@
 "kind": "gjithmone",
 "domain": "antpeak.com",
 "first": 1794622637.3416238,
-"last": 1794968008.106246,
+"last": 1795140831.7037055,
 "max_clients": 6
 },
 "gjithmone:api-pro.urban-vpn.com": {
@@ -122,14 +122,14 @@
 "kind": "gjithmone",
 "domain": "dns-tunnel-check.googlezip.net",
 "first": 1794622637.3416238,
-"last": 1795054426.5273762,
+"last": 1795140831.7037055,
 "max_clients": 7
 },
 "gjithmone:dns.google": {
 "kind": "gjithmone",
 "domain": "dns.google",
 "first": 1794881602.7043989,
-"last": 1795054426.5273762,
+"last": 1795140831.7037055,
 "max_clients": 8
 },
 "gjithmone:dns11.quad9.net": {
@@ -206,7 +206,7 @@
 "kind": "gjithmone",
 "domain": "proigor.com",
 "first": 1794622637.3416238,
-"last": 1794968008.106246,
+"last": 1795140831.7037055,
 "max_clients": 4
 },
 "gjithmone:protonvpn.com": {
@@ -241,7 +241,7 @@
 "kind": "gjithmone",
 "domain": "split-tool.com",
 "first": 1794622637.3416238,
-"last": 1795054426.5273762,
+"last": 1795140831.7037055,
 "max_clients": 9
 },
 "gjithmone:tronyza.com": {
@@ -255,7 +255,7 @@
 "kind": "gjithmone",
 "domain": "tunnel.googlezip.net",
 "first": 1794622637.3416238,
-"last": 1795054426.5273762,
+"last": 1795140831.7037055,
 "max_clients": 24
 },
 "gjithmone:vpn-api.proton.me": {
