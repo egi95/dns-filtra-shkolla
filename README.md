@@ -13,3 +13,8 @@ The workflow `.github/workflows/perditeso.yml` refreshes all lists every night. 
 
 ## Source and license
 The domains come from the UT1 blacklists of Université Toulouse Capitole (https://dsi.ut-capitole.fr/blacklists/), through the mirror https://github.com/olbat/ut1-blacklists. They are published under **CC BY-SA 4.0**, and this conversion is shared under the same license.
+## Burimet Firewalla dhe F5 DevCentral
+
+Procesi i natës lexon listën e chatbotëve të F5. Për katalogët e gjerë të mjeteve AI përdor domenet e klasifikuara si AI edhe nga Firewalla, edhe nga F5, krahas UT1, Nullgen dhe domeneve të dedikuara. Përjashtimet ruajnë platformat e përbashkëta të mësimit. Lista e veçantë `students/nsfw-ai.txt` zbatohet për nxënësit edhe kur lejohet kategoria e zakonshme AI.
+
+Për VPN, proxy, DNS të koduar dhe pirateri, katalogu Firewalla të drejton te HaGeZi. Nënshkrimet shkarkohen një herë për secilën kategori. Nëse pasqyra nuk përgjigjet, procesi provon burimin origjinal. Për këto kategori përdoren vetëm adresat e verifikuara të burimit përkatës.

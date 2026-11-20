@@ -256,6 +256,12 @@ def main():
     if security:
         s.policy("BGT Siguria UT1 - gjithmone", s.group("BGT Siguria UT1", security), ALWAYS)
 
+    adult_ai = read_merged("bgt-nsfw-ai")
+    if not adult_ai or len(adult_ai) < 40:
+        raise ValueError("Missing adult AI source")
+    s.policy("BGT Students NSFW AI - gjithmone",
+             s.group("BGT NSFW AI Firewalla", sorted(adult_ai)), ALWAYS)
+
     # learned from BGT 1's AdGuard (adult, gambling, piracy, VPN/DoH that students really tried) -> always
     learned = sorted(read_merged("bgt-mesuar-gjithmone") or [])
     if learned:

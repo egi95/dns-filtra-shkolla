@@ -44,6 +44,7 @@ def main():
     for service in GAME_SERVICES:
         game_rules.update(services[service])
     write("lojera", game_rules)
+    write("nsfw-ai", {"||" + d + "^" for d in domains("bgt-nsfw-ai")}, important=True)
     write("sociale", {"||" + d + "^" for d in social})
     write("ai", {"||" + d + "^" for d in ai}, important=True)
 

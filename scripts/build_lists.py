@@ -36,7 +36,20 @@ ALLOW_GAMES = ["kahoot.com", "kahoot.it", "wordwall.net", "quizizz.com", "blooke
 # WhatsApp and Viber must stay allowed in both schools, even when social networks get blocked
 ALLOW_SOCIAL = ["whatsapp.com", "whatsapp.net", "wa.me", "viber.com", "viber.co"]
 
+FIREWALLA = "https://raw.githubusercontent.com/firewalla/fw-public-lists/main/"
+F5_AI = "https://raw.githubusercontent.com/f5devcentral/sslo-script-tools/main/sslo-generative-ai-categories/"
+# Firewalla publishes these feeds as pointers to the same HaGeZi project.
+MIRRORS = {
+    HAGEZI + "/anti.piracy.txt": ("Hagezi-Anti-Piracy.txt", "anti.piracy", 10000),
+    HAGEZI + "/doh-vpn-proxy-bypass.txt": ("Hagezi-DoH-VPN-Proxy-Bypass.txt", "doh-vpn-proxy-bypass", 8000),
+}
+
 LISTS_DEF = {
+    "bgt-nsfw-ai": {
+        "title": "Adult AI services (Firewalla)", "local": [],
+        "remote": [FIREWALLA + "nsfw-ai.txt"], "allow": [], "min": 40,
+        "license": "Firewalla fw-public-lists GPL-2.0",
+    },
     "bgt-hagezi-vpn-proxy": {
         "title": "HaGeZi encrypted DNS, VPN, Tor and proxies",
         "local": [], "remote": [f"{HAGEZI}/doh-vpn-proxy-bypass.txt"], "allow": [], "min": 8000,
@@ -60,14 +73,14 @@ LISTS_DEF = {
         "allow": [], "min": 20000,
     },
     "bgt-ai": {
-        "title": "AI chatbots and APIs (UT1 and Nullgen)",
+        "title": "AI services (UT1, Nullgen, Firewalla and F5 DevCentral)",
         "local": ["ai"],
         "remote": ["https://raw.githubusercontent.com/nullgen-inc/ai-blocklist/main/lists/ai.domains.txt"],
         "allow": ["google.com", "microsoft.com", "github.com", "amazon.com", "adobe.com",
                   "apple.com", "office.com", "m365.cloud.microsoft", "factory.com", "playground.com",
                   "sourcegraph.com", "assistant.googleapis.com", "aiplatform.googleapis.com"],
         "min": 30,
-        "license": "UT1 CC BY-SA 4.0; Nullgen CC0-1.0",
+        "license": "UT1 CC BY-SA 4.0; Nullgen CC0-1.0; additional domains from Firewalla and F5 DevCentral, see source URLs",
     },
     "bgt-mashtrim": {
         "title": "Mashtrime / scam / fake shops (HaGeZi fake + Block List Project scam)",
@@ -128,6 +141,34 @@ def fetch(url):
         return r.read().decode("utf-8", "replace").splitlines()
 
 
+def wildcard_domains(url, minimum):
+    rows = fetch(url)
+    domains = parse(line.strip().removeprefix("*.") for line in rows)
+    if len(domains) < minimum:
+        raise ValueError(f"Incomplete domain feed: {url}")
+    return domains
+
+
+def remote_domains(url):
+    if url == FIREWALLA + "nsfw-ai.txt":
+        return wildcard_domains(url, 40), url
+    if url not in MIRRORS:
+        return parse(fetch(url)), url
+    filename, category, minimum = MIRRORS[url]
+    manifest = FIREWALLA + filename
+    target = "https://cdn.jsdelivr.net/gh/hagezi/dns-blocklists@latest/wildcard/" + category + ".txt"
+    try:
+        if [s.strip() for s in fetch(manifest) if s.startswith("@")] != ["@" + target]:
+            raise ValueError(f"Unexpected feed pointer: {manifest}")
+        return wildcard_domains(target, minimum), manifest + " -> " + target
+    except (OSError, ValueError) as error:
+        print(f"{manifest}: {error}; using HaGeZi directly", file=sys.stderr)
+        domains = parse(fetch(url))
+        if len(domains) < minimum:
+            raise ValueError(f"Incomplete fallback feed: {url}")
+        return domains, url
+
+
 def old_count(path):
     if not os.path.exists(path):
         return 0
@@ -150,18 +191,31 @@ def build(name, d):
             used.append(f"{fname} ({len(got)})")
     for url in d["remote"]:
         try:
-            got = parse(fetch(url))
+            got, source = remote_domains(url)
             if name == "bgt-ai" and len(got) < 100:
                 raise ValueError("Incomplete AI source")
             doms |= got
-            used.append(f"{url} ({len(got)})")
+            used.append(f"{source} ({len(got)})")
         except Exception as e:  # one failing source must not break the night
             print(f"{name}: burimi deshtoi {url}: {e}", file=sys.stderr)
-            if name == "bgt-ai":
-                return
+            if name in {"bgt-ai", "bgt-nsfw-ai"} or url in MIRRORS:
+                raise
     allow = d["allow"]
     if name == "bgt-ai":
         from ai_hosts import AI_SERVICE_HOSTS
+        fw = FIREWALLA + "ai-provider.txt"
+        broad = F5_AI + "ai-tools-urls"
+        chat = F5_AI + "ai-category-chat"
+        confirmed = wildcard_domains(fw, 700) & wildcard_domains(broad, 1200)
+        if len(confirmed) < 100:
+            raise ValueError("AI catalogs have too few matching domains")
+        chats = wildcard_domains(chat, 70)
+        shared = ALLOW_GAMES + ALLOW_SOCIAL + ["notion.so", "canva.com", "grammarly.com",
+            "xata.io", "tidio.com", "crisp.chat", "commandbar.com", "deepl.com"]
+        additions = {host for host in confirmed | chats
+                     if not any(host == base or host.endswith("." + base) for base in shared)}
+        doms |= additions
+        used += [f"{fw} + {broad} (matched: {len(confirmed)})", f"{chat} ({len(chats)})"]
         doms = (doms - set(allow)) | AI_SERVICE_HOSTS
     else:
         doms = {x for x in doms if not any(x == a or x.endswith("." + a) for a in allow)}
