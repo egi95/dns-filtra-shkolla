@@ -1,8 +1,8 @@
 ! Title: Mashtrime / scam / fake shops (HaGeZi fake + Block List Project scam)
-! Source: https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/fake.txt (10728)
+! Source: https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/fake.txt (10734)
 ! Source: https://blocklistproject.github.io/Lists/adguard/scam-ags.txt (8527)
 ! Licenses: UT1 CC BY-SA 4.0; HaGeZi GPL-3.0; Block List Project see upstream; CasCas2 see repo
-! Domains: 19243
+! Domains: 19249
 ||0-google.com^
 ||007-dvd.com^
 ||01crypto.com^
@@ -2496,7 +2496,6 @@
 ||brennholz-brennstoff.com^
 ||brennholz-forstservice-gilbert.de^
 ||brennholz-friedrich.com^
-||brennholz-goignerog.at^
 ||brennholz-hans.de^
 ||brennholz-haus.de^
 ||brennholz-hofmann.de^
@@ -3499,7 +3498,6 @@
 ||comicpickshop.com^
 ||comiprise.com^
 ||comme-des-garcons.at^
-||comme-des-garcons.co.at^
 ||commedesgarconsstore.de^
 ||commentn.com^
 ||commercewealth.com^
@@ -5452,7 +5450,6 @@
 ||etsytees.com^
 ||etsytelemall.com^
 ||ettern24.de^
-||etvgozkl.shop^
 ||eu-fuehrerschein-agentur.com^
 ||eu-fuehrerschein-mpu.com^
 ||eu-meds.net^
@@ -5995,6 +5992,7 @@
 ||finrally.com^
 ||finrocketpro.com^
 ||fintessxpert.com^
+||fintevex.io^
 ||fintrexia.org^
 ||fintrustb.com^
 ||finvestai.org^
@@ -6497,7 +6495,6 @@
 ||gabbian.de^
 ||gabelglanz.de^
 ||gaborberlin.com^
-||gaborosterreich.at^
 ||gaborshoesoutlet.shop^
 ||gadgetinfinityz.com^
 ||gadgets-4-free.co.uk^
@@ -6558,6 +6555,7 @@
 ||ganhappin.com^
 ||ganja-estates.com^
 ||ganjamancannabis.com^
+||gannioutlet.de^
 ||ganobee.com^
 ||gantoslo.com^
 ||gantosterreich.co.at^
@@ -7585,6 +7583,7 @@
 ||haushaltsheld.com^
 ||haushaltsreich.de^
 ||haushaltswarendiscount.shop^
+||hausmarkt24.com^
 ||hausmobel-de.com^
 ||hausofvedashop.com^
 ||hausonline24.com^
@@ -7735,6 +7734,7 @@
 ||heizoel-tankstelle.de^
 ||heizoel24-aktuell.com^
 ||heizoel24-preise.com^
+||heizoel24.shop^
 ||heizoelbp.de^
 ||heizoeldeal.de^
 ||heizoelhanse.com^
@@ -9404,6 +9404,7 @@
 ||konsolenladen.com^
 ||konsolenland.de^
 ||konsolenmarkt.com^
+||konsolenplatz.com^
 ||kontaktlinsenshopping.de^
 ||kontano.de^
 ||kopakorkorthar.com^
@@ -9781,6 +9782,7 @@
 ||lensmartonline.com^
 ||leobabyjordanbjj.com^
 ||leoffength.com^
+||leomans.com^
 ||leopold-mode.com^
 ||leoswc.com^
 ||leplandiscret.com^
@@ -10073,6 +10075,7 @@
 ||lottonorway.net^
 ||lottoportugal.net^
 ||lottoslovakia.sk^
+||lottosouthafrica.net^
 ||lotusgaminglive.com^
 ||lotz-container.com^
 ||louise-perrin.de^
@@ -11365,6 +11368,7 @@
 ||mustang-parts-shop.de^
 ||muthaafoundation.org^
 ||mutterkissen.myshopify.com^
+||muvastore.com^
 ||muzam.de^
 ||mv.wiesengrund-sylt.com^
 ||mvleingarten.de^
@@ -12250,6 +12254,7 @@
 ||omnedealslab.online^
 ||omniluxaustria.com^
 ||on-at.com^
+||on-outlet.shop^
 ||on-runningdeutschland.de^
 ||on2025004.myshoplaza.com^
 ||on3.myshoplaza.com^
@@ -12681,6 +12686,7 @@
 ||panyearn.com^
 ||panzarmshop.com^
 ||panzarmstore.com^
+||papabau.com^
 ||papageienzuchtheim.de^
 ||papasmagazine.com.br^
 ||papershelp.org^
@@ -14490,7 +14496,6 @@
 ||salmingsuomi.com^
 ||salomon-deutschland.de^
 ||salomondeutschlandsale.de^
-||salomonosterreich.at^
 ||salomonoutletgermany.de^
 ||salomonoutletireland.com^
 ||salomonoutletstoresusa.com^
@@ -17167,6 +17172,7 @@
 ||triumphanty.com^
 ||triumphty.com^
 ||trivanode.com^
+||trivio-handel.de^
 ||trivona.de^
 ||trktrk.club^
 ||trockenes-brennholz.com^
