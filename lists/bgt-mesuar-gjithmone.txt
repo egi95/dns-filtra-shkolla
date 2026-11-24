@@ -1,5 +1,5 @@
 ! Title: Mesuar - Bllokuar nga AdGuard i BGT 1
-! Updated: 2026-11-23 03:08
+! Updated: 2026-11-24 03:14
 ! Domains: 46
 ||aapljs.com^
 ||analytics-toolbar.falais.com^
