@@ -76,7 +76,6 @@ jobs:
           git -C "$source_dir" ls-tree -r --name-only HEAD -- blacklists > "$RUNNER_TEMP/ut1-tree"
           sed -nE 's|^blacklists/([a-zA-Z0-9_-]+)/domains$|\1|p' "$RUNNER_TEMP/ut1-tree" > "$RUNNER_TEMP/ut1-categories"
           grep -Fxq vpn "$RUNNER_TEMP/ut1-categories"
-          grep -Fxq adult "$RUNNER_TEMP/ut1-categories"
           while IFS= read -r cat; do
             [ "$cat" = "adult" ] && continue
             curl -fsSL --retry 3 --retry-all-errors --max-time 180 \
