@@ -4,7 +4,7 @@ name: Perditeso IP listat (Tor, Spamhaus)
 
 on:
   schedule:
-    - cron: "10 1 * * *"
+    - cron: "10 1,17 * * *"
   workflow_dispatch:
 
 permissions:
@@ -20,10 +20,24 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      - id: time
+        run: |
+          echo "day=$(TZ=Europe/Belgrade date +%F)" >> "$GITHUB_OUTPUT"
+          if bash scripts/publication-window.sh; then echo "open=true" >> "$GITHUB_OUTPUT"; fi
+      - id: done
+        if: steps.time.outputs.open == 'true'
+        uses: actions/cache/restore@v4
+        with:
+          path: .ip-published
+          key: ip-published-v1-${{ steps.time.outputs.day }}
+          lookup-only: true
+
       - name: Nderto listat e IP-ve
+        if: steps.time.outputs.open == 'true' && (github.event_name == 'workflow_dispatch' || steps.done.outputs.cache-hit != 'true')
         run: python3 scripts/build_ip_lists.py
 
       - name: Ruaj ndryshimet
+        if: steps.time.outputs.open == 'true' && (github.event_name == 'workflow_dispatch' || steps.done.outputs.cache-hit != 'true')
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
@@ -31,4 +45,13 @@ jobs:
           git diff --cached --quiet && exit 0
           git commit -m "IP listat (Tor, Spamhaus) $(date -u +'%F %H:%M')"
           git pull --rebase -q origin main
+          bash scripts/publication-window.sh
           git push
+      - name: Shenjo publikimin e IP-ve
+        if: steps.time.outputs.open == 'true' && steps.done.outputs.cache-hit != 'true'
+        run: touch .ip-published
+      - uses: actions/cache/save@v4
+        if: steps.time.outputs.open == 'true' && steps.done.outputs.cache-hit != 'true'
+        with:
+          path: .ip-published
+          key: ip-published-v1-${{ steps.time.outputs.day }}

@@ -7,7 +7,7 @@ on:
   workflow_dispatch:
     inputs:
       allow_daytime_sync:
-        description: "Lejo ndryshime UniFi jashte 00:00-07:00 per nje nderhyrje manuale te miratuar"
+        description: "Lejo sinkronizimin manual UniFi pas ores 17:00"
         required: false
         type: boolean
         default: false
@@ -25,18 +25,25 @@ jobs:
     outputs:
       proceed: ${{ steps.time.outputs.proceed }}
       day: ${{ steps.time.outputs.day }}
+      publish: ${{ steps.time.outputs.publish }}
     steps:
+      - uses: actions/checkout@v4
+        with:
+          sparse-checkout: scripts/publication-window.sh
+          sparse-checkout-cone-mode: false
       - id: time
         env:
           EVENT: ${{ github.event_name }}
           TZ: Europe/Belgrade
         run: |
           echo "day=$(date +%F)" >> "$GITHUB_OUTPUT"
+          if bash scripts/publication-window.sh; then echo "publish=true" >> "$GITHUB_OUTPUT"; fi
           if [[ "$EVENT" == workflow_dispatch || $(date +%H) < 07 ]]; then
             echo "proceed=true" >> "$GITHUB_OUTPUT"
           fi
   perditeso:
     needs: window
+    if: needs.window.outputs.publish == 'true'
     runs-on: ubuntu-latest
     steps:
       - name: Kontrollo a eshte verifikuar kjo nate
@@ -57,8 +64,12 @@ jobs:
         with:
           ref: main
 
+      - id: refresh
+        if: github.event_name == 'workflow_dispatch' || steps.published.outputs.cache-hit != 'true' || hashFiles('.ut1-pending') != ''
+        run: echo "needed=true" >> "$GITHUB_OUTPUT"
+
       - name: Shkarko dhe konverto listat UT1
-        if: github.event_name == 'workflow_dispatch' || steps.published.outputs.cache-hit != 'true'
+        if: steps.refresh.outputs.needed == 'true'
         run: |
           set -euo pipefail
           mkdir -p lists
@@ -76,10 +87,20 @@ jobs:
           git -C "$source_dir" ls-tree -r --name-only HEAD -- blacklists > "$RUNNER_TEMP/ut1-tree"
           sed -nE 's|^blacklists/([a-zA-Z0-9_-]+)/domains$|\1|p' "$RUNNER_TEMP/ut1-tree" > "$RUNNER_TEMP/ut1-categories"
           grep -Fxq vpn "$RUNNER_TEMP/ut1-categories"
+          pending="$RUNNER_TEMP/ut1-pending"
+          : > "$pending"
+          report_pending() {
+            echo "$cat" >> "$pending"
+            echo "::warning::UT1 $cat: $1"
+            echo "- UT1 $cat: $1" >> "$GITHUB_STEP_SUMMARY"
+          }
           while IFS= read -r cat; do
             [ "$cat" = "adult" ] && continue
-            curl -fsSL --retry 3 --retry-all-errors --max-time 180 \
-              "https://raw.githubusercontent.com/olbat/ut1-blacklists/$revision/blacklists/$cat/domains" -o "/tmp/$cat.txt"
+            if ! curl -fsSL --retry 3 --retry-all-errors --max-time 180 \
+              "https://raw.githubusercontent.com/olbat/ut1-blacklists/$revision/blacklists/$cat/domains" -o "/tmp/$cat.txt"; then
+              report_pending "Shkarkimi deshtoi. Kategoria mbetet per riprove."
+              continue
+            fi
             # keep only plain domain names, drop IP addresses and comments
             tr -d '\r' < "/tmp/$cat.txt" | sed -E 's/^[*.]+//' | tr 'A-Z' 'a-z' \
               | { grep -E '^[a-z0-9-]+(\.[a-z0-9-]+)+$' || true; } | { grep -vE '^[0-9.]+$' || true; } | sort -u > "/tmp/$cat.clean"
@@ -87,8 +108,9 @@ jobs:
             old=0
             [ -f "lists/ut1-$cat.txt" ] && old=$(grep -c '^||' "lists/ut1-$cat.txt" || true)
             # an empty or suddenly halved download means the source failed: keep yesterday's list
-            if [ "$count" -eq 0 ] || [ "$count" -lt $((old / 2)) ]; then
-              echo "UT1 $cat: $count domene (dje $old), lista nuk ndryshohet"; continue
+            if [ "$count" -eq 0 ] || (( count * 2 < old )); then
+              report_pending "$count domene (me pare $old). Kategoria mbetet per riprove."
+              continue
             fi
             {
               echo "! Title: UT1 $cat (AdGuard)"
@@ -99,6 +121,23 @@ jobs:
             } > "lists/ut1-$cat.txt"
             echo "UT1 $cat: $count domene"
           done < "$RUNNER_TEMP/ut1-categories"
+
+          # Detect a previously published category disappearing from the source catalogue.
+          for file in lists/ut1-*.txt; do
+            cat=${file#lists/ut1-}; cat=${cat%.txt}
+            if ! grep -Fxq "$cat" "$RUNNER_TEMP/ut1-categories"; then
+              report_pending "Kategoria mungon ne katalog."
+            fi
+          done
+          sort -u "$pending" -o "$pending"
+          if [[ -f .ut1-pending ]]; then
+            comm -12 .ut1-pending "$pending" > "$RUNNER_TEMP/ut1-repeated"
+          fi
+          if [[ -s "$pending" ]]; then
+            cp "$pending" .ut1-pending
+          else
+            rm -f .ut1-pending
+          fi
 
           # combined lists used by the schools (always on): security and filter-bypass sites
           python3 - <<'PY'
@@ -141,18 +180,22 @@ jobs:
           } > lists/README.md
 
       - name: Ruaj ndryshimet
-        if: github.event_name == 'workflow_dispatch' || steps.published.outputs.cache-hit != 'true'
+        if: steps.refresh.outputs.needed == 'true'
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add lists
+          if [[ -f .ut1-pending ]] || git ls-files --error-unmatch .ut1-pending >/dev/null 2>&1; then
+            git add -A -- .ut1-pending
+          fi
           git diff --cached --quiet && exit 0
           git commit -m "Perditesim automatik i listave $(date -u +%F)"
           git pull --rebase -q origin main
+          bash scripts/publication-window.sh
           git push
 
       - name: Arkivo katalogun e plote zyrtar UT1
-        if: github.event_name == 'workflow_dispatch' || steps.published.outputs.cache-hit != 'true'
+        if: steps.refresh.outputs.needed == 'true'
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
@@ -162,15 +205,17 @@ jobs:
           grep -Eq '(^|/)adult/domains$' /tmp/ut1-entries.txt
           grep -Eq '(^|/)vpn/domains$' /tmp/ut1-entries.txt
           if ! gh release view ut1-catalog >/dev/null 2>&1; then
+            bash scripts/publication-window.sh
             gh release create ut1-catalog --title "UT1 full category archive" --notes "Official Universite Toulouse Capitole archive, including adult domains and URL paths. Source: https://dsi.ut-capitole.fr/blacklists/" --latest=false
           fi
+          bash scripts/publication-window.sh
           gh release upload ut1-catalog /tmp/ut1-all.tar.gz --clobber
 
       - name: Shenjo publikimin pas ruajtjes se listave dhe arkivit
-        if: steps.published.outputs.cache-hit != 'true'
+        if: steps.published.outputs.cache-hit != 'true' && hashFiles('.ut1-pending') == ''
         run: touch .lists-published
       - uses: actions/cache/save@v4
-        if: steps.published.outputs.cache-hit != 'true'
+        if: steps.published.outputs.cache-hit != 'true' && hashFiles('.ut1-pending') == ''
         with:
           path: .lists-published
           key: lists-published-v1-${{ needs.window.outputs.day }}
@@ -179,7 +224,7 @@ jobs:
       # (BGT 1 needs nothing here: its AdGuard Home downloads the lists itself every 24 h.)
       - name: Sinkronizo UniFi (BGT 2)
         id: sync
-        if: github.repository == 'egi95/dns-filtra-shkolla' && needs.window.outputs.proceed == 'true' && (github.event_name == 'workflow_dispatch' || steps.done.outputs.cache-hit != 'true')
+        if: github.repository == 'egi95/dns-filtra-shkolla' && needs.window.outputs.proceed == 'true' && (github.event_name == 'workflow_dispatch' || steps.done.outputs.cache-hit != 'true' || steps.refresh.outputs.needed == 'true')
         env:
           UNIFI_API_KEY: ${{ secrets.UNIFI_API_KEY }}
           UNIFI_CONSOLE: ${{ secrets.UNIFI_CONSOLE }}
@@ -193,11 +238,20 @@ jobs:
             echo "Listat u publikuan. Zbatimi ne UniFi pret dritaren e nates." >> "$GITHUB_STEP_SUMMARY"
             exit 0
           fi
+          bash scripts/publication-window.sh
           python3 scripts/unifi_sync.py "${args[@]}"
           touch .night-verified
       - name: Shenjo naten pas verifikimit ne router
-        if: github.event_name == 'schedule' && steps.done.outputs.cache-hit != 'true' && hashFiles('.night-verified') != ''
+        if: github.event_name == 'schedule' && steps.done.outputs.cache-hit != 'true' && hashFiles('.night-verified') != '' && hashFiles('.ut1-pending') == ''
         uses: actions/cache/save@v4
         with:
           path: .night-verified
           key: unifi-verified-v1-${{ needs.window.outputs.day }}
+
+      - name: Sinjalizo kategorite qe deshtuan perseri
+        if: steps.refresh.outputs.needed == 'true'
+        run: |
+          if [[ -s "$RUNNER_TEMP/ut1-repeated" ]]; then
+            echo "::error::UT1 pret kontroll per kategorite: $(paste -sd, "$RUNNER_TEMP/ut1-repeated")"
+            exit 1
+          fi

@@ -25,15 +25,15 @@ from datetime import datetime
 from zoneinfo import ZoneInfo
 
 
-def maintenance_window(now=None):
-    """Automatic configuration sync starts only before 07:00 in the school's time zone."""
+def maintenance_window(now=None, allow_evening=False):
+    """Automatic sync runs before 07:00. An approved manual run can also use the evening."""
     local = (now or datetime.now(ZoneInfo("Europe/Belgrade"))).astimezone(ZoneInfo("Europe/Belgrade"))
-    return local.hour < 7
+    return local.hour < 7 or (allow_evening and local.hour >= 17)
 
 
-if __name__ == "__main__" and "--allow-daytime" not in sys.argv and not maintenance_window():
+if __name__ == "__main__" and not maintenance_window(allow_evening="--allow-daytime" in sys.argv):
     print("SKIP UniFi: jashte orarit 00:00-07:00 te shkolles; listat e publikuara ruhen. "
-          "Per nje nderhyrje te miratuar manualisht perdor --allow-daytime.")
+          "Nje nderhyrje manuale e miratuar mund te kryhet pas ores 17:00.")
     sys.exit(2)
 
 KEY = os.environ["UNIFI_API_KEY"].strip()
@@ -77,6 +77,8 @@ SECURITY_CATS = ["ddos", "dangerous_material", "warez", "tricheur"]
 
 
 def api(method, path, body=None):
+    if method.upper() not in {"GET", "HEAD"} and not maintenance_window(allow_evening="--allow-daytime" in sys.argv):
+        sys.exit("Shkrimi ne UniFi u shty deri ne dritaren e lejuar.")
     data = json.dumps(body).encode() if body is not None else None
     req = urllib.request.Request(BASE + path, data=data, method=method,
                                  headers={"X-API-Key": KEY, "Content-Type": "application/json"})
