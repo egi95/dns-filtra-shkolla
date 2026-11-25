@@ -37,7 +37,6 @@ jobs:
           fi
   perditeso:
     needs: window
-    if: needs.window.outputs.proceed == 'true'
     runs-on: ubuntu-latest
     steps:
       - name: Kontrollo a eshte verifikuar kjo nate
@@ -47,23 +46,41 @@ jobs:
           path: .night-verified
           key: unifi-verified-v1-${{ needs.window.outputs.day }}
           lookup-only: true
+      - name: Kontrollo publikimin e listave per sot
+        id: published
+        uses: actions/cache/restore@v4
+        with:
+          path: .lists-published
+          key: lists-published-v1-${{ needs.window.outputs.day }}
+          lookup-only: true
       - uses: actions/checkout@v4
         with:
           ref: main
 
       - name: Shkarko dhe konverto listat UT1
-        if: github.event_name == 'workflow_dispatch' || steps.done.outputs.cache-hit != 'true'
+        if: github.event_name == 'workflow_dispatch' || steps.published.outputs.cache-hit != 'true'
         run: |
           set -euo pipefail
           mkdir -p lists
           # All domain categories for the operational lists. The full archive, including adult and URL paths, is stored in Releases.
-          cats=$(curl -fsSL --retry 3 https://api.github.com/repos/olbat/ut1-blacklists/contents/blacklists \
-                 | python3 -c 'import json,sys; print(" ".join(sorted(x["name"] for x in json.load(sys.stdin) if x["type"]=="dir")))')
-          for cat in $cats; do
-            [ "$cat" = "adult" ] && continue
-            if ! curl -fsSL --retry 3 "https://raw.githubusercontent.com/olbat/ut1-blacklists/master/blacklists/$cat/domains" -o "/tmp/$cat.txt"; then
-              echo "UT1 $cat: pa skedar domains, kalohet"; continue
+          # Read the source tree over Git, independently of the GitHub REST API quota.
+          source_dir="$RUNNER_TEMP/ut1-source"
+          for delay in 0 5 20; do
+            sleep "$delay"
+            if git clone --quiet --depth=1 --filter=blob:none --no-checkout --branch master \
+              https://github.com/olbat/ut1-blacklists.git "$source_dir"; then
+              break
             fi
+          done
+          revision=$(git -C "$source_dir" rev-parse --verify HEAD)
+          git -C "$source_dir" ls-tree -r --name-only HEAD -- blacklists > "$RUNNER_TEMP/ut1-tree"
+          sed -nE 's|^blacklists/([a-zA-Z0-9_-]+)/domains$|\1|p' "$RUNNER_TEMP/ut1-tree" > "$RUNNER_TEMP/ut1-categories"
+          grep -Fxq vpn "$RUNNER_TEMP/ut1-categories"
+          grep -Fxq adult "$RUNNER_TEMP/ut1-categories"
+          while IFS= read -r cat; do
+            [ "$cat" = "adult" ] && continue
+            curl -fsSL --retry 3 --retry-all-errors --max-time 180 \
+              "https://raw.githubusercontent.com/olbat/ut1-blacklists/$revision/blacklists/$cat/domains" -o "/tmp/$cat.txt"
             # keep only plain domain names, drop IP addresses and comments
             tr -d '\r' < "/tmp/$cat.txt" | sed -E 's/^[*.]+//' | tr 'A-Z' 'a-z' \
               | { grep -E '^[a-z0-9-]+(\.[a-z0-9-]+)+$' || true; } | { grep -vE '^[0-9.]+$' || true; } | sort -u > "/tmp/$cat.clean"
@@ -82,7 +99,7 @@ jobs:
               sed -E 's/.*/||&^/' "/tmp/$cat.clean"
             } > "lists/ut1-$cat.txt"
             echo "UT1 $cat: $count domene"
-          done
+          done < "$RUNNER_TEMP/ut1-categories"
 
           # combined lists used by the schools (always on): security and filter-bypass sites
           python3 - <<'PY'
@@ -125,7 +142,7 @@ jobs:
           } > lists/README.md
 
       - name: Ruaj ndryshimet
-        if: github.event_name == 'workflow_dispatch' || steps.done.outputs.cache-hit != 'true'
+        if: github.event_name == 'workflow_dispatch' || steps.published.outputs.cache-hit != 'true'
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
@@ -136,7 +153,7 @@ jobs:
           git push
 
       - name: Arkivo katalogun e plote zyrtar UT1
-        if: github.event_name == 'workflow_dispatch' || steps.done.outputs.cache-hit != 'true'
+        if: github.event_name == 'workflow_dispatch' || steps.published.outputs.cache-hit != 'true'
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
@@ -150,11 +167,20 @@ jobs:
           fi
           gh release upload ut1-catalog /tmp/ut1-all.tar.gz --clobber
 
+      - name: Shenjo publikimin pas ruajtjes se listave dhe arkivit
+        if: steps.published.outputs.cache-hit != 'true'
+        run: touch .lists-published
+      - uses: actions/cache/save@v4
+        if: steps.published.outputs.cache-hit != 'true'
+        with:
+          path: .lists-published
+          key: lists-published-v1-${{ needs.window.outputs.day }}
+
       # BGT 2: UniFi cannot read a list URL, so the Domain Lists and lesson policies are synced through its API.
       # (BGT 1 needs nothing here: its AdGuard Home downloads the lists itself every 24 h.)
       - name: Sinkronizo UniFi (BGT 2)
         id: sync
-        if: github.repository == 'egi95/dns-filtra-shkolla' && (github.event_name == 'workflow_dispatch' || steps.done.outputs.cache-hit != 'true')
+        if: github.repository == 'egi95/dns-filtra-shkolla' && needs.window.outputs.proceed == 'true' && (github.event_name == 'workflow_dispatch' || steps.done.outputs.cache-hit != 'true')
         env:
           UNIFI_API_KEY: ${{ secrets.UNIFI_API_KEY }}
           UNIFI_CONSOLE: ${{ secrets.UNIFI_CONSOLE }}
