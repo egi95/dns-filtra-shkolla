@@ -1,7 +1,7 @@
 # Title: Spamhaus DROP (IPv4)
 # Source: https://www.spamhaus.org/drop/
 # Entries: 1736
-# Updated: 2026-11-25 09:48 UTC
+# Updated: 2026-11-25 17:36 UTC
 1.10.16.0/20
 1.19.0.0/16
 1.32.128.0/18
