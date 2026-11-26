@@ -1,8 +1,8 @@
 ! Title: Mashtrime / scam / fake shops (HaGeZi fake + Block List Project scam)
-! Source: https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/fake.txt (10334)
+! Source: https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/fake.txt (10333)
 ! Source: https://blocklistproject.github.io/Lists/adguard/scam-ags.txt (8527)
 ! Licenses: UT1 CC BY-SA 4.0; HaGeZi GPL-3.0; Block List Project see upstream; CasCas2 see repo
-! Domains: 18850
+! Domains: 18849
 ||0-google.com^
 ||007-dvd.com^
 ||01crypto.com^
@@ -1294,7 +1294,6 @@
 ||aura-epargne.com^
 ||auraboutique-shop.com^
 ||auradeals.shop^
-||auraterraplaza.com^
 ||aurenbridge.com^
 ||aurendal.com^
 ||aureoncorevix-fr.com^
@@ -1965,6 +1964,7 @@
 ||bfmvip.com^
 ||bforbinary.com^
 ||bforex.com^
+||bftb.org^
 ||bfxoption.com^
 ||bgmbgroupe.com^
 ||bh-shop-online.com^
@@ -4028,7 +4028,6 @@
 ||de.justfashionnow.com^
 ||de.jxsaen.shop^
 ||de.osmo-official.com^
-||de.thereverselookup.com^
 ||de.wwiqtest.com^
 ||de1.aiinshgits.de^
 ||de4.luxedressshop.com^
@@ -7774,6 +7773,7 @@
 ||hoesfetrt.com^
 ||hofasudtransport.com^
 ||hoffmannholz.com^
+||hoffmannwelpen.de^
 ||hofkammerpro-de.live^
 ||hofkammerpro.at^
 ||hofman.com^
@@ -18758,7 +18758,6 @@
 ||zeitgeschenen.de^
 ||zeitlosliebe.de^
 ||zelono.de^
-||zeloriacore.com^
 ||zelterabatt.com^
 ||zeltneu.com^
 ||zen-online.com^

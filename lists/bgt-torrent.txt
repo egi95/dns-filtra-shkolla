@@ -1,10 +1,10 @@
 ! Title: Torrent / pirateri (UT1 warez + HaGeZi anti-piracy + Block List Project piracy, torrent)
 ! Source: UT1 warez (1524)
-! Source: https://raw.githubusercontent.com/firewalla/fw-public-lists/main/Hagezi-Anti-Piracy.txt -> https://cdn.jsdelivr.net/gh/hagezi/dns-blocklists@latest/wildcard/anti.piracy.txt (63806)
+! Source: https://raw.githubusercontent.com/firewalla/fw-public-lists/main/Hagezi-Anti-Piracy.txt -> https://cdn.jsdelivr.net/gh/hagezi/dns-blocklists@latest/wildcard/anti.piracy.txt (63807)
 ! Source: https://blocklistproject.github.io/Lists/adguard/piracy-ags.txt (2154)
 ! Source: https://blocklistproject.github.io/Lists/adguard/torrent-ags.txt (2620)
 ! Licenses: UT1 CC BY-SA 4.0; HaGeZi GPL-3.0; Block List Project see upstream; CasCas2 see repo
-! Domains: 67511
+! Domains: 67509
 ||0-123movies.com^
 ||0-123movies.site^
 ||0.arenabg.com^
@@ -2210,7 +2210,6 @@
 ||5movierulz.university^
 ||5movierulz.vc^
 ||5movierulz.ventures^
-||5movierulz.vip^
 ||5movierulz.vote^
 ||5movierulz.voto^
 ||5movierulz.voyage^
@@ -2620,7 +2619,6 @@
 ||abandon5000.com^
 ||abandonhouse.com^
 ||abbaspc.net^
-||abbasport.site^
 ||abbatstvo-daaunton-lordfilm.ru^
 ||abbatstvo-daunton-3-lordfilm.buzz^
 ||abbatstvo-daunton-lordfilm.ru^
@@ -8010,9 +8008,7 @@
 ||cineby.haus^
 ||cineby.host^
 ||cineby.hot^
-||cineby.icu^
 ||cineby.in^
-||cineby.info^
 ||cineby.ing^
 ||cineby.ink^
 ||cineby.io^
@@ -11177,6 +11173,7 @@
 ||dood.pro^
 ||dood.qpon^
 ||dood.re^
+||dood.red^
 ||dood.ro^
 ||dood.sbs^
 ||dood.sh^
@@ -13478,6 +13475,7 @@
 ||filmpalast.to^
 ||filmpertutti.baby^
 ||filmpertutti.be^
+||filmpertutti.bet^
 ||filmpertutti.black^
 ||filmpertutti.click^
 ||filmpertutti.cloud^
@@ -14911,7 +14909,6 @@
 ||freebestmovies.net^
 ||freebfg.org^
 ||freebooks.lol^
-||freebookspot.es^
 ||freebookspot.unblocked.llc^
 ||freecinema.live^
 ||freecinemanow.com^
@@ -18126,7 +18123,6 @@
 ||hdmovie2.dk^
 ||hdmovie2.download^
 ||hdmovie2.email^
-||hdmovie2.engineering^
 ||hdmovie2.enterprises^
 ||hdmovie2.events^
 ||hdmovie2.express^
@@ -18137,7 +18133,6 @@
 ||hdmovie2.fish^
 ||hdmovie2.football^
 ||hdmovie2.forum^
-||hdmovie2.foundation^
 ||hdmovie2.fun^
 ||hdmovie2.games^
 ||hdmovie2.gd^
@@ -18670,7 +18665,6 @@
 ||hdmoviesplus.xyz^
 ||hdmoviespoint-offcial.cyou^
 ||hdmoviespoint.cc^
-||hdmoviespoint.club^
 ||hdmoviespoint.co.in^
 ||hdmoviespoint.online^
 ||hdmoviespoint.site^
@@ -19082,6 +19076,7 @@
 ||hindmovie.vin^
 ||hindmoviez.bet^
 ||hindmoviez.biz^
+||hindmoviez.click^
 ||hindmoviez.com^
 ||hindmoviez.email^
 ||hindmoviez.wiki^
@@ -19668,7 +19663,6 @@
 ||ien-lordfilms.ru^
 ||ifilmsenzalimiti.pw^
 ||ifilmsenzalimiti.site^
-||ifilmsenzalimiti.space^
 ||iflix.com^
 ||ifra.network^
 ||ifullmovie.com^
@@ -44147,6 +44141,7 @@
 ||netu.to^
 ||netu.tv^
 ||network.rip^
+||networkstress.xyz^
 ||networkstresser.com^
 ||networkstresser.net^
 ||neu-pro.com^
@@ -51061,6 +51056,7 @@
 ||seriesflix.lol^
 ||seriesflix.love^
 ||seriesflix.monster^
+||seriesflix.my^
 ||seriesflix.org^
 ||seriesflix.pics^
 ||seriesflix.pro^
@@ -54729,6 +54725,8 @@
 ||streamingcommunityz.llc^
 ||streamingcommunityz.locker^
 ||streamingcommunityz.lol^
+||streamingcommunityz.luxe^
+||streamingcommunityz.miami^
 ||streamingcommunityz.motorcycles^
 ||streamingcommunityz.mov^
 ||streamingcommunityz.my^
@@ -54751,6 +54749,7 @@
 ||streamingcommunityz.sarl^
 ||streamingcommunityz.sbs^
 ||streamingcommunityz.shiksha^
+||streamingcommunityz.shop^
 ||streamingcommunityz.site^
 ||streamingcommunityz.space^
 ||streamingcommunityz.store^
@@ -61102,7 +61101,6 @@
 ||urban-legendo-lordfilm.ru^
 ||urban-legendt-lordfilm.ru^
 ||urbanchaosvideos.org^
-||urbanproxy.eu^
 ||urll.net^
 ||urnold-schwarznegerr-lordfilm.ru^
 ||urock-lordfilms.ru^
