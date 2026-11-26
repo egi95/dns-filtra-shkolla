@@ -315,10 +315,27 @@ def main():
     summary = os.environ.get("GITHUB_STEP_SUMMARY")
     if summary:
         with open(summary, "a", encoding="utf-8") as report:
-            report.write("### Shkëmbimi mes shkollave\n\n")
+            report.write("### ShkÃ«mbimi mes shkollave\n\n")
             for category in ("vpn", "ai", "siguria", "legacy"):
                 report.write(f"- {category}: {len(exchange[category])} domene.\n")
-            report.write("\nGrupet dhe politikat u rilexuan nga UniFi. Prova nga pajisja e nxënësit raportohet veçmas.\n")
+            report.write("\n| Zbuluar në | Kategoria | Domeni | Grupi i verifikuar në BGT2 |\n")
+            report.write("|---|---|---|---|\n")
+            observations = Path(LISTS) / "bgt-shkembim.json"
+            rows = json.loads(observations.read_text()) if observations.exists() else []
+            historic = json.loads((Path(LISTS) / "bgt-mesuar.json").read_text())
+            rows.extend({"origin": "BGT1", "category": cat, "domain": item["domain"]}
+                        for item in historic.values() if item["kind"] == "gjithmone"
+                        for cat in exchange if item["domain"] in exchange[cat])
+            seen = set()
+            for row in rows:
+                identity = (row["origin"], row["category"], row["domain"])
+                if identity in seen or row["domain"] not in exchange.get(row["category"], set()):
+                    continue
+                seen.add(identity)
+                groups = [n for n, members in s.expected_groups.items() if row["domain"] in members]
+                location = ", ".join(sorted(groups)) or "Pa grup të konfirmuar"
+                report.write("| " + " | ".join((*identity, location)) + " |\n")
+            report.write("\nGrupet dhe politikat u rilexuan nga UniFi. Prova nga pajisja e nxÃ«nÃ«sit raportohet veÃ§mas.\n")
     print(f"lojera: {len(games)} domene ne {len(chunks)} lista; siguria: {len(security)}; AI: {len(ai)}; "
           f"rregulla te reja: {s.created}")
 
