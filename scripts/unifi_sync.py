@@ -304,7 +304,19 @@ def main():
     sync_vpn(s, sources)
     # Verify the destination groups before removing any duplicate legacy membership.
     s.verify()
-    learned = sorted((read_merged("bgt-mesuar-gjithmone") or set()) & exchange["legacy"])
+    # Only retire a live legacy entry after verifying an always-on VPN replacement.
+    # A disabled or scheduled destination policy can be valid for the admin's
+    # mode, but does not provide equivalent coverage for this migration.
+    covered = set()
+    for name, members in s.expected_groups.items():
+        if name.startswith(VPN_GROUP + " "):
+            policy = s.expected_policies.get(name + " - gjithmone")
+            if policy and policy[1] is True and (policy[2] or {}).get("mode") == "ALWAYS":
+                covered.update(members)
+    current = set(s.groups.get("BGT Mesuar nga BGT1", {}).get("group_members", []))
+    current.discard(EMPTY_LIST)
+    retained = current - (exchange["vpn"] & covered)
+    learned = sorted(retained | ((read_merged("bgt-mesuar-gjithmone") or set()) & exchange["legacy"]))
     if len(learned) > MAX_PER_LIST:
         raise ValueError("Legacy group exceeds UniFi capacity")
     if learned or "BGT Mesuar nga BGT1" in s.groups:
