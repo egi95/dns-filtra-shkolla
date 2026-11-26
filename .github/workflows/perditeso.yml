@@ -46,23 +46,23 @@ jobs:
     if: needs.window.outputs.publish == 'true'
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
       - name: Kontrollo a eshte verifikuar kjo nate
         id: done
         uses: actions/cache/restore@v4
         with:
           path: .night-verified
-          key: unifi-verified-v1-${{ needs.window.outputs.day }}
+          key: unifi-verified-v2-${{ needs.window.outputs.day }}-${{ hashFiles('lists/bgt-mesuar.json', 'lists/bgt-shkembim.json') }}
           lookup-only: true
       - name: Kontrollo publikimin e listave per sot
         id: published
         uses: actions/cache/restore@v4
         with:
           path: .lists-published
-          key: lists-published-v1-${{ needs.window.outputs.day }}
+          key: lists-published-v2-${{ needs.window.outputs.day }}-${{ hashFiles('lists/bgt-mesuar.json', 'lists/bgt-shkembim.json') }}
           lookup-only: true
-      - uses: actions/checkout@v4
-        with:
-          ref: main
 
       - id: refresh
         if: github.event_name == 'workflow_dispatch' || steps.published.outputs.cache-hit != 'true' || hashFiles('.ut1-pending') != ''
@@ -218,7 +218,7 @@ jobs:
         if: steps.published.outputs.cache-hit != 'true' && hashFiles('.ut1-pending') == ''
         with:
           path: .lists-published
-          key: lists-published-v1-${{ needs.window.outputs.day }}
+          key: lists-published-v2-${{ needs.window.outputs.day }}-${{ hashFiles('lists/bgt-mesuar.json', 'lists/bgt-shkembim.json') }}
 
       # BGT 2: UniFi cannot read a list URL, so the Domain Lists and lesson policies are synced through its API.
       # (BGT 1 needs nothing here: its AdGuard Home downloads the lists itself every 24 h.)
@@ -246,7 +246,7 @@ jobs:
         uses: actions/cache/save@v4
         with:
           path: .night-verified
-          key: unifi-verified-v1-${{ needs.window.outputs.day }}
+          key: unifi-verified-v2-${{ needs.window.outputs.day }}-${{ hashFiles('lists/bgt-mesuar.json', 'lists/bgt-shkembim.json') }}
 
       - name: Sinjalizo kategorite qe deshtuan perseri
         if: steps.refresh.outputs.needed == 'true'

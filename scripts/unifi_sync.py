@@ -15,6 +15,8 @@ Creates what is missing and updates list members; objects with other names are n
 Needs UNIFI_API_KEY and UNIFI_CONSOLE (the console id used in the api.ui.com connector URL).
 """
 from ai_hosts import AI_SERVICE_HOSTS
+from pathlib import Path
+from school_exchange import read_exchange
 
 import json
 import os
@@ -157,15 +159,18 @@ class Sync:
         for name, expected in self.expected_groups.items():
             if groups.get(name) != expected:
                 raise RuntimeError(f"Membership mismatch: {name}")
-        for name, gid in self.expected_policies.items():
+        for name, (gid, enabled, timing) in self.expected_policies.items():
             p = policies.get(name, {})
             if (p.get("action") != "BLOCK" or p.get("destination", {}).get("web_group_id") != gid
+                    or p.get("enabled") != enabled or any((p.get("schedule") or {}).get(k) != v for k, v in (timing or {}).items())
                     or p.get("source", {}).get("network_ids") != [NETWORK_DEFAULT]):
                 raise RuntimeError(f"Policy mismatch: {name}")
 
     def policy(self, name, gid, schedule, enabled_when_new=True):
-        self.expected_policies[name] = gid
         p = self.policies.get(name)
+        enabled = p.get("enabled", enabled_when_new) if p else enabled_when_new
+        timing = p.get("schedule") if p else schedule
+        self.expected_policies[name] = (gid, enabled, timing)
         if p is None:
             api("POST", "/v2/api/site/default/firewall-policies", policy_body(name, gid, schedule, enabled_when_new))
             self.created += 1
@@ -274,7 +279,8 @@ def main():
             s.group(f"BGT Lojera UT1 #{k}", [EMPTY_LIST])
     chunks = [games]
 
-    security = sorted(set().union(*(read_list(c) for c in SECURITY_CATS)))
+    exchange = read_exchange(Path(LISTS))
+    security = sorted(set().union(*(read_list(c) for c in SECURITY_CATS), exchange["siguria"]))
     if security:
         s.policy("BGT Siguria UT1 - gjithmone", s.group("BGT Siguria UT1", security), ALWAYS)
 
@@ -284,22 +290,35 @@ def main():
     s.policy("BGT Students NSFW AI - gjithmone",
              s.group("BGT NSFW AI Firewalla", sorted(adult_ai)), ALWAYS)
 
-    # learned from BGT 1's AdGuard (adult, gambling, piracy, VPN/DoH that students really tried) -> always
-    learned = sorted(read_merged("bgt-mesuar-gjithmone") or [])
-    if learned:
-        s.policy("BGT Mesuar nga BGT1 - gjithmone", s.group("BGT Mesuar nga BGT1", learned[:MAX_PER_LIST]), ALWAYS)
-
+    sources = vpn_sources()
+    sources["Mesuar"] = {d for d in exchange["vpn"] if not shared(d) and not any(
+        d == suffix or d.endswith("." + suffix) for suffix in (*ALLOW, *VPN_SHARED_HOSTING))}
     # AI: one policy per lesson block like the games, created switched off; the admin's modes
     # (bgt-modi on the BGT 1 server) decide whether they are on, off or "all day".
-    ai = ai_members()
+    ai = sorted(set(ai_members()) | exchange["ai"])
     if ai:
         gid = s.group("BGT AI UT1", ai)
         for ora, start, end in BLOCKS:
             s.policy(f"BGT AI UT1 - {ora}", gid, lesson(start, end), enabled_when_new=False)
 
-    sync_vpn(s, vpn_sources())
+    sync_vpn(s, sources)
+    # Verify the destination groups before removing any duplicate legacy membership.
+    s.verify()
+    learned = sorted((read_merged("bgt-mesuar-gjithmone") or set()) & exchange["legacy"])
+    if len(learned) > MAX_PER_LIST:
+        raise ValueError("Legacy group exceeds UniFi capacity")
+    if learned or "BGT Mesuar nga BGT1" in s.groups:
+        s.policy("BGT Mesuar nga BGT1 - gjithmone",
+                 s.group("BGT Mesuar nga BGT1", learned or [EMPTY_LIST]), ALWAYS)
     s.verify()
 
+    summary = os.environ.get("GITHUB_STEP_SUMMARY")
+    if summary:
+        with open(summary, "a", encoding="utf-8") as report:
+            report.write("### Shkëmbimi mes shkollave\n\n")
+            for category in ("vpn", "ai", "siguria", "legacy"):
+                report.write(f"- {category}: {len(exchange[category])} domene.\n")
+            report.write("\nGrupet dhe politikat u rilexuan nga UniFi. Prova nga pajisja e nxënësit raportohet veçmas.\n")
     print(f"lojera: {len(games)} domene ne {len(chunks)} lista; siguria: {len(security)}; AI: {len(ai)}; "
           f"rregulla te reja: {s.created}")
 

@@ -3,6 +3,7 @@ from pathlib import Path
 import json
 from urllib.request import urlopen
 
+from school_exchange import read_exchange
 from ai_hosts import AI_SERVICE_HOSTS
 from build_lists import ALLOW_SOCIAL, parse
 
@@ -33,7 +34,8 @@ def write(category, rules, important=False):
 
 def main():
     games = domains("bgt-lojera") | {"poki-gdn.com", "roblox.com"}
-    ai = domains("bgt-ai") | AI_SERVICE_HOSTS
+    exchange = read_exchange(LISTS)
+    ai = domains("bgt-ai") | AI_SERVICE_HOSTS | exchange["ai"]
     social = SOCIAL | domains("bgt-mesuar-sociale")
     social = {d for d in social if not any(d == a or d.endswith("." + a) for a in ALLOW_SOCIAL)}
     if len(games) < 1000 or not {"copilot.microsoft.com", "gemini.google.com", "chatgpt.com"} <= ai:
@@ -43,6 +45,14 @@ def main():
     game_rules = {"||" + d + "^" for d in games}
     for service in GAME_SERVICES:
         game_rules.update(services[service])
+    # BGT1 already subscribes to this bypass feed. Scope additional rules to Students.
+    for category, filename in [("vpn", "bgt-anashkalimi"), ("siguria", "bgt-siguria")]:
+        file = LISTS / (filename + ".txt")
+        marker = "! BGT Students - shkembimi " + category
+        original = file.read_text(encoding="utf-8").split(marker)[0].rstrip()
+        extra = sorted(exchange[category] - parse(original.splitlines()))
+        content = [original, marker] + [f"||{d}^$client=10.10.0.0/16" for d in extra]
+        file.write_text("\n".join(content) + "\n", encoding="utf-8")
     write("lojera", game_rules)
     write("nsfw-ai", {"||" + d + "^" for d in domains("bgt-nsfw-ai")}, important=True)
     write("sociale", {"||" + d + "^" for d in social})
