@@ -54,7 +54,7 @@ jobs:
         uses: actions/cache/restore@v4
         with:
           path: .night-verified
-          key: unifi-verified-v2-${{ needs.window.outputs.day }}-${{ hashFiles('lists/bgt-mesuar.json', 'lists/bgt-shkembim.json') }}
+          key: unifi-verified-v3-${{ needs.window.outputs.day }}-${{ hashFiles('scripts/unifi_sync.py', 'scripts/school_exchange.py', 'scripts/exchange-legacy.txt', 'lists/bgt-mesuar.json', 'lists/bgt-shkembim.json') }}
           lookup-only: true
       - name: Kontrollo publikimin e listave per sot
         id: published
@@ -246,7 +246,7 @@ jobs:
         uses: actions/cache/save@v4
         with:
           path: .night-verified
-          key: unifi-verified-v2-${{ needs.window.outputs.day }}-${{ hashFiles('lists/bgt-mesuar.json', 'lists/bgt-shkembim.json') }}
+          key: unifi-verified-v3-${{ needs.window.outputs.day }}-${{ hashFiles('scripts/unifi_sync.py', 'scripts/school_exchange.py', 'scripts/exchange-legacy.txt', 'lists/bgt-mesuar.json', 'lists/bgt-shkembim.json') }}
 
       - name: Sinjalizo kategorite qe deshtuan perseri
         if: steps.refresh.outputs.needed == 'true'

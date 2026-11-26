@@ -328,6 +328,10 @@ def main():
     if summary:
         with open(summary, "a", encoding="utf-8") as report:
             report.write("### ShkÃ«mbimi mes shkollave\n\n")
+            report.write(f"BGT Mesuar nga BGT1: {len(current)} domene para migrimit, "
+                         f"{len(learned)} pas rileximit nga UniFi, "
+                         f"{len(current - set(learned))} hyrje te hequra. "
+                         f"Politika te reja ne kete sinkronizim: {s.created}.\n\n")
             for category in ("vpn", "ai", "siguria", "legacy"):
                 report.write(f"- {category}: {len(exchange[category])} domene.\n")
             report.write("\n| Zbuluar në | Kategoria | Domeni | Grupi i verifikuar në BGT2 |\n")
