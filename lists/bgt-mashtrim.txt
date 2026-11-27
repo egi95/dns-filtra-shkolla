@@ -1,8 +1,8 @@
 ! Title: Mashtrime / scam / fake shops (HaGeZi fake + Block List Project scam)
-! Source: https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/fake.txt (10702)
+! Source: https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/fake.txt (10726)
 ! Source: https://blocklistproject.github.io/Lists/adguard/scam-ags.txt (8527)
 ! Licenses: UT1 CC BY-SA 4.0; HaGeZi GPL-3.0; Block List Project see upstream; CasCas2 see repo
-! Domains: 19218
+! Domains: 19242
 ||0-google.com^
 ||007-dvd.com^
 ||01crypto.com^
@@ -2467,6 +2467,7 @@
 ||bremerbrennholz.com^
 ||bremerholz.de^
 ||bremsenverkauf.com^
+||brenholz-karl.de^
 ||brenn-holzinger.at^
 ||brenner-berlin.com^
 ||brennholz-anhaenger.de^
@@ -2801,6 +2802,7 @@
 ||campenwelt.com^
 ||camping-bewegung.com^
 ||campingdebarf.com^
+||campingimharz.de^
 ||campingkuche.de^
 ||campinglagea.com^
 ||campinglagern.com^
@@ -3091,6 +3093,7 @@
 ||ces-lekarna.com^
 ||ceska-lekarna.com^
 ||cfd.diamond-tradeltd.com^
+||cfd.eliteai-t.com^
 ||cfds100.com^
 ||cfdtc.com^
 ||cftmarteorvers.com^
@@ -4081,6 +4084,7 @@
 ||de.justfashionnow.com^
 ||de.jxsaen.shop^
 ||de.osmo-official.com^
+||de.thereverselookup.com^
 ||de.wwiqtest.com^
 ||de1.aiinshgits.de^
 ||de4.luxedressshop.com^
@@ -5067,7 +5071,6 @@
 ||elektro-ecke.de^
 ||elektro-evolution.de^
 ||elektro-friedrich.com^
-||elektro-hettich.de^
 ||elektro-meisner.com^
 ||elektro-outlet24.myshopify.com^
 ||elektro-rock.com^
@@ -5406,6 +5409,7 @@
 ||ethikadeutschland.de^
 ||ethimostyle.com^
 ||ethxpgsc.shop^
+||eticketsy.com^
 ||etkick.de^
 ||etorooption.com^
 ||etrade-securities.com^
@@ -13721,6 +13725,7 @@
 ||ravenciax.shop^
 ||ravetrust.com^
 ||ravstream.com^
+||raytomore.com^
 ||razorbackarmory.com^
 ||razys.de^
 ||razysshop.com^
@@ -13833,6 +13838,7 @@
 ||regulatev.com^
 ||regulationi.com^
 ||rehaubrandstore.com^
+||rehman-remote.de^
 ||reiclub.com^
 ||reife-treffen.ch^
 ||reifen-dreyer.com^
@@ -15849,6 +15855,7 @@
 ||store.oflike.com^
 ||store.parajumpersnettbutikk.com^
 ||store.parajumpersnorway.com^
+||store.pavridora.com^
 ||store.pharaohstore.com^
 ||store.pjs.outlet.com^
 ||store.popeurope.com^
@@ -16331,7 +16338,6 @@
 ||taurusjudgefirearmsforsale.com^
 ||tavaresautopecas.com^
 ||tavorello.net^
-||tawagold.com^
 ||tax.crypto.com^
 ||taxmimic.com^
 ||taxoflex.de^
@@ -16908,6 +16914,7 @@
 ||toyshobbiesworld.com^
 ||toywhirl.site^
 ||tp-treuhand.de^
+||tr-brokers.com^
 ||trabo-garten.de^
 ||tracedream.com^
 ||traceoption.com^
@@ -17896,6 +17903,7 @@
 ||warmeluxe.com^
 ||warmrainbow.com^
 ||warmthvo.com^
+||warmundholz.com^
 ||warmwolle.com^
 ||warnerrobinstoday.com^
 ||warrenclintonnews.com^
@@ -18417,6 +18425,7 @@
 ||www.acquatee.com^
 ||www.adidasko.com^
 ||www.ahenana.com^
+||www.ainvestments.biz^
 ||www.airmaxskobillige.com^
 ||www.akarosi.com^
 ||www.akatee.com^
@@ -18434,6 +18443,7 @@
 ||www.arnoldgloverruss58.myshopify.com^
 ||www.arvetellefsen.no^
 ||www.assassinfitness.com^
+||www.asse-groupe.com^
 ||www.atrendsz.com^
 ||www.aussiesportfashion.com^
 ||www.azitecs.com^
@@ -18451,6 +18461,8 @@
 ||www.blanketmart.us^
 ||www.blingyy.com^
 ||www.bltskins.com^
+||www.bnp-coin.com^
+||www.bnp-otccoin.com^
 ||www.boobeeshop.com^
 ||www.boododa.com^
 ||www.bossaving.com^
@@ -18510,6 +18522,7 @@
 ||www.easyliving4you.com^
 ||www.easyshoppingus.com^
 ||www.elaka.lk^
+||www.elite-patrimoine.com^
 ||www.elitepharmclothing.com^
 ||www.ellezz.com^
 ||www.enchantestore.myshopify.com^
@@ -18526,6 +18539,7 @@
 ||www.fapst.com^
 ||www.fatalfailblog.com^
 ||www.festmusikk.com^
+||www.finetero.com^
 ||www.fishinglovely.com^
 ||www.fixpub.com^
 ||www.flattee.com^
@@ -18560,6 +18574,7 @@
 ||www.goyourheart.com^
 ||www.gracesector.com^
 ||www.graciaszone.com^
+||www.gravity-market.com^
 ||www.gsport.com^
 ||www.guccitees.com^
 ||www.gunstee.com^
@@ -18576,9 +18591,11 @@
 ||www.hugetrump.com^
 ||www.hunterbeus.com^
 ||www.icelandclothing.myshopify.com^
+||www.igmholdings.com^
 ||www.ikiha.com^
 ||www.ilpollenza-sorso23.it^
 ||www.investissement.strategie-business.com^
+||www.isaloge-investissement.com^
 ||www.jaimerico.net^
 ||www.jakkesalgs.com^
 ||www.jakkesnorge.com^
@@ -18621,6 +18638,8 @@
 ||www.lunapresent.com^
 ||www.luvinstars.com^
 ||www.luxsgear.com^
+||www.lyxorassetmanagement.com^
+||www.lyxorpro.com^
 ||www.marleytecnologica.com^
 ||www.mayor4london.com^
 ||www.mbtnorge.com^
@@ -18779,6 +18798,8 @@
 ||www.survivalcatsupply.com^
 ||www.sweepstakesalerts.com^
 ||www.swellsup.com^
+||www.swissepargne.com^
+||www.t4trade.com^
 ||www.tartannewzealand.myshopify.com^
 ||www.tartanz.co^
 ||www.tee24h.com^
@@ -18807,6 +18828,7 @@
 ||www.tomadamsenergy.com^
 ||www.tourwaysl.com^
 ||www.trade-skins.net^
+||www.tradeogre.fr^
 ||www.treasurefan.com^
 ||www.trendsharks.com^
 ||www.trendygladys.com^
@@ -18820,7 +18842,9 @@
 ||www.ultraboxlab.com^
 ||www.um-bs.com^
 ||www.uniaxes.com^
+||www.uniqa-alternatives.com^
 ||www.unique3ds.com^
+||www.universaltrade.io^
 ||www.ureashi.com^
 ||www.uredaka.com^
 ||www.usasport247.com^
